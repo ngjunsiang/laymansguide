@@ -37,7 +37,7 @@ Relational databases can also develop problems that require them to be shut down
 
 If you don’t expect to be changing your database schema often, or if you are able to design the schema to minimise such migrations, relational databases can be quite excellent for your needs. Please consult a professional database engineer if you are planning to use a database for your business needs.
 
-**Issue summary:** Relational databases are designed to maintain a well-structured set of data tables through constraint rules. this makes them very useful for preventing accidental inconsistencies in data, but make any changes to the data schema difficult to implement. Changing from one schema to another involves downtime and a migration.
+**Issue summary:** Relational databases are designed to maintain a well-structured set of data tables through constraint rules. This makes them very useful for preventing accidental inconsistencies in data, but make any changes to the data schema difficult to implement. Changing from one schema to another involves downtime and a migration.
 
 ## What I’ll be covering next
 
