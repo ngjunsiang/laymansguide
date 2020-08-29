@@ -6,7 +6,7 @@ We could add more disk space, more memory, more cores on the processor; this is 
 
 Or we could spread that database over two or more computers. And keep them constantly synchronised. This is called **horizontal scaling**/**scaling out** (because we are adding more computers, which is usually depicted as adding more units on a horizontal axis).
 
-We can only take vertical scaling so far; at some point we will have the most powerful possible server and it just isn’t enough. So if we are expecting massive growth, that means we will need a **distributed database**.
+We can only take vertical scaling so far; at some point we will have the most powerful server possible and it still won’t be enough. So if we are expecting massive growth, that means we will need a **distributed database**.
 
 ## Wait, who actually expects a database to not have to store *a lot* of information?
 
@@ -22,7 +22,7 @@ In distributed databases, there are three factors that are impossible to achieve
 
 - **C**onsistency — reading the same data multiple times should not give us different results
 - **A**vailability — we should get a response from the database quickly
-- **P**artition tolerance — If network disruptions or software/hardware failures break communication, the system should still continue to operate
+- **P**artition tolerance — If network disruptions or software/hardware failures break communication, our cluster of servers break up into smaller clusters—they get partitioned. Computers in each subcluster can communicate with each other, but not with computers outside the subcluster. Under such conditions, the system should still continue to operate.
 
 This is known as the **CAP theorem**: you can only really prioritise two out of the three factors.
 
@@ -32,7 +32,7 @@ The database we have been examining so far in Season 7 are known as relational d
 
 How does that work? When our distributed database is being hit with 100,000s of requests per second, more than one computer can handle, we need multiple computers to serve these requests. These computers had better be synchronised (to achieve consistency) so that the request will always return the same response from any of those computers.
 
-One way to achieve this is to have a Single Source of Truth: perhaps we design it so that only one “leader” computer handles edits/changes to the database, which then get sent to all the other “follower” computers. (This assumption that reading data occurs much more frequently than writing/changing data holds up for most use cases.) What happens if the “leader” computer goes down—our distributed database go from a leader-follower system to a partitioned bunch of followers? No writes can happen, the system is no longer operational.
+One way to achieve this is to have a Single Source of Truth: perhaps we design it so that only one “leader” computer handles edits/changes to the database, which then get sent to all the other “follower” computers. (This assumption that reading data occurs much more frequently than writing/changing data holds up for most use cases.) What happens if the “leader” computer goes down, and our distributed database goes from a leader-follower system to a partitioned bunch of followers? No writes can happen, the system is no longer operational.
 
 (There are multiple theorems on how to design this system to automatically/manually select a new leader, but I won’t go into that here. The fundamental problem of ensuring consistency and availability in such cases remains.)
 
@@ -54,7 +54,7 @@ If you find yourself in the position of having to choose a distributed database,
 
 **Partitioning and Availability**: Essential services, such as Google Maps, have to remain operational even with (recoverable) failures, and still have to respond in a reasonable amount of time (otherwise real-time navigation would fail). Roads do not change often, so it is okay if the info we are getting is slightly out of date; we might occasionally get a slower route or find ourselves at a business whose operating hours are not updated in Google Maps, but these are not critical failures.
 
-The CAP theorem does not say we can never have the third factor! It means we have to pick 2 factors to prioritise, and live with the lower performance of the third.
+The CAP theorem does not say we can never have the third factor! It means we have to pick 2 factors to prioritise, and live with the lowered performance of the third.
 
 **Issue summary:** To increase the performance of a distributed database, we can scale up/scale vertically by increasing the computers’ performance, or scale out/scale horizontally by adding more computers. Distributed databases can only prioritise two of the following three factors: consistency, availability, partitioning (CAP theorem).
 
