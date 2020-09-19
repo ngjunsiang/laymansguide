@@ -38,7 +38,7 @@ or it can look like:
 
 `postgres://myusername:myverylongwindedpasswordwhichisobviouslygeneratedbyacomputerandnotahuman@ec2-52-207-124-89.compute-1.amazonaws.com:5432/d77ila0heea1lk`
 
-which identifies your database as a `postgres` (SQL) database running on the server at `ec2-56-486-386-34.compute-5.amazonaws.com` on port `5432`, and your particular database is named `d77ila0heea1lk` (you can run multiple databases on a single server).
+which identifies your database as a `postgres` (relational) database running on the server at `ec2-56-486-386-34.compute-5.amazonaws.com` on port `5432`, and your particular database is named `d77ila0heea1lk` (you can run multiple databases on a single server).
 
 ## Connecting to a database
 
