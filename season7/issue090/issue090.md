@@ -1,4 +1,4 @@
-[**Previously:**](https://buttondown.email/laymansguide/archive/) Graph databases treat the details of things as secondary, and optimise for managing the network of relationships. A graph database and quickly look up how things are related to each other, and return the results.
+[**Previously:**](https://buttondown.email/laymansguide/archive/) Graph databases treat the details of things as secondary, and optimise for managing the network of relationships. A graph database can quickly look up how things are related to each other, and return the results.
 
 At some point in the past, getting a database meant talking to a consultant or contractor, who would then sit with you to understand your requirements, then set everything up for you without letting you touch any part of it. And that is probably for the benefit of you both. But today, for SMEs with some relevant expertise, it is actually possible to get your own database up and running very quickly.
 
