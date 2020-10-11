@@ -15,9 +15,12 @@ As a web-first programming language, Javascript programs were not expected to ha
 5. For data that is only needed in that tab (e.g. partially filled form data), and can be safely deleted when the tab is closed, the browser provides **sessionstorage**. This works similarly to localstorage.
 6. For more significant amounts of data, web apps can use IndexedDB, a more advanced database also managed in the browser. It is a document database ([Issue 88](https://buttondown.email/laymansguide/archive/lmg-s7-issue-88-document-databases/)), with each document tagged to a key in a key-object system.
 
+![Firefox DevTools, showing the Storage tab. Local Storage is selected, displaying a list of keys and values.](https://raw.githubusercontent.com/ngjunsiang/laymansguide/release/season8/issue092/issue092_01.png)<br />
+<small>DevTools in Firefox lets you inspect the data that web apps keep.<br />The Storage tab shows what is stored in cache, cookies, IndexedDB, localstorage, and sessionstorage.<br />IndexedDB, localstorage, and sessionstorage are key-value databases that store the data (value) tagged to a key.</small>
+
 ## Requesting and receiving data on a server
 
-So a web app doesn’t have all that much storage, but they were not designed for that at all. Most of the heavy lifting is not meant to be done in the browser, but elsewhere, on a server. A web app would send heavy workloads to a server (typically owned by the same company) through an API ([Issue 4](https://buttondown.email/laymansguide/archive/lmg-issue-4-what-is-an-api/)) through a web request ([Issue 9](https://buttondown.email/laymansguide/archive/lmg-issue-9-how-do-i-make-an-http-request/)), and receive the results through a server response ([Issue 8](https://buttondown.email/laymansguide/archive/lmg-issue-8-http-error-codeshow-does-a-server-let/)).
+So a web app doesn’t much in the way of storage access, but they were not designed for that at all. Most of the heavy lifting is not meant to be done in the browser, but elsewhere, on a server. A web app would send heavy workloads to a server (typically owned by the same company) through an API ([Issue 4](https://buttondown.email/laymansguide/archive/lmg-issue-4-what-is-an-api/)) through a web request ([Issue 9](https://buttondown.email/laymansguide/archive/lmg-issue-9-how-do-i-make-an-http-request/)), and receive the results through a server response ([Issue 8](https://buttondown.email/laymansguide/archive/lmg-issue-8-http-error-codeshow-does-a-server-let/)).
 
 A web app would also need resources for display: images, videos, PDFs, ... these are requested and received via web requests as well.
 
