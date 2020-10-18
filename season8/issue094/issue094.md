@@ -41,7 +41,7 @@ Internally, a web browser converts the HTML page into a DOM—a data structure t
 
 ----------
 
-**Issue summary:**
+**Issue summary:** Web apps require the browser to request memory on their behalf, and thus their memory usage shows up under the browser process in the OS Task Manager. Web apps use this data to store a more convenient (but larger) representation of the webpage document, and to store the data needed by the app.
 
 And that is how a web app uses up 84MiB of memory space. If you have multiple tabs running the same app (e.g. multiple Google Sheets open), some of the memory can be shared ([Issue 84](https://buttondown.email/laymansguide/archive/lmg-s5-issue-65-memory-sharing-in-the-operating/)) by these tabs (e.g. `scripts`), but otherwise each tab is going to have its own memory needs.
 
