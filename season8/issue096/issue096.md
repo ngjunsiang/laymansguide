@@ -58,7 +58,7 @@ It’s worth thinking about what this says whenever we hear about so much data b
 
 Finally we can move on the laptop apps, to more fully explore the complexity of apps that integrate more closely with the operating system: laptop apps!
 
-This should be enough of a primer before I go on to talk about where all this app data goes, and then about app installation and uninstallation (and hence strike out another “sometime in the future” question, woohoo!🙌🙌🙌🙌🙌🙌🙌🙌🙌🙌🙌🙌🙌🙌)🙌🙌
+This should be enough of a primer before I go on to talk about where all this app data goes, and then about app installation and uninstallation (and hence strike out another “sometime in the future” question, woohoo! 🙌)
 
 **Sometime in the future:** What is:
 
