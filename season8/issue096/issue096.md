@@ -8,7 +8,7 @@ Libraries that provide core functions are typically provided by the operating sy
 
 Web apps, which I covered in [Issue 94](), pull in any resources they need through web requests. This includes any libraries that they need. the browser allows it to do this, but prevents access to most parts of the operating system, and allows limited access to camera, sound, storage, etc. The sandboxing features of the browser make web apps generally safer to access.
 
-A mobile app, on the other hand, is sandboxed by the operating system. Most of the resources it needs have to be present at the time of running the app, and that includes libraries. In an unsandboxed OS, commonly used libraries (e.g. mobile payment libraries) could be installed in the OS and shared by the apps. But this opens up a means of unauthorised access to multiple apps: hack this library successfully, and all other apps on the OS are also affected!
+A mobile app, on the other hand, is sandboxed by the operating system. Most of the resources it needs have to be present at the time of running the app, and that includes libraries. In an unsandboxed environment, commonly used libraries (e.g. mobile payment libraries) could be installed in the OS and shared by the apps. But this opens up a means of unauthorised access to multiple apps: hack this library successfully, and all other apps on the OS are also affected!
 
 The sandboxing system in a mobile device does not allow this. Each app must bundle all the libraries it requires, to be installed into storage after downloading. This way, if an app has one or more libraries compromised, it would at least not expose the user’s data in other apps.
 
