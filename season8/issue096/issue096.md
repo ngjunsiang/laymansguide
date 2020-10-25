@@ -54,7 +54,7 @@ It’s worth thinking about what this says whenever we hear about so much data b
 
 ## What I’ll be covering next
 
-**Next issue:** [LMG S8] Issue 97: Laptop apps and temporary files
+**Next issue:** [LMG S8] Issue 97: Laptop apps
 
 Finally we can move on the laptop apps, to more fully explore the complexity of apps that integrate more closely with the operating system: laptop apps!
 
