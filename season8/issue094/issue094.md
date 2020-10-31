@@ -20,7 +20,7 @@ I have a browser tab open now, with a Google Sheet loaded. What is the Google Sh
 
 DevTools has a really cool tab labelled “Memory”, and it has a nice visual depiction of what the app is doing with all that memory:
 
-![Firefox DevTools, showing the Memory tab. The app is using 83.84MB of memory, and 32MiB of that is used by objects.](https://raw.githubusercontent.com/ngjunsiang/laymansguide/release/season8/issue092/issue092_01.png)<br />
+![Firefox DevTools, showing the Memory tab. The app is using 83.84MB of memory, and 32MiB of that is used by objects.](https://raw.githubusercontent.com/ngjunsiang/laymansguide/release/season8/issue094/issue094_01.png)<br />
 <small>DevTools in Firefox lets you inspect the memory that web apps use.<br />The Memory tab shows what is stored in memory.<br />Most of the memory here is being taken up by javascript objects.</small>
 
 Javascript `object`s here are Javascript’s own internal representation of data, which is quite similar to a document database’s format. Altogether, they take up 32 MiB of memory space (differenve between MB and MiB is covered in [Issue 40](https://buttondown.email/laymansguide/archive/lmg-s4-issue-40-bits-and-bytes/)). Google Sheets is juggling a lot of data internally, data which is not stored in IndexedDB or localstorage!
