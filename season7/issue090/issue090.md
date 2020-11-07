@@ -8,7 +8,7 @@ If you have admin rights to the workplace server (which can be both a blessing a
 
 ## Registering a database in the cloud
 
-If you do not have admin rights to the workplace server, so you usually ask your friendly server administrator to help you install the database and set up a web admin panel for you. They will give you a URL and login credentials for that web admin panel, and you configure the database through the database section of the admin panel.
+If you do not have admin rights to the workplace server, you usually ask your friendly server administrator to help you install the database and set up a web admin panel for you. They will give you a URL and login credentials for that web admin panel, and you configure the database through the database section of the admin panel.
 
 If your company has decided to do away with organic IT support, your next bet is to outsource that help from cloud services. Each of the major cloud providers provide multiple database types for your perusal. Some app hosting services will also host a database for you (usually intended for app use, but who’s asking?).
 

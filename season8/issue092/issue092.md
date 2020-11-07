@@ -16,13 +16,13 @@ This is why sandbox systems were already being researched as early as the 1970s,
 
 ## What is sandboxing?
 
-If you are old enough you might remember playing in a sandbox. While there are usually no explicit rules about how the play in a sandbox, there is usually one unspoken rule:
+If you are old enough you might remember playing in a sandbox. While there are usually no explicit rules about how to play in a sandbox, there is usually one unspoken rule:
 
 What was in the sandbox, stays in the sandbox.
 
 A sandbox limits the mess, yet gives you unrestrained freedom _within_ that box.
 
-Ina computer, a sandbox system imposes restrictions on running applications. Some common restrictions include:
+In a computer, a sandbox system imposes restrictions on running applications. Some common restrictions include:
 
 - only being able to access/change/delete files within a particular subfolder
 - only having access to some OS resources (e.g. not being able to access USB devices, or audio, or webcam)
@@ -34,7 +34,7 @@ So one way to categorise laptop apps, mobile apps, and web apps is in the amount
 
 **Issue summary:** Sandboxing is a catch-all term for the concept of ensuring apps don’t have access to resources outside of their privileges. Sandboxed apps are generally safer than non-sandboxed apps in terms of security, and easier to manage, terminate, and uninstall.
 
-Keeping it vague in this issue because the details really differ between operating systems, kinds of apps, and even they way they are distributed. We’ll be digging into details next issue, starting with the most heavily sandboxed app: the web app.
+Keeping it vague in this issue because the details really differ between operating systems, kinds of apps, and even the way they are distributed. We’ll be digging into details next issue, starting with the most heavily sandboxed app: the web app.
 
 ## What I’ll be covering next
 
