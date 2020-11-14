@@ -60,9 +60,9 @@ Okay so this ran much longer than I expected. In fact, it ran so long that I spl
 
 ## What I’ll be covering next
 
-**Next issue:** [LMG S8] Issue 101: Why do apps hang
+**Next issue:** [LMG S8] Issue 101: Why do apps crash?
 
-Moving on from app files and settings, the next few issues will explore common app problems. Coming up next issue: why do apps hang?
+Moving on from app files and settings, the next few issues will explore common app problems. Coming up next issue: why do apps crash?
 
 **Sometime in the future:** What is:
 
