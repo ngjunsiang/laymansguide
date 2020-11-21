@@ -2,7 +2,7 @@
 
 Apps once lived on a computer. You double-clicked them or pressed Enter or right-clicked Run, a window pops up and a rectangle appears on your taskbar. If Task Manager is showing you that it is using up gobs of memory, you just End Task and the rectangle disappears. Later in this season I’ll say more about what it is like to live in a computer, but we are on web apps now.
 
-Web apps are somewhat more complicated. Because they are so tidily sandboxed ([Issue 92](https://buttondown.email/laymansguide/archive/lmg-s7-issue-92-all-about-apps/)), they cannot actually live on your computer. Instead, they live in your browser.
+Web apps are somewhat more complicated. Because they are so tidily sandboxed ([Issue 92](https://buttondown.email/laymansguide/archive/lmg-s8-issue-92-all-about-apps/)), they cannot actually live on your computer. Instead, they live in your browser.
 
 ## Living in a web browser
 
@@ -23,7 +23,7 @@ DevTools has a really cool tab labelled “Memory”, and it has a nice visual d
 ![Firefox DevTools, showing the Memory tab. The app is using 83.84MB of memory, and 32MiB of that is used by objects.](https://raw.githubusercontent.com/ngjunsiang/laymansguide/release/season8/issue094/issue094_01.png)<br />
 <small>DevTools in Firefox lets you inspect the memory that web apps use.<br />The Memory tab shows what is stored in memory.<br />Most of the memory here is being taken up by javascript objects.</small>
 
-Javascript `object`s here are Javascript’s own internal representation of data, which is quite similar to a document database’s format. Altogether, they take up 32 MiB of memory space (differenve between MB and MiB is covered in [Issue 40](https://buttondown.email/laymansguide/archive/lmg-s4-issue-40-bits-and-bytes/)). Google Sheets is juggling a lot of data internally, data which is not stored in IndexedDB or localstorage!
+Javascript `object`s here are Javascript’s own internal representation of data, which is quite similar to a document database’s format. Altogether, they take up 32 MiB of memory space (difference between MB and MiB is covered in [Issue 40](https://buttondown.email/laymansguide/archive/lmg-s4-issue-40-bits-and-bytes/)). Google Sheets is juggling a lot of data internally, data which is not stored in IndexedDB or localstorage!
 
 `other`, taking up 15 MiB, seems to be pointing to a javascript library that Google Sheets is using to render the spreadsheet.
 
