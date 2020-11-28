@@ -36,9 +36,9 @@ Before going into app hangs, I’ll need to talk about threads first. If you hav
 
 ## What I’ll be covering next
 
-**Next issue:** [LMG S8] Issue 102: Threads
+**Next issue:** [LMG S8] Issue 102: Threading
 
-“Many hands make light work” is true for computers as well, and next issue I’ll go into more detail about how a computer uses its many hands to speed up the work it does :)
+“Many hands make light work” is true for computers as well, and I’ll go into more detail about how a computer uses its many hands to speed up the work it does :) Before that, let’s examine the simple case of an app doing only one thing at a time: the single-threaded app.
 
 **Sometime in the future:** What is:
 
