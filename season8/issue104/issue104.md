@@ -46,9 +46,7 @@ What you do, then, is to store the password *hash* instead of the password. When
 
 The hashes are designed to be difficult to reverse. The state-of-the-art algorithm used today can generate hashes that would take millions of years to reverse using hardware currently available. But there are techniques that can reverse hashes of some older algorithms in as little as 30 minutes, so if you are a developer, please find out which one to use!
 
-**Issue summary:**
-
-Shared secrets allow secured access to resources, such as databases or other services. These shared secrets are typically kept on a server controlled by the app developer. For mobile apps, they are usually stored with the operating system, inaccessible to other apps.
+**Issue summary:** Shared secrets allow secured access to resources, such as databases or other services. These shared secrets are typically kept on a server controlled by the app developer. For mobile apps, they are usually stored with the operating system, inaccessible to other apps.
 
 Phew, we had enough issues here to cover the main parts. And I managed to answer one of the sometime-in-the-future questions! Actually, I also answered another one on software installation earlier, in issues [99](https://buttondown.email/laymansguide/archive/lmg-s8-issue-99-where-does-all-the-app-data-go-a/) and [100](https://buttondown.email/laymansguide/archive/lmg-s8-issue-100-where-does-all-the-app-data-go-a/), so I’m going to go ahead and strike it off.
 
