@@ -54,9 +54,9 @@ If I still have issues left after that, I might geek out a bit and talk about fo
 
 ## What I’ll be covering next
 
-**Next issue:** [LMG S9] Issue 106: The challenges of storage
+**Next issue:** [LMG S9] Issue 106: Organising storage
 
-First up: why is storage such a challenge for OSes?
+First up: How exactly is data organised in the hard disk? How does an operating system manage it all?
 
 **Sometime in the future:** What is:
 
