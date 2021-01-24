@@ -17,7 +17,7 @@ This way of storing data first before updating the file table is advantageous in
 
 But for large batches of data (or large shipments of cargo), this means a long wait ... and in the meantime, nothing else can happen! Hard drives only have one writing needle, which is like a warehouse only having one forklift. If you have other applications waiting for that file (similar to other employees waiting for the file record to appear in the file table), they will be twiddling their thumbs until the last sector of data is written, the last pallet of cargo loaded onto the racks.
 
-But this is the *right thing to do*, isn’t it? It doesn’t matter; Windows Vista did it this way, waiting for write operations to complete before updating the file metadata in the file table, and the result is that *people complained that it was slower*. People do not like things slow!
+But this is the *right thing to do*, isn’t it? It doesn’t matter; [Windows Vista did it this way](https://blog.codinghorror.com/actual-performance-perceived-performance/), waiting for write operations to complete before updating the file metadata in the file table, and the result is that *people complained that it was slower*. People do not like things slow!
 
 Why did Windows XP feel faster, then? Because it did it the other way round!
 
