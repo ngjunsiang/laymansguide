@@ -1,6 +1,6 @@
 [**Previously:**](https://buttondown.email/laymansguide/archive/) Filesystem journals are a record of changes made to the disk, so as to enable those changes to be rolled back, or to be completed properly in case of sudden interruption.
 
-Okay, thats enough of a look at the nitty-gritty of moving data around. In this issue, let’s turn our attention to the file table, where interesting things happen as well.
+Okay, that’s enough of a look at the nitty-gritty of moving data around. In this issue, let’s turn our attention to the file table, where interesting things happen as well.
 
 ## What happens when we copy a file?
 
