@@ -30,7 +30,7 @@ Well okay ... it’s not a lost cause right? Yup, we do have ways to mitigate th
 
 ## What I’ll be covering next
 
-**Next issue:** [LMG S9] Issue 110: Safeguarding data corruption with a journal
+**Next issue:** [LMG S9] Issue 110: Safeguarding against data corruption with a journal
 
 Woot, answered another sometime-in-the-future question, albeit in a slightly different fashion from how I thought I would do it.
 
