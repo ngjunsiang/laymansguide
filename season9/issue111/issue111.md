@@ -34,7 +34,7 @@ I’ve been waiting a long time to explain this, and can finally get it out on s
 
 ## What I’ll be covering next
 
-**Next issue:** [LMG S9] Issue 112: In the beginning (firmware)
+**Next issue:** [LMG S9] Issue 112: Bootstrapping into existence
 
 Now I can move on to something closer to the hardware, and talk about what happens when the power button is pressed.
 
