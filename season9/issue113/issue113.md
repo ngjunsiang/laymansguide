@@ -10,7 +10,7 @@ Sometimes, you press the power button and nothing happens. Absolute stillness. T
 
 If you hear fans spinning, the power source works. But if nothing appears on screen after that, and then the system seems to reboot again, it may mean the BIOS has failed; if you attempted to upgrade the BIOS recently, that might be a possible cause. A friendly geek might be able to fix this for you.
 
-If you hear fans spinning for a long time, and things ... *seem* to be happening? But nothing is showing on screen, your video card (future issue, I promise) may be borked. Can’t do anything other than sending it in to a technician.
+If you hear fans spinning for a long time, and things *seem* to be happening, but nothing is showing on screen, your video card (future issue, I promise) may be borked. Can’t do anything other than sending it in to a technician.
 
 If you have attempted a driver upgrade recently (again, future issue), that might be a possible cause.
 
