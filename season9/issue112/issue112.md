@@ -14,10 +14,12 @@ The way to sidestep the bootup paradox is to have a very tiny chip perform the b
 
 [^2]: Modern BIOSes are no longer stored permanently on a chip, but written to flash storage (similar to a thumbdrive) that is soldered directly to the motherboard.
 
-1. Check that the core parts are present: CPU, memory, video card, keyboard, storage disk.
-   Today, this process is usually hidden by a branded startup screen. You can usually disable that screen if you like to see this bootstrap process happening. During the BIOS screen, you can press a button to configure BIOS settings.
+1. Check that the core parts are present: CPU, memory, video card, keyboard, storage disk.  
+   At the BIOS screen[^3], you can press a button to configure BIOS settings.
 2. The BIOS checks the available disks to see if they are “bootable”, i.e. contain information in a specific part of the disk that contains a **bootloader**. In modern BIOSes, you can override this process by specifying a valid disk containing the bootloader.
 3. The BIOS loads the bootloader into memory, and runs it.
+
+[^3]: Today, this process is hidden by a branded startup screen on machines that come with Windows pre-installed. You can usually disable that screen if you like to see this bootstrap process happening.
 
 ## The bootloader
 
@@ -29,7 +31,7 @@ Usually, the first thing that needs to be loaded is the filesystem ([Issue 106](
 
 Some systems may contain multiple OSes: Mac users may want to run Windows using Parallels Desktop, Windows users may want to dabble in Linux, and many Linux users dual-boot Windows as well. The bootloader, with the help of the filesystem, detect other operating systems on the storage disks, and offers the user a choice of which one to boot. If there is only one OS found, this step might be skipped.
 
-Once an operating system is selected, the bootloader loads the OS **kernel**, which contains its core instructions, and hands control over. The bootup sequence is not yet complete, but the bootloader has completed its job.
+Once an operating system is selected, the bootloader loads the OS **kernel**, which contains its core instructions, and hands control over. The bootloader is done, but the bootup sequence is not yet complete.
 
 ## The operating system startup
 
