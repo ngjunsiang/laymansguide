@@ -35,7 +35,7 @@ Once an operating system is selected, the bootloader loads the OS **kernel**, wh
 
 ## The operating system startup
 
-The operating system is not ready to accept user input at this point yet. It still has to mount other storage disks and their subregions, check that other hardware is available and working properly (such as hardware timers, which are very important for an operating system), start up various necessary services, start up programs which asked to be started up when the system boots, etc.
+The operating system is not ready to accept user input at this point yet. It still has to mount other storage disks and peripherals, check that other hardware is available and working properly (such as hardware timers, which are very important for an operating system), start up various necessary services, start up programs which asked to be started up when the system boots, etc.
 
 Finally, when it is ready, it displays the login screen.
 
