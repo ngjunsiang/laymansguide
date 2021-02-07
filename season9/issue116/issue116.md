@@ -18,7 +18,9 @@ When you press the power button again to bring the system back, the computer sti
 
 Okay, so that’s one more mystery explained.
 
+One thing I didn’t think was critical to explain above, but which eventually crops up for most people, is that the hibernation file takes up a lot of space! It needs to contain all the data in memory, so if you have a laptop with 16GB of memory, your hibernation file will be around that size too. If you’re wondering why Windows is taking up so much space, this is usually one of those reasons.
 
+If you found `C:\hiberfil.sys`, you might have also found `C:\pagefile.sys`, another huge file, though not as huge as the hibernation file. What is this one used for? I’ll explain that in the season finale :)
 
 ## What I’ll be covering next
 
@@ -26,7 +28,7 @@ Okay, so that’s one more mystery explained.
 
 Sometimes, you get a laptop with 2 or 4 GB of memory, and you wonder how it’s able to run Chrome with 46 tabs open; shouldn’t you have run out of memory by now? In the next issue, I’ll explain this trick that lets computers pretend they have more memory!
 
-I wanted to write this issue earlier in the season, but it just never presented an opportune moment.
+I wanted to write this issue earlier in the season, but it just never presented an opportune moment. So let’s wrap up with it.
 
 **Sometime in the future:** What is:
 
