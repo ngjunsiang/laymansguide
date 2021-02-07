@@ -34,7 +34,6 @@ I wanted to write this issue earlier in the season, but it just never presented 
 
 - XSS? [Issue 8]
 - a good reason developers write code and give it away for free online? [Issue 21]
-- ~~firmware? [Issue 34]~~
 - OpenType? And what are fonts anyway? [Issue 42]
 - a driver file and why do I need one? [Issue 98]
 - a video card? [Issue 113]
