@@ -5,7 +5,8 @@
         <meta charset="utf-8" />
         <meta name="generator" content="Pelican" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" type="text/css" href="/theme/css/style.css" />
+        <link rel="stylesheet" type="text/css" href="theme/css/style.css" />
+<link rel="stylesheet" type="text/css" href="theme/css/article.css" />
 
 
 
@@ -17,7 +18,7 @@
 
 <body>
         <header>
-              <hgroup><h1><a href="https://ngjunsiang.github.io/laymansguide/">Layman's Guide to Computing</a></h1></hgroup>
+              <hgroup><h1><a href="./">Layman's Guide to Computing</a></h1></hgroup>
         <nav><ul>
             <li><a href="/categories">Seasons</a></li>
             <li><a href="/tags">Tags</a></li>
@@ -25,10 +26,10 @@
         </header>
         <main>
 <article>
-  <p><a href="https://ngjunsiang.github.io/laymansguide/category/season-05.html">Season 05</a></p>
+  <p><a href="./category/season-05.html">Season 05</a></p>
   <header>
     <h2>
-      <a href="https://ngjunsiang.github.io/laymansguide/issue064.html" rel="bookmark"
+      <a href="./issue064.html" rel="bookmark"
          title="Permalink to Issue 64: Fixing Meltdown and Spectre">Issue 64: Fixing Meltdown and Spectre</a></h2>
  
   </header>
@@ -49,8 +50,8 @@
 <p>Having to keep switching between two sets of pages when executing instructions from both kernel programs as well as user programs is, of course, going to make things take longer than usual. Up to 20% longer for some instructions.</p>
 <p>This primarily mitigates the impact of Meltdown, which attempts to access the kernel address space before it gets caught and an exception is raised in the program. But it does not do anything for Spectre, which speculatively executes two possible outcomes where the code meets a decision point, but later discards the outcome which is not needed.</p>
 <h2>Crash course: Translation Lookaside Buffer</h2>
-<p>One concept to cover before we get to the Spectre mitigation. In <a href="https://ngjunsiang.github.io/laymansguide/issue055.html">Issue 55</a>) I talked about how the virtual address space allows programs to access data from different parts of the computer: USB devices, hard drives, network, sound card, and of course not forgetting the physical memory itself.</p>
-<p>How does the CPU know that virtual address 2354476 is actually pointing to physical memory address 3564241? It doesn’t. This mapping is stored in the CPU, within the memory management unit. Like all mappings (remember the CPU cache, and the DNS cache from <a href="https://ngjunsiang.github.io/laymansguide/issue039.html">Issue 39</a>)?), the lookup process can be greatly speeded up with a cache. The part of the CPU that caches virtual-to-physical memory mappings is called the Translation Lookaside Buffer, or TLB.</p>
+<p>One concept to cover before we get to the Spectre mitigation. In <a href="./issue055.html">Issue 55</a>) I talked about how the virtual address space allows programs to access data from different parts of the computer: USB devices, hard drives, network, sound card, and of course not forgetting the physical memory itself.</p>
+<p>How does the CPU know that virtual address 2354476 is actually pointing to physical memory address 3564241? It doesn’t. This mapping is stored in the CPU, within the memory management unit. Like all mappings (remember the CPU cache, and the DNS cache from <a href="./issue039.html">Issue 39</a>)?), the lookup process can be greatly speeded up with a cache. The part of the CPU that caches virtual-to-physical memory mappings is called the Translation Lookaside Buffer, or TLB.</p>
 <p>A key requirement for Spectre to work is for the Translation Lookaside Buffer to remain unchanged, so that it is getting data from the same part of (kernel address space) memory.</p>
 <h2>Mitigating Spectre: TLB flushing</h2>
 <p>Naturally, one way to mitigate Spectre is to keep flushing the TLB. As can be expected whenever you flush a cache, lookups will cause a cache miss and result in the CPU memory management unit having to figure out the mapping all over again, leading to slowdown.</p>
@@ -96,26 +97,16 @@
     </time></p>
  -->
     <address>
-      By           <a href="https://ngjunsiang.github.io/laymansguide/author/j-s-ng.html">J S Ng</a>
+      By           <a href="./author/j-s-ng.html">J S Ng</a>
     </address>
     <p>
         Tags:
-            <a href="https://ngjunsiang.github.io/laymansguide/tag/cpu.html">cpu</a>
-            <a href="https://ngjunsiang.github.io/laymansguide/tag/operating-system.html">operating system</a>
+            <a href="./tag/cpu.html">cpu</a>
+            <a href="./tag/operating-system.html">operating system</a>
     </p>
   </footer>
   </article>
 <ul>
-        <li>
-            <a href="https://ngjunsiang.github.io/laymansguide/issue063.html">
-                Issue 63: Limitations of Meltdown and Spectre
-            </a>
-        </li>
-        <li>
-            <a href="https://ngjunsiang.github.io/laymansguide/issue065.html">
-                Issue 65: Memory Sharing in the Operating System
-            </a>
-        </li>
 </ul>
         </main>
         <footer>

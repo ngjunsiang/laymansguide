@@ -5,7 +5,8 @@
         <meta charset="utf-8" />
         <meta name="generator" content="Pelican" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" type="text/css" href="/theme/css/style.css" />
+        <link rel="stylesheet" type="text/css" href="theme/css/style.css" />
+<link rel="stylesheet" type="text/css" href="theme/css/article.css" />
 
 
 
@@ -16,7 +17,7 @@
 
 <body>
         <header>
-              <hgroup><h1><a href="https://ngjunsiang.github.io/laymansguide/">Layman's Guide to Computing</a></h1></hgroup>
+              <hgroup><h1><a href="./">Layman's Guide to Computing</a></h1></hgroup>
         <nav><ul>
             <li><a href="/categories">Seasons</a></li>
             <li><a href="/tags">Tags</a></li>
@@ -24,10 +25,10 @@
         </header>
         <main>
 <article>
-  <p><a href="https://ngjunsiang.github.io/laymansguide/category/season-04.html">Season 04</a></p>
+  <p><a href="./category/season-04.html">Season 04</a></p>
   <header>
     <h2>
-      <a href="https://ngjunsiang.github.io/laymansguide/issue048.html" rel="bookmark"
+      <a href="./issue048.html" rel="bookmark"
          title="Permalink to Issue 48: Of containers and codecs">Issue 48: Of containers and codecs</a></h2>
  
   </header>
@@ -58,8 +59,8 @@
 <p>For everyday purposes, such as online streaming, it is more common to encounter 30 fps, or even 25 fps for older videos. In certain types of video entertainment, such as hand-drawn animation, the human eye can make do with 15 fps and the brain can still piece together an enjoyable performance!</p>
 <h1>Data streams</h1>
 <p>How about the data streams? How are they stored?</p>
-<p>To start with the obvious, they are not stored uncompressed; we saw that a single image of 1920×1080 pixels (that’s 1080p video standard, with 1080 pixels vertically) already requires 6 MiB (<a href="https://ngjunsiang.github.io/laymansguide/issue043.html">Issue 43</a>)), while one second of audio requires 86 KiB (<a href="https://ngjunsiang.github.io/laymansguide/issue045.html">Issue 45</a>)).</p>
-<p>In addition to the lossy compression techniques I covered in <a href="https://ngjunsiang.github.io/laymansguide/issue046.html">Issue 46</a>), software that creates these streams can also compare video frames at different points in time and throw away identical parts (if there’s no scene change, or if the camera is panning slowly, for instance).</p>
+<p>To start with the obvious, they are not stored uncompressed; we saw that a single image of 1920×1080 pixels (that’s 1080p video standard, with 1080 pixels vertically) already requires 6 MiB (<a href="./issue043.html">Issue 43</a>)), while one second of audio requires 86 KiB (<a href="./issue045.html">Issue 45</a>)).</p>
+<p>In addition to the lossy compression techniques I covered in <a href="./issue046.html">Issue 46</a>), software that creates these streams can also compare video frames at different points in time and throw away identical parts (if there’s no scene change, or if the camera is panning slowly, for instance).</p>
 <p>Various video stream formats exist to carry out this lossy compression of video data.</p>
 <ul>
 <li>h264 (a.k.a. AVC, for <strong>A</strong>dvanced <strong>V</strong>ideo <strong>Coding</strong>) is still the most common video stream format in use today.</li>
@@ -75,7 +76,7 @@
 <p>About a decade ago, when video formats proliferated like a tropical ecosystem, codec packs containing just about every codec you need were a common sight online. Today, with most video moved to online streaming platforms, you no longer need them.</p>
 <h1>MediaInfo: a program to decipher containers and streams</h1>
 <p>You can use a program like <a href="https://mediaarea.net/en/MediaInfo">MediaInfo</a> to help you read the metadata and figure out the container and stream formats. Here’s an example of the information it shows about the only video file on my laptop at the moment:</p>
-<p><img alt="MediaInfo screenshot showing container, video stream, and audio stream information" src="https://ngjunsiang.github.io/laymansguide/issue048_01.png"><br>
+<p><img alt="MediaInfo screenshot showing container, video stream, and audio stream information" src="./issue048_01.png"><br>
 <em>Mediainfo screenshot showing metadata for an MP4 file containing an h264 (a.k.a. AVC) video stream and an AAC audio stream.</em>    </p>
 <p><strong>Issue summary:</strong> A video container can hold one or more audio, video, or text data streams. To encode or decode a data stream, you need to have the necessary codec installed<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup>. Most video runs at 25 or 30 fps, with high-quality video going up to 60 fps. You can use a program like MediaInfo to help you decipher the streams inside a video container file.</p>
 <hr>
@@ -114,25 +115,15 @@
     </time></p>
  -->
     <address>
-      By           <a href="https://ngjunsiang.github.io/laymansguide/author/j-s-ng.html">J S Ng</a>
+      By           <a href="./author/j-s-ng.html">J S Ng</a>
     </address>
     <p>
         Tags:
-            <a href="https://ngjunsiang.github.io/laymansguide/tag/compression.html">compression</a>
+            <a href="./tag/compression.html">compression</a>
     </p>
   </footer>
   </article>
 <ul>
-        <li>
-            <a href="https://ngjunsiang.github.io/laymansguide/issue047.html">
-                Issue 47: Lossless compression
-            </a>
-        </li>
-        <li>
-            <a href="https://ngjunsiang.github.io/laymansguide/issue049.html">
-                Issue 49: What is a File?
-            </a>
-        </li>
 </ul>
         </main>
         <footer>

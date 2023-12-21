@@ -5,7 +5,8 @@
         <meta charset="utf-8" />
         <meta name="generator" content="Pelican" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" type="text/css" href="/theme/css/style.css" />
+        <link rel="stylesheet" type="text/css" href="theme/css/style.css" />
+<link rel="stylesheet" type="text/css" href="theme/css/article.css" />
 
 
 
@@ -18,7 +19,7 @@
 
 <body>
         <header>
-              <hgroup><h1><a href="https://ngjunsiang.github.io/laymansguide/">Layman's Guide to Computing</a></h1></hgroup>
+              <hgroup><h1><a href="./">Layman's Guide to Computing</a></h1></hgroup>
         <nav><ul>
             <li><a href="/categories">Seasons</a></li>
             <li><a href="/tags">Tags</a></li>
@@ -26,10 +27,10 @@
         </header>
         <main>
 <article>
-  <p><a href="https://ngjunsiang.github.io/laymansguide/category/season-05.html">Season 05</a></p>
+  <p><a href="./category/season-05.html">Season 05</a></p>
   <header>
     <h2>
-      <a href="https://ngjunsiang.github.io/laymansguide/issue057.html" rel="bookmark"
+      <a href="./issue057.html" rel="bookmark"
          title="Permalink to Issue 57: Cache, the CPU’s working space">Issue 57: Cache, the CPU’s working space</a></h2>
  
   </header>
@@ -37,7 +38,7 @@
     Sat 25 January 2020
   </time></p>
   <p><strong>Previously:</strong> The operating system is responsible for listing and managing the computer’s resources, making them available to programs running on the computer, and making sure they only use what they are allowed to.</p>
-<p>Those who have been following Layman’s Guide since Season 3 will remember this term, <strong>caching</strong>. I first introduced it at the end of Season 3, in <a href="https://ngjunsiang.github.io/laymansguide/issue039.html">Issue 39</a>):</p>
+<p>Those who have been following Layman’s Guide since Season 3 will remember this term, <strong>caching</strong>. I first introduced it at the end of Season 3, in <a href="./issue039.html">Issue 39</a>):</p>
 <blockquote>
 <p>Searching for anything takes time. Need to fill out a form? You need to search for a pen first. Need to call someone? Before speed dial and contacts apps existed, you used to need to look up a number in order to dial it. If you do it often enough, you would make sure you always had a pen with you, or you would write the number somewhere convenient for you to see so you don’t need to hunt for it.</p>
 <p>Computers use the same trick, and it is called <strong>caching</strong>. Any information it needs repeatedly which is unchanging is stored in a <strong>cache</strong>.</p>
@@ -53,7 +54,7 @@
 <li>CPU register: &lt;1 ns (&lt;0.000001 ms) response latency[^1]</li>
 </ul>
 <p>[1]: We seldom talk about the transfer speed of CPU registers, because each register only holds one byte and the transfer is near-instantaneous.</p>
-<p>A CPU register is a slot within the CPU (the same slots from <a href="https://ngjunsiang.github.io/laymansguide/issue053.html">Issue 53</a>)) which it uses to hold the data it is processing.</p>
+<p>A CPU register is a slot within the CPU (the same slots from <a href="./issue053.html">Issue 53</a>)) which it uses to hold the data it is processing.</p>
 <p>Notice that the speed difference between each layer is more than 10×? If a computer did not have physical memory to store temporary data in, and had to transfer data to/from disk instead, it would be responding a thousand times more slowly!</p>
 <p>A CPU can carry out operations very quickly on data loaded into its registers; it generally takes only a few nanoseconds for complex calculations to be done. Simple instructions (such as ADD) can even be done in less than 1 ns!</p>
 <p>This means that the limiting factor for CPU speed is actually loading and storing data. In the time it takes to load data from physical memory or store data to physical memory, it can perform 100 simple operations. That’s <em>damn slow</em> in CPU time!</p>
@@ -98,27 +99,17 @@
     </time></p>
  -->
     <address>
-      By           <a href="https://ngjunsiang.github.io/laymansguide/author/j-s-ng.html">J S Ng</a>
+      By           <a href="./author/j-s-ng.html">J S Ng</a>
     </address>
     <p>
         Tags:
-            <a href="https://ngjunsiang.github.io/laymansguide/tag/cache.html">cache</a>
-            <a href="https://ngjunsiang.github.io/laymansguide/tag/cpu.html">cpu</a>
-            <a href="https://ngjunsiang.github.io/laymansguide/tag/memory.html">memory</a>
+            <a href="./tag/cache.html">cache</a>
+            <a href="./tag/cpu.html">cpu</a>
+            <a href="./tag/memory.html">memory</a>
     </p>
   </footer>
   </article>
 <ul>
-        <li>
-            <a href="https://ngjunsiang.github.io/laymansguide/issue056.html">
-                Issue 56: Operating Systems and resource management
-            </a>
-        </li>
-        <li>
-            <a href="https://ngjunsiang.github.io/laymansguide/issue058.html">
-                Issue 58: CPU Optimisation Part 1 – Out-of-Order Processing
-            </a>
-        </li>
 </ul>
         </main>
         <footer>

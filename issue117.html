@@ -5,7 +5,8 @@
         <meta charset="utf-8" />
         <meta name="generator" content="Pelican" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" type="text/css" href="/theme/css/style.css" />
+        <link rel="stylesheet" type="text/css" href="theme/css/style.css" />
+<link rel="stylesheet" type="text/css" href="theme/css/article.css" />
 
 
 
@@ -18,7 +19,7 @@
 
 <body>
         <header>
-              <hgroup><h1><a href="https://ngjunsiang.github.io/laymansguide/">Layman's Guide to Computing</a></h1></hgroup>
+              <hgroup><h1><a href="./">Layman's Guide to Computing</a></h1></hgroup>
         <nav><ul>
             <li><a href="/categories">Seasons</a></li>
             <li><a href="/tags">Tags</a></li>
@@ -26,10 +27,10 @@
         </header>
         <main>
 <article>
-  <p><a href="https://ngjunsiang.github.io/laymansguide/category/season-09.html">Season 09</a></p>
+  <p><a href="./category/season-09.html">Season 09</a></p>
   <header>
     <h2>
-      <a href="https://ngjunsiang.github.io/laymansguide/issue117.html" rel="bookmark"
+      <a href="./issue117.html" rel="bookmark"
          title="Permalink to Issue 117: Swap space">Issue 117: Swap space</a></h2>
  
   </header>
@@ -37,7 +38,7 @@
     Sat 24 April 2021
   </time></p>
   <p><a href="https://buttondown.email/laymansguide/archive/"><strong>Previously:</strong></a> Hibernation mode causes the computer to store the data configuration into a hibernation file on disk. When powered up, the OS reads the data configuration from the file back into memory. This lets the system avoid having to do a full shutdown and bootup; it performs a shorter version of these two sequences instead.</p>
-<p>In <a href="https://ngjunsiang.github.io/laymansguide/issue057.html">Issue 57</a>), I laid out the transfer speeds and latencies for a few places in the computer where data can be stored:</p>
+<p>In <a href="./issue057.html">Issue 57</a>), I laid out the transfer speeds and latencies for a few places in the computer where data can be stored:</p>
 <ul>
 <li>Hard disk drive (HDD): ≈5 ms response latency, 100 MB/s transfer speed</li>
 <li>Solid state disk (SSD): up to 0.1 ms response latency, 0.5–1+ GB/s transfer speed</li>
@@ -57,7 +58,7 @@
 <p>This is what all modern OSes do. They write unused in-memory data to a file known as the <strong>page file</strong>. In Windows, the page file is <code>C:\pagefile.sys</code>. When data is moved from physical memory to the page file, it is said to be <em>paged out</em>, and when moved from page file to physical memory, it is <em>paged in</em>.</p>
 <p>In older systems or software, you may also see this page file referred to as a <em>swap file</em>, or <em>swap space</em>. On Linux, a subregion of storage space can be set aside as a <em>swap partition</em>.</p>
 <h2>Why is it called the page file?</h2>
-<p>Computer memory is organised into pages, each page typically being 4 KiB (notice that disk sectors are also typically 4 KiB (<a href="https://ngjunsiang.github.io/laymansguide/issue106.html">Issue 106</a>)) …). The computer may have only 8GB of physical memory, but present 16GB of virtual memory (<a href="https://ngjunsiang.github.io/laymansguide/issue056.html">Issue 56</a>)) to programs. Kind of like how banks only hold some liquidity but present their assets as being much more …</p>
+<p>Computer memory is organised into pages, each page typically being 4 KiB (notice that disk sectors are also typically 4 KiB (<a href="./issue106.html">Issue 106</a>)) …). The computer may have only 8GB of physical memory, but present 16GB of virtual memory (<a href="./issue056.html">Issue 56</a>)) to programs. Kind of like how banks only hold some liquidity but present their assets as being much more …</p>
 <p>So the 8GB “shortfall” is actually in the pagefile, not in memory. The pagefile essentially acts like (much slower) memory! The OS reads pages from it and writes pages to it, through virtual memory accesses.</p>
 <h2>This sounds like a waste of space, can I choose not to use it?</h2>
 <p>Though most OSes are configured to use a page file by default, you can configure it to not do so, although this is ill-advised (and I won’t explain why here; this is a newsletter aimed at layfolks). Modern OSes are pretty smart at managing page files, understanding that it is much slower than physical computer memory. They have their own algorithms to decide when to move data to a pagefile, and these days they even forecast when data that was paged out will soon be needed by the program.</p>
@@ -84,27 +85,17 @@
     </time></p>
  -->
     <address>
-      By           <a href="https://ngjunsiang.github.io/laymansguide/author/j-s-ng.html">J S Ng</a>
+      By           <a href="./author/j-s-ng.html">J S Ng</a>
     </address>
     <p>
         Tags:
-            <a href="https://ngjunsiang.github.io/laymansguide/tag/cpu.html">cpu</a>
-            <a href="https://ngjunsiang.github.io/laymansguide/tag/memory.html">memory</a>
-            <a href="https://ngjunsiang.github.io/laymansguide/tag/operating-system.html">operating system</a>
+            <a href="./tag/cpu.html">cpu</a>
+            <a href="./tag/memory.html">memory</a>
+            <a href="./tag/operating-system.html">operating system</a>
     </p>
   </footer>
   </article>
 <ul>
-        <li>
-            <a href="https://ngjunsiang.github.io/laymansguide/issue116.html">
-                Issue 116: Hibernation
-            </a>
-        </li>
-        <li>
-            <a href="https://ngjunsiang.github.io/laymansguide/issue118.html">
-                Issue 118: When I run two file-copy processes at the same time, why are they much slower?
-            </a>
-        </li>
 </ul>
         </main>
         <footer>

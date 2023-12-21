@@ -5,7 +5,8 @@
         <meta charset="utf-8" />
         <meta name="generator" content="Pelican" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" type="text/css" href="/theme/css/style.css" />
+        <link rel="stylesheet" type="text/css" href="theme/css/style.css" />
+<link rel="stylesheet" type="text/css" href="theme/css/article.css" />
 
 
 
@@ -16,7 +17,7 @@
 
 <body>
         <header>
-              <hgroup><h1><a href="https://ngjunsiang.github.io/laymansguide/">Layman's Guide to Computing</a></h1></hgroup>
+              <hgroup><h1><a href="./">Layman's Guide to Computing</a></h1></hgroup>
         <nav><ul>
             <li><a href="/categories">Seasons</a></li>
             <li><a href="/tags">Tags</a></li>
@@ -24,10 +25,10 @@
         </header>
         <main>
 <article>
-  <p><a href="https://ngjunsiang.github.io/laymansguide/category/season-04.html">Season 04</a></p>
+  <p><a href="./category/season-04.html">Season 04</a></p>
   <header>
     <h2>
-      <a href="https://ngjunsiang.github.io/laymansguide/issue050.html" rel="bookmark"
+      <a href="./issue050.html" rel="bookmark"
          title="Permalink to Issue 50: Complex file formats and the Document">Issue 50: Complex file formats and the Document</a></h2>
  
   </header>
@@ -39,12 +40,12 @@
 <p>Video files can contain multiple data streams: video, audio, and text. That makes them a pretty complex type of file in which we can embed other types of data. But they are not the only complex file type. We deal with them every time we create a new Microsoft Office document, be it in Word, Powerpoint, or Excel. You can embed images, videos, fonts, and even stranger objects in Microsoft Word. How does a simple DOCX or PPTX document keep it all together?</p>
 <p>We are going to dig into a webpage document and a Word document and see what it looks like in there.</p>
 <h2>Webpage: An HTML document</h2>
-<p>It may be 2019 now, where URLs can end with all kinds of extensions like <code>.aspx</code> and <code>.php</code> and even no extension, but a decade or two ago they almost always ended in <code>.html</code>. That’s because I mentioned back in <a href="https://ngjunsiang.github.io/laymansguide/issue003.html">Issue 3</a>) that the basic format of any web document is HTML. I apologise for leaving that acronym untranslated up till now.</p>
-<p>HTML stands for <strong>H</strong>yper<strong>t</strong>ext <strong>M</strong>arkup <strong>L</strong>anguage. We’ve seen this word “Hypertext” before, when I explained the Hypertext Transfer Protocol (HTTP, <a href="https://ngjunsiang.github.io/laymansguide/issue007.html">Issue 7</a>)), the set of rules that our web browsers use to request Hypertext Markup Language documents. See a link now?</p>
+<p>It may be 2019 now, where URLs can end with all kinds of extensions like <code>.aspx</code> and <code>.php</code> and even no extension, but a decade or two ago they almost always ended in <code>.html</code>. That’s because I mentioned back in <a href="./issue003.html">Issue 3</a>) that the basic format of any web document is HTML. I apologise for leaving that acronym untranslated up till now.</p>
+<p>HTML stands for <strong>H</strong>yper<strong>t</strong>ext <strong>M</strong>arkup <strong>L</strong>anguage. We’ve seen this word “Hypertext” before, when I explained the Hypertext Transfer Protocol (HTTP, <a href="./issue007.html">Issue 7</a>)), the set of rules that our web browsers use to request Hypertext Markup Language documents. See a link now?</p>
 <p>HTML is not a programming language. You can’t write code and tell a computer to make different decisions just by writing HTML. You can create a button using HTML, but you cant use HTML to tell the computer to send your credit card details to another server on the Internet when you click that button. And that is why we refer to it by another term: a markup language.</p>
 <h2>HTML Markup tags</h2>
 <p>This is (a snippet of) the previous issue, as an HTML file:</p>
-<p><img alt="Snippet of HTML from Issue 49" src="https://ngjunsiang.github.io/laymansguide/issue050_01.png"><br>
+<p><img alt="Snippet of HTML from Issue 49" src="./issue050_01.png"><br>
 <em>Issue 49 as an HTML file</em>    </p>
 <p>Thank goodness we have syntax highlighting, which should make it easier to notice all the little tags that start with an open angled bracket <code>&lt;</code> and closed angled bracket <code>&gt;</code>. These are called HTML tags, and they signify the start and end of segments in the document.</p>
 <ul>
@@ -58,14 +59,14 @@
 <li><code>&lt;strong&gt;…&lt;/strong&gt;</code> indicates that it is to be formatted in strong fashion (which is usually treated as bold text … but you can change that in the styles section in the <code>&lt;head&gt;</code>).</li>
 </ul>
 <p>What are those <code>class="…"</code> attributes in the tags? The web browser creates a content element for each tag, and styles it according to the predefined style class in the document, defined inside <code>&lt;style&gt;…&lt;/style&gt;</code>. This is what that section looks like when expanded:</p>
-<p><img alt="Styles for the Issue 49 HTML file" src="https://ngjunsiang.github.io/laymansguide/issue050_02.png"><br>
+<p><img alt="Styles for the Issue 49 HTML file" src="./issue050_02.png"><br>
 <em>Element styles for Issue 49</em>    </p>
 <p>I don’t need to explain the specifications for you to notice that <code>&lt;h1&gt;</code>, <code>&lt;h2&gt;</code>, <code>&lt;h3&gt;</code> etc all have a slightly different style defined for them. <code>.app</code> is a little different; it starts with a period (<code>.</code>) and is applied to everything that has the <code>class="app"</code> attribute (<em>psst</em> … that’s the <code>&lt;body&gt;</code> element from the earlier image!).</p>
 <p>Yet at the same time, there are also other styles defined for <code>&lt;body&gt;…&lt;/body&gt;</code>. The browser has rules for how it chooses which styles override which. Those rules are like the bible for web programmers and web designers, which thankfully we are not (*waves to any web folks in this mailing list*).</p>
 <p>Okay, just two more tags to illustrate embedding other content:</p>
-<p><img alt="Another part of the Issue 49 HTML file showing the &lt;a&gt; tag" src="https://ngjunsiang.github.io/laymansguide/issue050_03.png"></p>
+<p><img alt="Another part of the Issue 49 HTML file showing the &lt;a&gt; tag" src="./issue050_03.png"></p>
 <p>The <code>&lt;a&gt;</code> tag (for "anchor"; don’t ask) is used to define links (those clickable things in a webpage) and the place it links to is defined as a <code>href="…"</code> attribute.</p>
-<p><img alt="Another part of the Issue 49 HTML file showing the &lt;img&gt; tag" src="https://ngjunsiang.github.io/laymansguide/issue050_04.png"></p>
+<p><img alt="Another part of the Issue 49 HTML file showing the &lt;img&gt; tag" src="./issue050_04.png"></p>
 <p>The <code>&lt;img&gt;</code> tag (for "image") is used to insert images. Rollover text, which appears when you put the mouse cursor over the image without clicking, is defined in the <code>alt="…"</code> attribute, while the URL of the image is defined in the <code>src="…"</code> attribute.</p>
 <p>(Embedding an image in a webpage is also possible, but I don’t want to go into depth here because I would have to explain many more concepts before that.)</p>
 <h2>Word document: An XML document</h2>
@@ -75,10 +76,10 @@
 <p>That also means you can spoof a lot of software into thinking you have a zip file when you in fact have an .epub ebook file. This is a pretty common way to unpack files that use the zip archive format to pack their files!</p>
 </blockquote>
 <p>Suppose we do that with a DOCX file … heck, lets convert Issue 49 into a DOCX, rename it to a <code>.zip</code> file and see what happens.</p>
-<p><img alt="Issue 49 DOCX file opened as a .zip file" src="https://ngjunsiang.github.io/laymansguide/issue050_05.png"></p>
+<p><img alt="Issue 49 DOCX file opened as a .zip file" src="./issue050_05.png"></p>
 <p><img alt="WHOA cat meme" src="https://i.imgflip.com/2i7zhl.jpg"></p>
 <p>Don’t run! Most of it is unimportantly technical, we’ll just jump right into the interesting part which is <code>document.xml</code>, so take a deep breath …</p>
-<p><img alt="document.xml" src="https://ngjunsiang.github.io/laymansguide/issue050_06.png"><br>
+<p><img alt="document.xml" src="./issue050_06.png"><br>
 <em>document.xml</em>    </p>
 <p>Okay, ouch. That’s a different tag language, called e<strong>X</strong>tensible <strong>M</strong>arkup <strong>L</strong>anguage (XML). Interestingly enough, each of those tags starts with <code>w:</code>, followed by some familiar phrases: <code>body</code>, <code>p</code>, and others that are not so familiar.</p>
 <p>But look, there’s also "Heading1" and "Heading3"! Other than the fact that the tags look completely different, it still uses tags in similar fashion.</p>
@@ -110,25 +111,15 @@
     </time></p>
  -->
     <address>
-      By           <a href="https://ngjunsiang.github.io/laymansguide/author/j-s-ng.html">J S Ng</a>
+      By           <a href="./author/j-s-ng.html">J S Ng</a>
     </address>
     <p>
         Tags:
-            <a href="https://ngjunsiang.github.io/laymansguide/tag/document.html">document</a>
+            <a href="./tag/document.html">document</a>
     </p>
   </footer>
   </article>
 <ul>
-        <li>
-            <a href="https://ngjunsiang.github.io/laymansguide/issue049.html">
-                Issue 49: What is a File?
-            </a>
-        </li>
-        <li>
-            <a href="https://ngjunsiang.github.io/laymansguide/issue051.html">
-                Issue 51: PDFs part 1 – Compatibility and fidelity
-            </a>
-        </li>
 </ul>
         </main>
         <footer>

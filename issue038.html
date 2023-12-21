@@ -5,7 +5,8 @@
         <meta charset="utf-8" />
         <meta name="generator" content="Pelican" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" type="text/css" href="/theme/css/style.css" />
+        <link rel="stylesheet" type="text/css" href="theme/css/style.css" />
+<link rel="stylesheet" type="text/css" href="theme/css/article.css" />
 
 
 
@@ -16,7 +17,7 @@
 
 <body>
         <header>
-              <hgroup><h1><a href="https://ngjunsiang.github.io/laymansguide/">Layman's Guide to Computing</a></h1></hgroup>
+              <hgroup><h1><a href="./">Layman's Guide to Computing</a></h1></hgroup>
         <nav><ul>
             <li><a href="/categories">Seasons</a></li>
             <li><a href="/tags">Tags</a></li>
@@ -24,10 +25,10 @@
         </header>
         <main>
 <article>
-  <p><a href="https://ngjunsiang.github.io/laymansguide/category/season-03.html">Season 03</a></p>
+  <p><a href="./category/season-03.html">Season 03</a></p>
   <header>
     <h2>
-      <a href="https://ngjunsiang.github.io/laymansguide/issue038.html" rel="bookmark"
+      <a href="./issue038.html" rel="bookmark"
          title="Permalink to Issue 38: Loading a web page">Issue 38: Loading a web page</a></h2>
  
   </header>
@@ -38,10 +39,10 @@
 <p>Last issue, I showed the route taken by data packets being sent to google.com, and to baidu.com. We don’t know what is in those data packets (yet), so in this issue I want to show you just how many requests/responses are involved in loading a webpage. I’ll be doing so using a tool that is available in Chrome and Firefox, which you might have accidentally opened before when you pressed some unknown hotkey combination, and wondered if you broke your browser. This tool is called <strong>Developer Tools</strong>, and it opens any time you right-click something in a webpage and then click 'Inspect Element', or if you press the <code>Ctrl-Alt-I</code> hotkey. It shows you what the backend of a webpage looks like, and today we’ll look at one of its features.</p>
 <h2>Loading a Github webpage</h2>
 <p>The Github repository where I keep my laymansguide files can be viewed on a webpage, and it looks like this:</p>
-<p><img alt="Github page for laymansguide" src="https://ngjunsiang.github.io/laymansguide/issue038_01.png"><br>
+<p><img alt="Github page for laymansguide" src="./issue038_01.png"><br>
 <em>Github page for laymansguide</em>    </p>
 <p>Loading this page with the Network tab of Developer Tools open produces this report:</p>
-<p><img alt="Developer Tools showing network activity while loading a Github page" src="https://ngjunsiang.github.io/laymansguide/issue038_02.png"><br>
+<p><img alt="Developer Tools showing network activity while loading a Github page" src="./issue038_02.png"><br>
 <em>Developer Tools, Network view</em>    </p>
 <p>This is a summary of the network activity that is happening while the page is loading. The top ribbon, showing time in milliseconds (ms) and a series of horizontal lines, is what is known as a <em>waterfall chart</em>. (You can also see this chart in the rightmost column below the ribbon.)</p>
 <p>Each line represents the loading of a resource—anything that the page requests while it is loading. Lines stacked on top of each other represent resources that are being loaded simultaneously (ideal), while lines joined end-to-end represent resources that are being loaded in tandem, one after the other (not ideal).</p>
@@ -79,16 +80,16 @@
 loads other requested resources, such as stylesheets, images, and scripts (Stage 2). Scripts and other interactive code may then request more resources (data fetches, images, icons, data, etc) which are then loaded subsequently (Stage 3, 4, 5, …).</p>
 <hr>
 <p><strong>Bonus content:</strong> I tried this with the Baidu homepage, which looks like this:</p>
-<p><img alt="Baidu homepage" src="https://ngjunsiang.github.io/laymansguide/issue038_03.png"><br>
+<p><img alt="Baidu homepage" src="./issue038_03.png"><br>
 <em>Baidu homepage</em>    </p>
 <p>and the network activity from loading it:</p>
-<p><img alt="Developer Tools showing network activity while loading Baidu homepage" src="https://ngjunsiang.github.io/laymansguide/issue038_04.png"><br>
+<p><img alt="Developer Tools showing network activity while loading Baidu homepage" src="./issue038_04.png"><br>
 <em>Developer Tools, Network view</em>    </p>
 <p>It takes slightly longer (about 400 ms longer) to load, but most of that time is from loading a single <code>gif</code>. I wont examine the elements here, in the season on the internet cloud, I’ll explain more what some of these elements do.</p>
 <p>So far, we have identified 3 sources of latency:</p>
 <ol>
-<li>DNS resolving (<a href="https://ngjunsiang.github.io/laymansguide/issue029.html">Issue 29</a>)), which translates the domain names in the requests to IP addresses that we can request data from,</li>
-<li>Data packet routing (<a href="https://ngjunsiang.github.io/laymansguide/issue037.html">Issue 37</a>)), which adds to latency with each hop through yet another gateway,</li>
+<li>DNS resolving (<a href="./issue029.html">Issue 29</a>)), which translates the domain names in the requests to IP addresses that we can request data from,</li>
+<li>Data packet routing (<a href="./issue037.html">Issue 37</a>)), which adds to latency with each hop through yet another gateway,</li>
 <li>Webpage loading (this issue), where documents or scripts that are loaded may request yet more resources.</li>
 </ol>
 <p>All of these layers of information gathering can add up to a few seconds of latency—a big turnoff for folks who have come to expect near-instantaneous response from apps. And often, our pages don’t appear to take that long to load, do they?</p>
@@ -114,7 +115,7 @@ loads other requested resources, such as stylesheets, images, and scripts (Stage
 <hr>
 <ol>
 <li id="fn:1">
-<p><a href="https://getbootstrap.com/docs/4.3/getting-started/introduction/">Bootstrap</a> is a <a href="https://ngjunsiang.github.io/laymansguide/issue014.html">front-end</a>) <a href="https://ngjunsiang.github.io/laymansguide/issue018.html">framework</a>) that makes it easy to create webpages. By loading a standard Bootstrap stylesheet and (optionally) a Bootstrap script, any front-end developer can add common elements (e.g. popovers, navigation bars, tooltips, cards, …) with fewer lines of code than if they wrote it from scratch.&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+<p><a href="https://getbootstrap.com/docs/4.3/getting-started/introduction/">Bootstrap</a> is a <a href="./issue014.html">front-end</a>) <a href="./issue018.html">framework</a>) that makes it easy to create webpages. By loading a standard Bootstrap stylesheet and (optionally) a Bootstrap script, any front-end developer can add common elements (e.g. popovers, navigation bars, tooltips, cards, …) with fewer lines of code than if they wrote it from scratch.&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
 </li>
 </ol>
 </div>
@@ -124,25 +125,15 @@ loads other requested resources, such as stylesheets, images, and scripts (Stage
     </time></p>
  -->
     <address>
-      By           <a href="https://ngjunsiang.github.io/laymansguide/author/j-s-ng.html">J S Ng</a>
+      By           <a href="./author/j-s-ng.html">J S Ng</a>
     </address>
     <p>
         Tags:
-            <a href="https://ngjunsiang.github.io/laymansguide/tag/document.html">document</a>
+            <a href="./tag/document.html">document</a>
     </p>
   </footer>
   </article>
 <ul>
-        <li>
-            <a href="https://ngjunsiang.github.io/laymansguide/issue037.html">
-                Issue 37: Traceroute–Google Maps for data packets
-            </a>
-        </li>
-        <li>
-            <a href="https://ngjunsiang.github.io/laymansguide/issue039.html">
-                Issue 39: Caches and caching
-            </a>
-        </li>
 </ul>
         </main>
         <footer>

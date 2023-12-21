@@ -5,7 +5,8 @@
         <meta charset="utf-8" />
         <meta name="generator" content="Pelican" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" type="text/css" href="/theme/css/style.css" />
+        <link rel="stylesheet" type="text/css" href="theme/css/style.css" />
+<link rel="stylesheet" type="text/css" href="theme/css/article.css" />
 
 
 
@@ -15,7 +16,7 @@
 
 <body>
         <header>
-              <hgroup><h1><a href="https://ngjunsiang.github.io/laymansguide/">Layman's Guide to Computing</a></h1></hgroup>
+              <hgroup><h1><a href="./">Layman's Guide to Computing</a></h1></hgroup>
         <nav><ul>
             <li><a href="/categories">Seasons</a></li>
             <li><a href="/tags">Tags</a></li>
@@ -23,10 +24,10 @@
         </header>
         <main>
 <article>
-  <p><a href="https://ngjunsiang.github.io/laymansguide/category/season-10.html">Season 10</a></p>
+  <p><a href="./category/season-10.html">Season 10</a></p>
   <header>
     <h2>
-      <a href="https://ngjunsiang.github.io/laymansguide/issue122.html" rel="bookmark"
+      <a href="./issue122.html" rel="bookmark"
          title="Permalink to Issue 122: The great flattening">Issue 122: The great flattening</a></h2>
  
   </header>
@@ -43,7 +44,7 @@
 <p>Lastly, since our screens display images as a grid of pixels, we need to figure out the best way to convert the distorted 2D view into a pixel grid. This part of the pipeline is known as <strong>rasterisation</strong>. Here, the computer figures out what colour each pixel should be, based on which part of the model actually gets projected here. Hidden parts do not need to be rasterised, and neither do parts of the model which are outside the screen.</p>
 <p>All these steps take place in the graphics pipeline.</p>
 <h2>The hardware</h2>
-<p>The pipeline used to be carried out by the CPU (<a href="https://ngjunsiang.github.io/laymansguide/issue053.html">Issue 53</a>)), but that isn’t ideal. The CPU’s hardware is optimised for <em>general-purpose processing</em>: keeping track of integers (i.e. natural numbers like 1, 2, 3, …), adding or subtracting them, and resetting them. It has many more computational units that carry out this calculation.</p>
+<p>The pipeline used to be carried out by the CPU (<a href="./issue053.html">Issue 53</a>)), but that isn’t ideal. The CPU’s hardware is optimised for <em>general-purpose processing</em>: keeping track of integers (i.e. natural numbers like 1, 2, 3, …), adding or subtracting them, and resetting them. It has many more computational units that carry out this calculation.</p>
 <p>Graphics processing, on the other hand, requires a different kind of calculation. The position of vertices do not fit nicely into integers; we have to carry this out using decimal numbers (1.46776, 2.58704, –3.57514, …). The CPU does not encounter these often, and therefore does not have many of these computational units.</p>
 <p>For graphics, we need a different kind of processor, one that is jam-packed with decimal computational units. We need a <strong>graphics card</strong>.</p>
 <p><strong>Issue summary:</strong> Computers are general-purpose machines that usually process integer calculations. The graphics pipeline requires more specialised hardware that can process decimal number calculations. This is why high-performance graphics usually requires a graphics card.</p>
@@ -64,21 +65,11 @@
     </time></p>
  -->
     <address>
-      By           <a href="https://ngjunsiang.github.io/laymansguide/author/j-s-ng.html">J S Ng</a>
+      By           <a href="./author/j-s-ng.html">J S Ng</a>
     </address>
   </footer>
   </article>
 <ul>
-        <li>
-            <a href="https://ngjunsiang.github.io/laymansguide/issue121.html">
-                Issue 121: In graphic detail
-            </a>
-        </li>
-        <li>
-            <a href="https://ngjunsiang.github.io/laymansguide/issue123.html">
-                Issue 123: Graphics cards: The Pixel Factory
-            </a>
-        </li>
 </ul>
         </main>
         <footer>

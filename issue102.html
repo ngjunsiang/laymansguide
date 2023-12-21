@@ -5,7 +5,8 @@
         <meta charset="utf-8" />
         <meta name="generator" content="Pelican" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" type="text/css" href="/theme/css/style.css" />
+        <link rel="stylesheet" type="text/css" href="theme/css/style.css" />
+<link rel="stylesheet" type="text/css" href="theme/css/article.css" />
 
 
 
@@ -17,7 +18,7 @@
 
 <body>
         <header>
-              <hgroup><h1><a href="https://ngjunsiang.github.io/laymansguide/">Layman's Guide to Computing</a></h1></hgroup>
+              <hgroup><h1><a href="./">Layman's Guide to Computing</a></h1></hgroup>
         <nav><ul>
             <li><a href="/categories">Seasons</a></li>
             <li><a href="/tags">Tags</a></li>
@@ -25,10 +26,10 @@
         </header>
         <main>
 <article>
-  <p><a href="https://ngjunsiang.github.io/laymansguide/category/season-08.html">Season 08</a></p>
+  <p><a href="./category/season-08.html">Season 08</a></p>
   <header>
     <h2>
-      <a href="https://ngjunsiang.github.io/laymansguide/issue102.html" rel="bookmark"
+      <a href="./issue102.html" rel="bookmark"
          title="Permalink to Issue 102: Threading">Issue 102:  Threading</a></h2>
  
   </header>
@@ -45,7 +46,7 @@
 <h2>What causes threads to get stuck?</h2>
 <p>Some of us really hate math, but not computers! The math is hardly ever what causes threads to stop.</p>
 <p>Like in the workplace, it is often other ~~people~~ devices.</p>
-<p>When an app (running in a thread) tries to open a file to read data from it, the operating system has to look up the virtual memory  address (<a href="https://ngjunsiang.github.io/laymansguide/issue055.html">Issue 55</a>)), follow it to the hard disk or solid state disk, and then wait for the disk to respond with the data.</p>
+<p>When an app (running in a thread) tries to open a file to read data from it, the operating system has to look up the virtual memory  address (<a href="./issue055.html">Issue 55</a>)), follow it to the hard disk or solid state disk, and then wait for the disk to respond with the data.</p>
 <p>And in that moment, <em>lots</em> of things can go wrong.</p>
 <p>If the disk is failing, and unable to read the sector where the data resides, it will usually keep attempting to do so. Meanwhile, back in the operating system, the thread is stuck. It cannot move on, because the previous instruction to open the file has not completed. It can’t even decide to abort the currently-running instruction—telling the app to stop <strong>is already another instruction</strong> which has to wait!</p>
 <p>The only thing to do now is wait for the OS to realise that this thread is taking too long to do its thing, and forcibly terminate the thread. This is known as a thread <strong>timeout</strong>.</p>
@@ -72,26 +73,16 @@
     </time></p>
  -->
     <address>
-      By           <a href="https://ngjunsiang.github.io/laymansguide/author/j-s-ng.html">J S Ng</a>
+      By           <a href="./author/j-s-ng.html">J S Ng</a>
     </address>
     <p>
         Tags:
-            <a href="https://ngjunsiang.github.io/laymansguide/tag/app.html">app</a>
-            <a href="https://ngjunsiang.github.io/laymansguide/tag/operating-system.html">operating system</a>
+            <a href="./tag/app.html">app</a>
+            <a href="./tag/operating-system.html">operating system</a>
     </p>
   </footer>
   </article>
 <ul>
-        <li>
-            <a href="https://ngjunsiang.github.io/laymansguide/issue101.html">
-                Issue 101: Why apps crash
-            </a>
-        </li>
-        <li>
-            <a href="https://ngjunsiang.github.io/laymansguide/issue103.html">
-                Issue 103: Why apps hang even with multiple threads
-            </a>
-        </li>
 </ul>
         </main>
         <footer>

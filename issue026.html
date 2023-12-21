@@ -5,7 +5,8 @@
         <meta charset="utf-8" />
         <meta name="generator" content="Pelican" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" type="text/css" href="/theme/css/style.css" />
+        <link rel="stylesheet" type="text/css" href="theme/css/style.css" />
+<link rel="stylesheet" type="text/css" href="theme/css/article.css" />
 
 
 
@@ -16,7 +17,7 @@
 
 <body>
         <header>
-              <hgroup><h1><a href="https://ngjunsiang.github.io/laymansguide/">Layman's Guide to Computing</a></h1></hgroup>
+              <hgroup><h1><a href="./">Layman's Guide to Computing</a></h1></hgroup>
         <nav><ul>
             <li><a href="/categories">Seasons</a></li>
             <li><a href="/tags">Tags</a></li>
@@ -24,17 +25,17 @@
         </header>
         <main>
 <article>
-  <p><a href="https://ngjunsiang.github.io/laymansguide/category/season-02.html">Season 02</a></p>
+  <p><a href="./category/season-02.html">Season 02</a></p>
   <header>
     <h2>
-      <a href="https://ngjunsiang.github.io/laymansguide/issue026.html" rel="bookmark"
+      <a href="./issue026.html" rel="bookmark"
          title="Permalink to Issue 26: Software distribution">Issue 26: Software distribution</a></h2>
  
   </header>
   <p>Published: <time datetime="2019-06-15T08:00:00+08:00">
     Sat 15 June 2019
   </time></p>
-  <p>In the past 12 issues I’ve talked a bit about different kinds of programs (<a href="https://ngjunsiang.github.io/laymansguide/issue014.html">web, desktop, mobile, …</a>)), different kinds of code (<a href="https://ngjunsiang.github.io/laymansguide/issue014.html">frontend, backend</a>)), tools that programmers use while programming (<a href="https://ngjunsiang.github.io/laymansguide/issue015.html">command line</a>), <a href="https://ngjunsiang.github.io/laymansguide/issue017.html">libraries</a>) and <a href="https://ngjunsiang.github.io/laymansguide/issue018.html">frameworks</a>), <a href="https://ngjunsiang.github.io/laymansguide/issue019.html">version control</a>), <a href="https://ngjunsiang.github.io/laymansguide/issue024.html">bug/issue trackers</a>), <a href="https://ngjunsiang.github.io/laymansguide/issue025.html">text editors and integrated development environments</a>)), and ideas they use to work more efficiently (<a href="https://ngjunsiang.github.io/laymansguide/issue023.html">specifications</a>), <a href="https://ngjunsiang.github.io/laymansguide/issue020.html">testing</a>), <a href="https://ngjunsiang.github.io/laymansguide/issue022.html">continuous integration</a>)).</p>
+  <p>In the past 12 issues I’ve talked a bit about different kinds of programs (<a href="./issue014.html">web, desktop, mobile, …</a>)), different kinds of code (<a href="./issue014.html">frontend, backend</a>)), tools that programmers use while programming (<a href="./issue015.html">command line</a>), <a href="./issue017.html">libraries</a>) and <a href="./issue018.html">frameworks</a>), <a href="./issue019.html">version control</a>), <a href="./issue024.html">bug/issue trackers</a>), <a href="./issue025.html">text editors and integrated development environments</a>)), and ideas they use to work more efficiently (<a href="./issue023.html">specifications</a>), <a href="./issue020.html">testing</a>), <a href="./issue022.html">continuous integration</a>)).</p>
 <p>To wrap this up, let’s answer one final question: how do they actually get their code out to the rest of the world?</p>
 <h2>Mobile apps</h2>
 <p>Let’s start with the easiest: mobile apps, of course, get published to the app store (<a href="https://www.apple.com/sg/ios/app-store/">Apple App Store</a>, or <a href="https://play.google.com/store">Google Play</a>, for most phones). Programmers could, of course, encourage people to enable installation of third-party apps and ask them to download and open an installation file … but how many people are going to do that?</p>
@@ -42,7 +43,7 @@
 <p>Before a program can be uploaded, a lot of extra information is needed by the app store: the app author’s name and particulars, the version number, minimum OS requirements (e.g. some apps won’t work on Android versions older than 4.4), and so on. The app store may also need a manifest, a list of files in the app. The process of adding all this information and organising the files into something that can be uploaded to an app store is known as <strong>packaging</strong>.</p>
 <p>How is code for other platforms packaged and released? That depends, really, on the community.</p>
 <h2>Linux: software repositories</h2>
-<p>On Linux, in the old days, you had to download the source code, compile it into an application (<em>self-note: this needs explaining in a future issue</em>), and install updates for each application individually … this soon became a gargantuan effort for a user. Then some smart people got together and thought: why don’t we make a list of applications, and where they can be found? And then automate it so that a computer can download the source code and compile it automatically? Or, even better, have a central place containing compiled applications that can be downloaded, ready to use? And thus the software repository was born. (don’t confuse this with a code repository, which I introduced in <a href="https://ngjunsiang.github.io/laymansguide/issue019.html">Issue 19</a>).)</p>
+<p>On Linux, in the old days, you had to download the source code, compile it into an application (<em>self-note: this needs explaining in a future issue</em>), and install updates for each application individually … this soon became a gargantuan effort for a user. Then some smart people got together and thought: why don’t we make a list of applications, and where they can be found? And then automate it so that a computer can download the source code and compile it automatically? Or, even better, have a central place containing compiled applications that can be downloaded, ready to use? And thus the software repository was born. (don’t confuse this with a code repository, which I introduced in <a href="./issue019.html">Issue 19</a>).)</p>
 <p>Each Linux distribution (<a href="https://www.ubuntu.com/">Ubuntu</a>, <a href="https://www.gnome.org/">GNOME</a>, <a href="https://linuxmint.com/">Linux Mint</a> are some of the more popular ones) has its own software repositories (also known as <strong>repos</strong>). These repositories contain the most important or popular applications that their users need, and are updated and maintained regularly by <strong>maintainers</strong>, developers who take on the role of testing code for compatibility. The maintainers often have to make changes, some little and some big, for the applications to run well with their distribution (also known as <strong>distro</strong>).</p>
 <p>Linux distros will often have multiple repositories to organise the huge list of applications available, and users can configure which repositories they want to use. They can edit the list of repositories directly, but most users will use a <strong>package manager</strong>, a program that helps users search for, install, and update the applications on their computer. Many of these package managers are command line applications, but there are graphical package managers available as well.</p>
 <h2>Plugins: it depends …</h2>
@@ -86,25 +87,15 @@
     </time></p>
  -->
     <address>
-      By           <a href="https://ngjunsiang.github.io/laymansguide/author/j-s-ng.html">J S Ng</a>
+      By           <a href="./author/j-s-ng.html">J S Ng</a>
     </address>
     <p>
         Tags:
-            <a href="https://ngjunsiang.github.io/laymansguide/tag/app.html">app</a>
+            <a href="./tag/app.html">app</a>
     </p>
   </footer>
   </article>
 <ul>
-        <li>
-            <a href="https://ngjunsiang.github.io/laymansguide/issue025.html">
-                Issue 25: Text Editors and Integrated Development Environments
-            </a>
-        </li>
-        <li>
-            <a href="https://ngjunsiang.github.io/laymansguide/issue027.html">
-                Issue 27: What is an IP address?
-            </a>
-        </li>
 </ul>
         </main>
         <footer>

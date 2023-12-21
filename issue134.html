@@ -5,7 +5,8 @@
         <meta charset="utf-8" />
         <meta name="generator" content="Pelican" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" type="text/css" href="/theme/css/style.css" />
+        <link rel="stylesheet" type="text/css" href="theme/css/style.css" />
+<link rel="stylesheet" type="text/css" href="theme/css/article.css" />
 
 
 
@@ -15,7 +16,7 @@
 
 <body>
         <header>
-              <hgroup><h1><a href="https://ngjunsiang.github.io/laymansguide/">Layman's Guide to Computing</a></h1></hgroup>
+              <hgroup><h1><a href="./">Layman's Guide to Computing</a></h1></hgroup>
         <nav><ul>
             <li><a href="/categories">Seasons</a></li>
             <li><a href="/tags">Tags</a></li>
@@ -23,10 +24,10 @@
         </header>
         <main>
 <article>
-  <p><a href="https://ngjunsiang.github.io/laymansguide/category/season-11.html">Season 11</a></p>
+  <p><a href="./category/season-11.html">Season 11</a></p>
   <header>
     <h2>
-      <a href="https://ngjunsiang.github.io/laymansguide/issue134.html" rel="bookmark"
+      <a href="./issue134.html" rel="bookmark"
          title="Permalink to Issue 134: Part 1 – the Intel Core i-series launches!">Issue 134: Part 1 – the Intel Core i-series launches!</a></h2>
  
   </header>
@@ -35,12 +36,12 @@
   </time></p>
   <p><a href="https://buttondown.email/laymansguide/archive/"><strong>Previously:</strong></a> The ATX form factor also brought with it a new breed of computers with more specialised chipsets: the memory controller hub (MCH) and peripheral controller hub (PCH). The MCH specialises in high-throughput requirements, such as computer memory and graphics. The PCH specialises in lower-throughput needs.</p>
 <p>Last issue, we looked at the ATX form factor by Intel, which replaced the AT form factor by IBM. While the AT could get by with a smattering of chips, which worked fine for mostly text-only computers, the ATX has much higher throughput requirements. To help the CPU focus on serving the user’s applications, two chipsets—the memory controller hub (MCH) and peripheral controller hub (PCH), take charge of managing the data throughput. The MCH manages data between CPU, computer memory, the graphics processor unit (GPU), and the PCH, while the PCH manages data between the peripherals (audio, storage, network, USB, ...) and the MCH.</p>
-<p><img alt="Chipset diagram of ATX systems, up to early Intel Core (i-Series)" src="https://ngjunsiang.github.io/laymansguide/issue134_01.gif"><br>
-<em>An Intel pre-Core i-series ATX system chipset diagram.<br />The MCH and PCH (labelled ICH here for unimportant reasons) support the CPU in its data operations<br />DDR refers to computer memory, while GDDR refers to graphics card memory (<a href="https://ngjunsiang.github.io/laymansguide/issue123.html">Issue123</a>))<br />Source: <a href="https://arstechnica.com/gadgets/2009/09/intel-launches-all-new-pc-architecture-with-core-i5i7-cpus/">Ars</a></em>    </p>
+<p><img alt="Chipset diagram of ATX systems, up to early Intel Core (i-Series)" src="./issue134_01.gif"><br>
+<em>An Intel pre-Core i-series ATX system chipset diagram.<br />The MCH and PCH (labelled ICH here for unimportant reasons) support the CPU in its data operations<br />DDR refers to computer memory, while GDDR refers to graphics card memory (<a href="./issue123.html">Issue123</a>))<br />Source: <a href="https://arstechnica.com/gadgets/2009/09/intel-launches-all-new-pc-architecture-with-core-i5i7-cpus/">Ars</a></em>    </p>
 <p>There are terms for each of the connections between chips, which I won’t get into because it largely won’t concern us until we have to design performant systems.</p>
 <h2>The evolution of Intel ATX</h2>
 <p>The technical geeks are probably fuming at this point because ATX is a motherboard standard, while I’m talking about the evolution of processors which have little to do with the motherboards, at least not directly ... but that’s of little importance at this point. Because we first need to talk about CPU pins.</p>
-<p>From <a href="https://ngjunsiang.github.io/laymansguide/issue131.html">Issue 131</a>), I gave a simple model of the limitations of data transfer:</p>
+<p>From <a href="./issue131.html">Issue 131</a>), I gave a simple model of the limitations of data transfer:</p>
 <blockquote>
 <p>There is a max frequency they can operate at, and a limit to the number of wires they can be connected to (throughput = no. of wires × frequency)</p>
 </blockquote>
@@ -60,8 +61,8 @@ Core (i7, first-gen): <strong>1155 pins</strong></p>
 <h2>It’s all about throughput ... but also latency</h2>
 <p>If light is taking one clock cycle to get out of the CPU, you have a problem. Raise the frequency higher than 3GHz, and you can cause a one-cycle lag just waiting for data to come in from the MCH, and to go out again to the MCH. That would counter-intuitively <em>slow down</em> the CPU.</p>
 <p>Solution: move the MCH into the CPU!</p>
-<p><img alt="Chipset diagram of ATX systems for Intel Core (i-Series)" src="https://ngjunsiang.github.io/laymansguide/issue134_02.gif"><br>
-<em>An Intel Core i-series ATX system chipset diagram.<br />The MCH is merged into the CPU, but still a discrete unit.<br />DDR refers to computer memory, while GDDR refers to graphics card memory (<a href="https://ngjunsiang.github.io/laymansguide/issue123.html">Issue123</a>))<br />Source: <a href="https://arstechnica.com/gadgets/2009/09/intel-launches-all-new-pc-architecture-with-core-i5i7-cpus/">Ars</a></em>    </p>
+<p><img alt="Chipset diagram of ATX systems for Intel Core (i-Series)" src="./issue134_02.gif"><br>
+<em>An Intel Core i-series ATX system chipset diagram.<br />The MCH is merged into the CPU, but still a discrete unit.<br />DDR refers to computer memory, while GDDR refers to graphics card memory (<a href="./issue123.html">Issue123</a>))<br />Source: <a href="https://arstechnica.com/gadgets/2009/09/intel-launches-all-new-pc-architecture-with-core-i5i7-cpus/">Ars</a></em>    </p>
 <h2>Squeezing more tenants into the building</h2>
 <p>Wait ... you can just do that?</p>
 <p>I will need many more issues to lay out the mechanics of this, so I won’t—I think it’s way beyond the scope of a layman’s guide at that point!—but let’s see what I can come up with in the next issue.</p>
@@ -90,21 +91,11 @@ Core (i7, first-gen): <strong>1155 pins</strong></p>
     </time></p>
  -->
     <address>
-      By           <a href="https://ngjunsiang.github.io/laymansguide/author/j-s-ng.html">J S Ng</a>
+      By           <a href="./author/j-s-ng.html">J S Ng</a>
     </address>
   </footer>
   </article>
 <ul>
-        <li>
-            <a href="https://ngjunsiang.github.io/laymansguide/issue133.html">
-                Issue 133: the ATX form factor (post-1995)
-            </a>
-        </li>
-        <li>
-            <a href="https://ngjunsiang.github.io/laymansguide/issue135.html">
-                Issue 135: Part 2 – Unifying the CPU and MCH (post-2008)
-            </a>
-        </li>
 </ul>
         </main>
         <footer>

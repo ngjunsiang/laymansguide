@@ -5,7 +5,8 @@
         <meta charset="utf-8" />
         <meta name="generator" content="Pelican" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" type="text/css" href="/theme/css/style.css" />
+        <link rel="stylesheet" type="text/css" href="theme/css/style.css" />
+<link rel="stylesheet" type="text/css" href="theme/css/article.css" />
 
 
 
@@ -16,7 +17,7 @@
 
 <body>
         <header>
-              <hgroup><h1><a href="https://ngjunsiang.github.io/laymansguide/">Layman's Guide to Computing</a></h1></hgroup>
+              <hgroup><h1><a href="./">Layman's Guide to Computing</a></h1></hgroup>
         <nav><ul>
             <li><a href="/categories">Seasons</a></li>
             <li><a href="/tags">Tags</a></li>
@@ -24,10 +25,10 @@
         </header>
         <main>
 <article>
-  <p><a href="https://ngjunsiang.github.io/laymansguide/category/season-06.html">Season 06</a></p>
+  <p><a href="./category/season-06.html">Season 06</a></p>
   <header>
     <h2>
-      <a href="https://ngjunsiang.github.io/laymansguide/issue073.html" rel="bookmark"
+      <a href="./issue073.html" rel="bookmark"
          title="Permalink to Issue 73: The Heart of Darkness (Header Bidding)">Issue 73: The Heart of Darkness (Header Bidding)</a></h2>
  
   </header>
@@ -40,13 +41,13 @@
 <p>Do a search for <code>&lt;head&gt;</code> and <code>&lt;/head&gt;</code>, then for <code>&lt;body&gt;</code> and <code>&lt;/body&gt;</code>.</p>
 <h2>Webpage loading: header, followed by body</h2>
 <p>The section flanked by <code>&lt;head&gt;&lt;/head&gt;</code> is the page header. This is the most important section of the page for everyone else besides the reader. When a page is requested by the browser, the HTML code for the entire page is retrieved. But it is not rendered all at once.</p>
-<p>The browser starts processing the page header first. It looks at all the file requests: CSS files (for styling the page), fonts (for formatting text), javascript code (for running code to make the page responsive and for loading cookies (<a href="https://ngjunsiang.github.io/laymansguide/issue070.html">Issue 70</a>)) etc). It sends off another round of requests for each of these resources. The rest of the page (flanked by the <code>&lt;body&gt;&lt;/body&gt;</code> tags) does not start rendering until critical files have been retrieved.</p>
+<p>The browser starts processing the page header first. It looks at all the file requests: CSS files (for styling the page), fonts (for formatting text), javascript code (for running code to make the page responsive and for loading cookies (<a href="./issue070.html">Issue 70</a>)) etc). It sends off another round of requests for each of these resources. The rest of the page (flanked by the <code>&lt;body&gt;&lt;/body&gt;</code> tags) does not start rendering until critical files have been retrieved.</p>
 <p>Often, the javascript code is considered critical, because some of them actually change the page body or affect what is loaded. They are therefore placed in the page header and loaded first before the body is rendered.</p>
 <p>Normally, on a non-advertising page, the page header is very short: just the page title, some metadata (to tell Google’s bot what the page is about for ranking in searches), some fonts, some CSS, and a bit of javascript to spice up page interactions. That’s it. A fancy photo carousel or other features will involve a bit more code, but still not a whole lot.</p>
 <h2>How ad bidding works</h2>
 <p>When advertising comes into the mix, the information flow gets much more complicated. The header loads an ad script that passes the cookie (embedded in the page), along with any other relevant information (type of website, device info, etc<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup>) to the advertising exchange.</p>
 <p>What does an exchange do? It matches this cookie to its huge database of cookies, and then it conducts an auction. “Here’s a user browsing New York Times! *Looks up user in database* Probably a woke young twenty-something, good credit history, into yoga, and health-fad-ish.” So it’s pretty much like a marketplace, but one that you cannot participate directly in. It’s actually automated bidding.</p>
-<p>The ad-buyers bid. These bids are not placed on-the-spot, but pre-bidded (through the advertisers’ dashboards, or <a href="https://ngjunsiang.github.io/laymansguide/issue004.html">through an API</a>)). Higher bids win over lower bids, but more relevant bids win over less relevant bids.</p>
+<p>The ad-buyers bid. These bids are not placed on-the-spot, but pre-bidded (through the advertisers’ dashboards, or <a href="./issue004.html">through an API</a>)). Higher bids win over lower bids, but more relevant bids win over less relevant bids.</p>
 <p>The advertiser’s server sends the winning bid code back to your browser. Then another piece of the advertiser’s javascript code kicks in, sending this code to the advertiser’s <strong>content delivery network (CDN)</strong>.</p>
 <p>Yup, online ads need specialised servers to do different things. The <strong>ad exchange</strong> carries out the bidding and determines the winner (much like a stock exchange); this requires intensive CPU calculations and low latency connections. The <strong>CDN</strong>, on the other hand, is a global network of servers that keep the content ready to deliver. Servers in the US can get content to US web browsers most quickly, while servers in South-east Asia are better placed to serve Southeast Asian browsers.</p>
 <p>These servers continually talk to each other or to a coordinating server, which determines what content should be on each server depending on the demand from each region. Each regional server caches the most frequently requested ads and cat images in the server memory (which is quick to access), leaving the rest in hard disk or solid state storage (which is slower to access).</p>
@@ -83,25 +84,15 @@
     </time></p>
  -->
     <address>
-      By           <a href="https://ngjunsiang.github.io/laymansguide/author/j-s-ng.html">J S Ng</a>
+      By           <a href="./author/j-s-ng.html">J S Ng</a>
     </address>
     <p>
         Tags:
-            <a href="https://ngjunsiang.github.io/laymansguide/tag/cache.html">cache</a>
+            <a href="./tag/cache.html">cache</a>
     </p>
   </footer>
   </article>
 <ul>
-        <li>
-            <a href="https://ngjunsiang.github.io/laymansguide/issue072.html">
-                Issue 72: The Data Brokers
-            </a>
-        </li>
-        <li>
-            <a href="https://ngjunsiang.github.io/laymansguide/issue074.html">
-                Issue 74: The Walls Have Pixels
-            </a>
-        </li>
 </ul>
         </main>
         <footer>

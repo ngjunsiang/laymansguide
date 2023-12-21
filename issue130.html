@@ -5,7 +5,8 @@
         <meta charset="utf-8" />
         <meta name="generator" content="Pelican" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" type="text/css" href="/theme/css/style.css" />
+        <link rel="stylesheet" type="text/css" href="theme/css/style.css" />
+<link rel="stylesheet" type="text/css" href="theme/css/article.css" />
 
 
 
@@ -15,7 +16,7 @@
 
 <body>
         <header>
-              <hgroup><h1><a href="https://ngjunsiang.github.io/laymansguide/">Layman's Guide to Computing</a></h1></hgroup>
+              <hgroup><h1><a href="./">Layman's Guide to Computing</a></h1></hgroup>
         <nav><ul>
             <li><a href="/categories">Seasons</a></li>
             <li><a href="/tags">Tags</a></li>
@@ -23,10 +24,10 @@
         </header>
         <main>
 <article>
-  <p><a href="https://ngjunsiang.github.io/laymansguide/category/season-10.html">Season 10</a></p>
+  <p><a href="./category/season-10.html">Season 10</a></p>
   <header>
     <h2>
-      <a href="https://ngjunsiang.github.io/laymansguide/issue130.html" rel="bookmark"
+      <a href="./issue130.html" rel="bookmark"
          title="Permalink to Issue 130: Power limits">Issue 130: Power limits</a></h2>
  
   </header>
@@ -47,17 +48,17 @@
 <p>That means if you have a desktop running at 100W (maybe while gaming or encoding video files), the <em>AC-DC converter alone</em> draws 111W at the wall socket, <strong>wastes 11W</strong> (in the form of heat), and provides 100W of power to the desktop.</p>
 <p>And heat is the enemy of CPUs.</p>
 <h2>External vs internal power supplies</h2>
-<p>Ughh, power bricks … so many different types, with different connectors, and we never quite know if we can use one laptop’s power brick on another laptop (at least, until USB Type-C power for laptops came along; more in <a href="https://ngjunsiang.github.io/laymansguide/issue127.html">Issue 127</a>))</p>
-<p>In a laptop, you really do not want the power supply dumping this heat <em>into the laptop</em>! The laptop already has enough work to do getting heat from the CPU out of that cramped space into the surroundings. You don’t want to give it more heat to remove, and risk throttling the CPU’s performance (<a href="https://ngjunsiang.github.io/laymansguide/issue129.html">Issue 129</a>)). It’s better that the AC converter/power brick remains external to the laptop, dumping that heat into the surroundings directly without heating up the laptop’s internal space.</p>
-<p><img alt="An Apple power adapter, with the cover removed" src="https://ngjunsiang.github.io/laymansguide/issue130_01.jpg"><br>
+<p>Ughh, power bricks … so many different types, with different connectors, and we never quite know if we can use one laptop’s power brick on another laptop (at least, until USB Type-C power for laptops came along; more in <a href="./issue127.html">Issue 127</a>))</p>
+<p>In a laptop, you really do not want the power supply dumping this heat <em>into the laptop</em>! The laptop already has enough work to do getting heat from the CPU out of that cramped space into the surroundings. You don’t want to give it more heat to remove, and risk throttling the CPU’s performance (<a href="./issue129.html">Issue 129</a>)). It’s better that the AC converter/power brick remains external to the laptop, dumping that heat into the surroundings directly without heating up the laptop’s internal space.</p>
+<p><img alt="An Apple power adapter, with the cover removed" src="./issue130_01.jpg"><br>
 <em>The internals of the Apple AC converter (i.e. power adapter)<br />Source: <a href="http://www.righto.com/2015/11/macbook-charger-teardown-surprising.html">Ken Shiriff</a></em>    </p>
 <p>In larger devices—the Mac Mini, game consoles (e.g. PS4 or Xbox One), and larger desktops, there’s plenty of space in the device’s internals, and they have sufficiently powerful cooling systems that can remove this heat. In desktops especially, the power supply may be large enough that it has its own cooling fan!</p>
-<p><img alt="A desktop power supply, with the cover removed" src="https://ngjunsiang.github.io/laymansguide/issue130_02.jpg"><br>
+<p><img alt="A desktop power supply, with the cover removed" src="./issue130_02.jpg"><br>
 <em>The internals of a desktop power supply.<br />Notice the cooling fan mounted on the back with 4 silver screws, and the two silver heatsinks mounted vertically<br />Source: <a href="https://en.wikipedia.org/wiki/Power_supply_unit_(computer)">Wikipedia</a></em>    </p>
 <p>So for large devices, it makes sense to hide the power supply within the device for a sleeker look.</p>
 <p>In fact, for high-power devices, a power adapter is a poor option. Since power adapters don’t have their own cooling fans, they have limited cooling ability, and are liable to overheat easily if they have to provide &gt;100 W to a device (remember that this means they release at least 11 W of heat, while passive cooling can typically dissipate up to 8 W).</p>
 <h2>Device categories</h2>
-<p>Putting together the information from <a href="https://ngjunsiang.github.io/laymansguide/issue129.html">Issue 129</a>) and this issue, we can deduce that devices seem to sort themselves into form-factor categories depending on how much power they draw, and how much heat they put out:</p>
+<p>Putting together the information from <a href="./issue129.html">Issue 129</a>) and this issue, we can deduce that devices seem to sort themselves into form-factor categories depending on how much power they draw, and how much heat they put out:</p>
 <p><strong>Devices drawing &gt;100W at peak, and putting out &gt;80 W of heat:</strong></p>
 <p>Generally large, directly powered from the wall (by AC), with power supply within the device.</p>
 <p>In rare cases they do use external AC adapters (such as high-power gaming laptops).</p>
@@ -104,21 +105,11 @@
     </time></p>
  -->
     <address>
-      By           <a href="https://ngjunsiang.github.io/laymansguide/author/j-s-ng.html">J S Ng</a>
+      By           <a href="./author/j-s-ng.html">J S Ng</a>
     </address>
   </footer>
   </article>
 <ul>
-        <li>
-            <a href="https://ngjunsiang.github.io/laymansguide/issue129.html">
-                Issue 129: Cooling
-            </a>
-        </li>
-        <li>
-            <a href="https://ngjunsiang.github.io/laymansguide/issue131.html">
-                Issue 131: What do early CPUs and startup founders have in common?
-            </a>
-        </li>
 </ul>
         </main>
         <footer>
