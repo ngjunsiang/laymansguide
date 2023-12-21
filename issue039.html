@@ -17,7 +17,7 @@
 
 <body>
         <header>
-              <hgroup><h1><a href="./">Layman's Guide to Computing</a></h1></hgroup>
+              <hgroup><h1><a href="https://ngjunsiang.github.io/laymansguide/">Layman's Guide to Computing</a></h1></hgroup>
         <nav><ul>
             <li><a href="/categories">Seasons</a></li>
             <li><a href="/tags">Tags</a></li>
@@ -25,10 +25,10 @@
         </header>
         <main>
 <article>
-  <p><a href="./category/season-03.html">Season 03</a></p>
+  <p><a href="https://ngjunsiang.github.io/laymansguide/category/season-03.html">Season 03</a></p>
   <header>
     <h2>
-      <a href="./issue039.html" rel="bookmark"
+      <a href="https://ngjunsiang.github.io/laymansguide/issue039.html" rel="bookmark"
          title="Permalink to Issue 39: Caches and caching">Issue 39: Caches and caching</a></h2>
  
   </header>
@@ -42,7 +42,7 @@ loads other requested resources, such as stylesheets, images, and scripts (Stage
 <p>Computers use the same trick, and it is called <strong>caching</strong>. Any information it needs repeatedly which is unchanging is stored in a <strong>cache</strong>. What kind of caches does a computer use to reduce network latency?</p>
 <h2>DNS cache</h2>
 <p>When you load a webpage or service and send requests to it, the first thing that happens is the DNS query. Once your OS knows the IP address to send requests to, it doesn’t make sense for it to keep querying the hostname, does it? IP addresses don’t change that quickly! The computer stores the hostnames and associated IP addresses in the DNS cache. You can view the DNS cache on a Windows PC by opening Command Prompt and typing <code>ipconfig /displaydns</code>.</p>
-<p><img alt="The DNS cache" src="./issue039_01.jpg"><br />
+<p><img alt="The DNS cache" src="https://ngjunsiang.github.io/laymansguide/issue039_01.jpg"><br />
 <small>The output of <code>ipconfig /displaydns</code><br />
 (I used Powershell instead of Command Prompt,
 but it will look the same in Command Prompt.)</small></p>
@@ -51,10 +51,10 @@ but it will look the same in Command Prompt.)</small></p>
 <p>When this happens, tech support will usually just flush the DNS cache to remove all information from it (yes, the bad with the good). On Windows, you can do so by opening Command Prompt and typing <code>ipconfig /flushdns</code>.</p>
 <h2>Browser cache</h2>
 <p>Notice that the first time your web browser loads any page you haven’t visited before, it often takes quite a while, but subsequent loads are really fast? That’s because we now skip a DNS query (grabbing the IP address from the DNS cache instead). Each time we do a lookup to retrieve a file or piece of information from the server, we can skip the DNS query!</p>
-<p>The caching trick isn’t applied only to the IP address; many elements you see on the page have been cached: the document itself, images, scripts, stylesheets, … most of the elements from <a href="./issue038.html">Issue 38</a>) are cacheable, and the browser will cache it.</p>
+<p>The caching trick isn’t applied only to the IP address; many elements you see on the page have been cached: the document itself, images, scripts, stylesheets, … most of the elements from <a href="https://ngjunsiang.github.io/laymansguide/issue038.html">Issue 38</a>) are cacheable, and the browser will cache it.</p>
 <p>How long does the browser cache these files? It depends ... I know it’s not an answer you like since it means more things to learn about, but I’ll keep it short.</p>
-<p>Remember this? It’s the response header we saw from <a href="./issue008.html">Issue 8</a>) on HTTP error codes:</p>
-<p><img alt="HTTP response header" src="./issue008_01.png"><br>
+<p>Remember this? It’s the response header we saw from <a href="https://ngjunsiang.github.io/laymansguide/issue008.html">Issue 8</a>) on HTTP error codes:</p>
+<p><img alt="HTTP response header" src="https://ngjunsiang.github.io/laymansguide/issue008_01.png"><br>
 <em>A response header from Hypothes.is</em>    </p>
 <p>See the line that says <code>Cache-Control: no-cache</code>? That is the server, hypothes.is, asking my browser not to cache this response (because the next time it makes the same API request, the response might be different).</p>
 <p>The server can also set a different <code>Cache-Control</code> time, especially for resources that are used repeatedly on pages (such as logos and headers). On heavily accessed sites, these resources may have a <code>Cache-Control</code> time of up to a year!</p>
@@ -90,11 +90,11 @@ but it will look the same in Command Prompt.)</small></p>
     </time></p>
  -->
     <address>
-      By           <a href="./author/j-s-ng.html">J S Ng</a>
+      By           <a href="https://ngjunsiang.github.io/laymansguide/author/j-s-ng.html">J S Ng</a>
     </address>
     <p>
         Tags:
-            <a href="./tag/cache.html">cache</a>
+            <a href="https://ngjunsiang.github.io/laymansguide/tag/cache.html">cache</a>
     </p>
   </footer>
   </article>

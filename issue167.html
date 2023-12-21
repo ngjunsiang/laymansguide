@@ -17,7 +17,7 @@
 
 <body>
         <header>
-              <hgroup><h1><a href="./">Layman's Guide to Computing</a></h1></hgroup>
+              <hgroup><h1><a href="https://ngjunsiang.github.io/laymansguide/">Layman's Guide to Computing</a></h1></hgroup>
         <nav><ul>
             <li><a href="/categories">Seasons</a></li>
             <li><a href="/tags">Tags</a></li>
@@ -25,10 +25,10 @@
         </header>
         <main>
 <article>
-  <p><a href="./category/season-13.html">Season 13</a></p>
+  <p><a href="https://ngjunsiang.github.io/laymansguide/category/season-13.html">Season 13</a></p>
   <header>
     <h2>
-      <a href="./issue167.html" rel="bookmark"
+      <a href="https://ngjunsiang.github.io/laymansguide/issue167.html" rel="bookmark"
          title="Permalink to Issue 167: Database fragmentation">Issue 167: Database fragmentation</a></h2>
  
   </header>
@@ -39,9 +39,9 @@
 <p>Last issue, we talked about caches and why they are no longer as effective as a performance-boosting measure.</p>
 <p>This issue, let’s look into a solved problem that is not-as-solved on Android: file fragmentation.</p>
 <h2>Storage fragmentation on mobile devices</h2>
-<p>I mentioned in <a href="./issue119.html">Issue 119</a>) that fragmentation is not an issue for faster SSDs; the much lower latency of SSDs makes the retrieval of multiple file chunks from multiple locations trivially easy. But for slower storage devices, whether they are hard disk drives or SSDs over a UFS interface, fragmentation is very real. Unfortunately, its not just a simple matter of defragmenting a disk regularly<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup>. the source of this fragmentation comes from the way apps themselves store data.</p>
+<p>I mentioned in <a href="https://ngjunsiang.github.io/laymansguide/issue119.html">Issue 119</a>) that fragmentation is not an issue for faster SSDs; the much lower latency of SSDs makes the retrieval of multiple file chunks from multiple locations trivially easy. But for slower storage devices, whether they are hard disk drives or SSDs over a UFS interface, fragmentation is very real. Unfortunately, its not just a simple matter of defragmenting a disk regularly<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup>. the source of this fragmentation comes from the way apps themselves store data.</p>
 <h2>SQLite, a blessing and a curse</h2>
-<p><a href="https://sqlite.org/index.html">SQLite</a> is a popular file-based relational database (<a href="./issue087.html">Issue 87</a>)) used by many Android apps (including WhatsApp!). This means that unlike other databases, which require a separate database program to run, SQLite just requires the programmer to bundle an appropriate library for their programming language instead of running a separate program. It makes management of data much easier for the app developers, and it is also fast—usually.</p>
+<p><a href="https://sqlite.org/index.html">SQLite</a> is a popular file-based relational database (<a href="https://ngjunsiang.github.io/laymansguide/issue087.html">Issue 87</a>)) used by many Android apps (including WhatsApp!). This means that unlike other databases, which require a separate database program to run, SQLite just requires the programmer to bundle an appropriate library for their programming language instead of running a separate program. It makes management of data much easier for the app developers, and it is also fast—usually.</p>
 <p>However, <a href="https://www.tuxera.com/blog/why-is-my-android-phone-slowing-down/">a 2016 study found that it contributes to fragmentation</a> on the Android filesystem. Even after clearing the app’s data, once SQLite starts storing data again, it tends to store them in many small chunks instead of fewer but larger chunks. On Android devices, which use the slower UFS interface, searching through the database involves reading each database chunk to see if the requested data is there; this gets slower as the database grows, and SQLite adds more chunks to the storage device.</p>
 <p>The study ends on a pretty pessimistic note: there doesn’t seem to be any feasible mitigation other than making upstream code changes to SQLite, or designing a different filesystem that overcomes this limitation. But that was five years ago; with any luck some positive developments might have been made into this area. I’m still looking into it!</p>
 <p><strong>Issue summary:</strong> Fragmentation is likely a contributor of system slowdown, particularly for mobile devices: the databases used by most mobile apps tend to store data in many small chunks rather than fewer big chunks, which slows down data search operations. The most effective measure for improving device responsiveness is usually to clear the app cache, so the app does not attempt to read previous data from storage.</p>
@@ -64,11 +64,11 @@
     </time></p>
  -->
     <address>
-      By           <a href="./author/j-s-ng.html">J S Ng</a>
+      By           <a href="https://ngjunsiang.github.io/laymansguide/author/j-s-ng.html">J S Ng</a>
     </address>
     <p>
         Tags:
-            <a href="./tag/cache.html">cache</a>
+            <a href="https://ngjunsiang.github.io/laymansguide/tag/cache.html">cache</a>
     </p>
   </footer>
   </article>

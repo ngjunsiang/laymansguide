@@ -18,7 +18,7 @@
 
 <body>
         <header>
-              <hgroup><h1><a href="./">Layman's Guide to Computing</a></h1></hgroup>
+              <hgroup><h1><a href="https://ngjunsiang.github.io/laymansguide/">Layman's Guide to Computing</a></h1></hgroup>
         <nav><ul>
             <li><a href="/categories">Seasons</a></li>
             <li><a href="/tags">Tags</a></li>
@@ -26,10 +26,10 @@
         </header>
         <main>
 <article>
-  <p><a href="./category/season-08.html">Season 08</a></p>
+  <p><a href="https://ngjunsiang.github.io/laymansguide/category/season-08.html">Season 08</a></p>
   <header>
     <h2>
-      <a href="./issue093.html" rel="bookmark"
+      <a href="https://ngjunsiang.github.io/laymansguide/issue093.html" rel="bookmark"
          title="Permalink to Issue 93: What's in a web app?">Issue 93: What's in a web app?</a></h2>
  
   </header>
@@ -42,21 +42,21 @@
 <h2>Data storage in web apps</h2>
 <p>As a web-first programming language, Javascript programs were not expected to have to access, open, or create files on the device. That would make it really easy for a malicious script to download malware to a folder, where it could be accidentally invoked! Instead, it relies on other features to store and retrieve data for specific purposes:</p>
 <ol>
-<li>To remember user logins (the “Remember me” feature you see on almost every login screen), web apps can set/unset cookies (<a href="./issue069.html">Issue 69</a>)) in the browser.</li>
+<li>To remember user logins (the “Remember me” feature you see on almost every login screen), web apps can set/unset cookies (<a href="https://ngjunsiang.github.io/laymansguide/issue069.html">Issue 69</a>)) in the browser.</li>
 <li>To obtain files for use, the web app can invoke a File Select dialog for the user to choose a file, such as for uploading to the server. The web app is not allowed to access arbitrary files this way.</li>
 <li>If data needs to be provided to the user in the form of a file, it can be stored on the disk with the user’s permission through a download dialog.</li>
 <li>The web app can store data through a browser feature called <strong>localstorage</strong>. This is a <em>key-value database</em>, managed by the browser, that allows you to store data (the <em>value</em>) tagged to a <em>key</em>. The same way a hotel lobby holds your luggage for you and lets you access it through a luggage tag, or the way you can rent a locker for storing your stuff (<em>value</em>) and access it through the locker <em>key</em>.</li>
 <li>For data that is only needed in that tab (e.g. partially filled form data), and can be safely deleted when the tab is closed, the browser provides <strong>sessionstorage</strong>. This works similarly to localstorage.</li>
-<li>For more significant amounts of data, web apps can use IndexedDB, a more advanced database also managed in the browser. It is a document database (<a href="./issue088.html">Issue 88</a>)), with each document tagged to a key in a key-object system.</li>
+<li>For more significant amounts of data, web apps can use IndexedDB, a more advanced database also managed in the browser. It is a document database (<a href="https://ngjunsiang.github.io/laymansguide/issue088.html">Issue 88</a>)), with each document tagged to a key in a key-object system.</li>
 </ol>
-<p><img alt="Firefox DevTools, showing the Storage tab. Local Storage is selected, displaying a list of keys and values." src="./issue093_01.png"><br>
+<p><img alt="Firefox DevTools, showing the Storage tab. Local Storage is selected, displaying a list of keys and values." src="https://ngjunsiang.github.io/laymansguide/issue093_01.png"><br>
 <em>DevTools in Firefox lets you inspect the data that web apps keep.<br />The Storage tab shows what is stored in cache, cookies, IndexedDB, localstorage, and sessionstorage.<br />IndexedDB, localstorage, and sessionstorage are key-value databases that store the data (value) tagged to a key.</em>    </p>
 <h2>Requesting and receiving data on a server</h2>
-<p>So a web app doesn’t much in the way of storage access, but they were not designed for that at all. Most of the heavy lifting is not meant to be done in the browser, but elsewhere, on a server. A web app would send heavy workloads to a server (typically owned by the same company) through an API (<a href="./issue004.html">Issue 4</a>)) through a web request (<a href="./issue009.html">Issue 9</a>)), and receive the results through a server response (<a href="./issue008.html">Issue 8</a>)).</p>
+<p>So a web app doesn’t much in the way of storage access, but they were not designed for that at all. Most of the heavy lifting is not meant to be done in the browser, but elsewhere, on a server. A web app would send heavy workloads to a server (typically owned by the same company) through an API (<a href="https://ngjunsiang.github.io/laymansguide/issue004.html">Issue 4</a>)) through a web request (<a href="https://ngjunsiang.github.io/laymansguide/issue009.html">Issue 9</a>)), and receive the results through a server response (<a href="https://ngjunsiang.github.io/laymansguide/issue008.html">Issue 8</a>)).</p>
 <p>A web app would also need resources for display: images, videos, PDFs, ... these are requested and received via web requests as well.</p>
 <p>Cool, so a web developer can just write Javascript code to get the data and resources it needs, display stuff to the user, wait for the user to interact, and then make more requests to the server to calculate stuff, or send the app more data (such as the user’s tweets or posts or other stuff).</p>
 <p>Just one problem with this: if internet connectivity is intermittent or laggy, none of this is going to work! Even when the internet is fine, it makes for a very slow experience. How do we improve this?</p>
-<p>One way is to cache (<a href="./issue039.html">Issue 39</a>)) as many things as possible: header images, logos, emojis, icons, … these can all be stored in localstorage and accessed even when the app is offline.</p>
+<p>One way is to cache (<a href="https://ngjunsiang.github.io/laymansguide/issue039.html">Issue 39</a>)) as many things as possible: header images, logos, emojis, icons, … these can all be stored in localstorage and accessed even when the app is offline.</p>
 <p>Some apps, such as Google Docs, will also store user data in IndexedDB for a smoother experience—imagine having to wait for a request-response round-trip to the Google servers for every word you type. The data gets modified in IndexedDB first, and then synced to the servers. If the device gets disconnected from the internet, at least you will still be able to read whatever is in IndexedDB (and if you have enabled offline access, you can even edit the data in IndexedDB, and the Docs app will attempt to sync it to the server once connectivity is restored).</p>
 <h2>Running background processes</h2>
 <p>Then what’s with these popups on some websites asking you to install them? And how are some websites actually able to send us notifications? Something has got to be running in the browser background for these to happen, and none of what we have learned so far explains that … what gives?</p>
@@ -93,12 +93,12 @@
     </time></p>
  -->
     <address>
-      By           <a href="./author/j-s-ng.html">J S Ng</a>
+      By           <a href="https://ngjunsiang.github.io/laymansguide/author/j-s-ng.html">J S Ng</a>
     </address>
     <p>
         Tags:
-            <a href="./tag/app.html">app</a>
-            <a href="./tag/cache.html">cache</a>
+            <a href="https://ngjunsiang.github.io/laymansguide/tag/app.html">app</a>
+            <a href="https://ngjunsiang.github.io/laymansguide/tag/cache.html">cache</a>
     </p>
   </footer>
   </article>

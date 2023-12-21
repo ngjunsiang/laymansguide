@@ -17,7 +17,7 @@
 
 <body>
         <header>
-              <hgroup><h1><a href="./">Layman's Guide to Computing</a></h1></hgroup>
+              <hgroup><h1><a href="https://ngjunsiang.github.io/laymansguide/">Layman's Guide to Computing</a></h1></hgroup>
         <nav><ul>
             <li><a href="/categories">Seasons</a></li>
             <li><a href="/tags">Tags</a></li>
@@ -25,10 +25,10 @@
         </header>
         <main>
 <article>
-  <p><a href="./category/season-08.html">Season 08</a></p>
+  <p><a href="https://ngjunsiang.github.io/laymansguide/category/season-08.html">Season 08</a></p>
   <header>
     <h2>
-      <a href="./issue096.html" rel="bookmark"
+      <a href="https://ngjunsiang.github.io/laymansguide/issue096.html" rel="bookmark"
          title="Permalink to Issue 96: Why are mobile apps so large in size?">Issue 96: Why are mobile apps so large in size?</a></h2>
  
   </header>
@@ -36,10 +36,10 @@
     Sat 28 November 2020
   </time></p>
   <p><a href="https://buttondown.email/laymansguide/archive/"><strong>Previously:</strong></a> Mobile apps, unlike web apps, can bundle resources and libraries to be installed to a mobile device. They can also request access to storage, and typically have a higher memory limit than web apps.</p>
-<p>In the process of creating an app, a developer often needs to use libraries (<a href="./issue017.html">Issue 17</a>)), which are ready-packaged chunks of code she can run without having to write the code herself. Some provide core functions (e.g. sending information via the Internet, or checking if a data connection is available), while some provide optional features (e.g. mobile payments, or user feedback systems).</p>
+<p>In the process of creating an app, a developer often needs to use libraries (<a href="https://ngjunsiang.github.io/laymansguide/issue017.html">Issue 17</a>)), which are ready-packaged chunks of code she can run without having to write the code herself. Some provide core functions (e.g. sending information via the Internet, or checking if a data connection is available), while some provide optional features (e.g. mobile payments, or user feedback systems).</p>
 <p>Libraries that provide core functions are typically provided by the operating system (OS), which ultimately controls the device’s resources, but all else have to be pulled in by the app, somehow.</p>
 <h2>Web apps vs mobile apps</h2>
-<p>Web apps, which I covered in <a href="./issue094.html">Issue 94</a>), pull in any resources they need through web requests. This includes any libraries that they need. The browser allows it to do this, but prevents access to most parts of the operating system, and allows limited access to camera, sound, storage, etc. The sandboxing features of the browser make web apps generally safer to access.</p>
+<p>Web apps, which I covered in <a href="https://ngjunsiang.github.io/laymansguide/issue094.html">Issue 94</a>), pull in any resources they need through web requests. This includes any libraries that they need. The browser allows it to do this, but prevents access to most parts of the operating system, and allows limited access to camera, sound, storage, etc. The sandboxing features of the browser make web apps generally safer to access.</p>
 <p>A mobile app, on the other hand, is sandboxed by the operating system. Most of the resources it needs have to be present at the time of running the app, and that includes libraries. In an unsandboxed environment, commonly used libraries (e.g. mobile payment libraries) could be installed in the OS and shared by the apps. But this opens up a means of unauthorised access to multiple apps: hack this library successfully, and all other apps on the OS are also affected!</p>
 <p>The sandboxing system in a mobile device does not allow this. Each app must bundle all the libraries it requires, to be installed into storage after downloading. This way, if an app has one or more libraries compromised, it would at least not expose the user’s data in other apps.</p>
 <h2>Libraries in a mobile app</h2>
@@ -68,7 +68,7 @@
 </ol>
 <p>and many others which I don’t know about.</p>
 <h2>Why aren’t web apps so huge then?</h2>
-<p>They are! But they don’t need many of these (e.g. code translation and compatibility), and most of the libraries in 1–13 would have been loaded separately from the main page (see <a href="./issue078.html">Issue 78</a>) for a visual example). Much of the functionality would not need to be loaded or installed upfront, only when it is required (e.g. map display).</p>
+<p>They are! But they don’t need many of these (e.g. code translation and compatibility), and most of the libraries in 1–13 would have been loaded separately from the main page (see <a href="https://ngjunsiang.github.io/laymansguide/issue078.html">Issue 78</a>) for a visual example). Much of the functionality would not need to be loaded or installed upfront, only when it is required (e.g. map display).</p>
 <p>For a web app, many more functions would also have been offloaded to Lazada’s servers, such as address validation. On a mobile app, this code is included upon installation to reduce data usage.</p>
 <p>More importantly, you have little idea how large a web app really is, since you are never shown its filesize anywhere ;)</p>
 <p><strong>Issue summary:</strong> Mobile apps are sandboxed by the operating system. As a result, they have to bundle all the libraries they need, and are not allowed to share libraries with other apps. This results in mobile apps with huge filesizes.</p>
@@ -94,11 +94,11 @@
     </time></p>
  -->
     <address>
-      By           <a href="./author/j-s-ng.html">J S Ng</a>
+      By           <a href="https://ngjunsiang.github.io/laymansguide/author/j-s-ng.html">J S Ng</a>
     </address>
     <p>
         Tags:
-            <a href="./tag/app.html">app</a>
+            <a href="https://ngjunsiang.github.io/laymansguide/tag/app.html">app</a>
     </p>
   </footer>
   </article>
