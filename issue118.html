@@ -16,18 +16,30 @@
 
 <body>
         <header>
-              <hgroup><h1><a href="https://ngjunsiang.github.io/laymansguide/">Layman's Guide to Computing</a></h1></hgroup>
+              <hgroup><h1><a href="./">Layman's Guide to Computing</a></h1></hgroup>
         <nav><ul>
-            <li><a href="/categories">Seasons</a></li>
-            <li><a href="/tags">Tags</a></li>
+            <li><a href="./categories">Seasons</a></li>
+            <li><a href="./tags">Tags</a></li>
         </ul></nav>
         </header>
         <main>
+<ul>
+        <li>
+            <a href="./issue117.html">
+                Issue 117: Swap space
+            </a>
+        </li>
+        <li>
+            <a href="./issue119.html">
+                Issue 119: Solid-state disks, an upgrade from hard disks
+            </a>
+        </li>
+</ul>
 <article>
-  <p><a href="https://ngjunsiang.github.io/laymansguide/category/season-10.html">Season 10</a></p>
+  <p><a href="./category/season-10.html">Season 10</a></p>
   <header>
     <h2>
-      <a href="https://ngjunsiang.github.io/laymansguide/issue118.html" rel="bookmark"
+      <a href="./issue118.html" rel="bookmark"
          title="Permalink to Issue 118: When I run two file-copy processes at the same time, why are they much slower?">Issue 118: When I run two file-copy processes at the same time, why are they much slower?</a></h2>
  
   </header>
@@ -41,7 +53,7 @@
 <p>To read data, all you need to do is move a tiny electromagnet over each domain, and use it to see which way the domain is aligned. This can be done by measuring the current flowing through the electromagnet, a detailed explanation of which is beyond the scope of this newsletter (perhaps in a future newsletter titled “Layman’s Guide to Physics” or something).</p>
 <p>To write data, you pass a current through the electromagnet to magnetise the domain below it whichever way you want; just spin the platter and keep changing the current to write a series of 1s or 0s.</p>
 <p>Put 3-5 platters together, attach the electromagnet to a moving arm (called the read arm), control the whole thing with some microchips, and you have a hard disk.</p>
-<p><img alt="Open hard disk" src="https://ngjunsiang.github.io/laymansguide/issue118_01.gif"><br>
+<p><img alt="Open hard disk" src="./issue118_01.gif"><br>
 <em>A picture of an opened hard disk, showing the read arms and magnetic platters</em>    </p>
 <h2>Characteristics of a hard disk</h2>
 <p>A hard disk spins at a constant speed, because it is much more complicated to figure out how to read/write stuff when the speed can vary. The larger hard disks, which go into desktops and use 3.5-inch platters, spin at 7200rpm, while the smaller hard disks, which go into laptops and use 2.5-inch platters, spin at 5400rpm.</p>
@@ -55,7 +67,7 @@
 <li>Moving the read arm to the correct position</li>
 <li>Measuring or inducing a current</li>
 </ol>
-<p>This means that each time the hard disk needs to access data from a different region of the disk, there is significant lag time (~5ms; see <a href="https://ngjunsiang.github.io/laymansguide/issue057.html">Issue 57</a>)). This is the time needed for all those movement described above. It is thus advantageous to try to put all the data you need in contiguous domains<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup>, to minimise read arm movement.</p>
+<p>This means that each time the hard disk needs to access data from a different region of the disk, there is significant lag time (~5ms; see <a href="./issue057.html">Issue 57</a>)). This is the time needed for all those movement described above. It is thus advantageous to try to put all the data you need in contiguous domains<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup>, to minimise read arm movement.</p>
 <p>So when an OS tries to perform two data operations at the same time (instead of sequentially), the read arm has to move a lot more to access data from different regions. And this is why, if you have multiple data operations to perform on a hard disk, you should try to do them sequentially instead of simultaneously!</p>
 <p><strong>Issue summary:</strong> A hard disk consists of a read arm, and a set of magnetic platters which store data. To read or write data, the read arm must move to the appropriate track of the rotating platter, and detect the magnetic field (for reading), or attempt to magnetise the domains on the platter (for writing). Operations that require the read arm to access different parts of the magnetic platters intermittently result in slower read speeds.</p>
 <p>This was something that took me a while to figure out; first, to notice that it was actually happening, and second, to read up enough about hard drives and take some (nonworking) ones apart to understand. And now I can explain it to you :)</p>
@@ -84,11 +96,21 @@
     </time></p>
  -->
     <address>
-      By           <a href="https://ngjunsiang.github.io/laymansguide/author/j-s-ng.html">J S Ng</a>
+      By           <a href="./author/j-s-ng.html">J S Ng</a>
     </address>
   </footer>
-  </article>
+</article>
 <ul>
+        <li>
+            <a href="./issue117.html">
+                Issue 117: Swap space
+            </a>
+        </li>
+        <li>
+            <a href="./issue119.html">
+                Issue 119: Solid-state disks, an upgrade from hard disks
+            </a>
+        </li>
 </ul>
         </main>
         <footer>

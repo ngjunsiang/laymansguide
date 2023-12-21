@@ -20,18 +20,30 @@
 
 <body>
         <header>
-              <hgroup><h1><a href="https://ngjunsiang.github.io/laymansguide/">Layman's Guide to Computing</a></h1></hgroup>
+              <hgroup><h1><a href="./">Layman's Guide to Computing</a></h1></hgroup>
         <nav><ul>
-            <li><a href="/categories">Seasons</a></li>
-            <li><a href="/tags">Tags</a></li>
+            <li><a href="./categories">Seasons</a></li>
+            <li><a href="./tags">Tags</a></li>
         </ul></nav>
         </header>
         <main>
+<ul>
+        <li>
+            <a href="./issue093.html">
+                Issue 93: What's in a web app?
+            </a>
+        </li>
+        <li>
+            <a href="./issue095.html">
+                Issue 95: What’s in a mobile app?
+            </a>
+        </li>
+</ul>
 <article>
-  <p><a href="https://ngjunsiang.github.io/laymansguide/category/season-08.html">Season 08</a></p>
+  <p><a href="./category/season-08.html">Season 08</a></p>
   <header>
     <h2>
-      <a href="https://ngjunsiang.github.io/laymansguide/issue094.html" rel="bookmark"
+      <a href="./issue094.html" rel="bookmark"
          title="Permalink to Issue 94: Why do web browsers take up so much memory?">Issue 94: Why do web browsers take up so much memory?</a></h2>
  
   </header>
@@ -40,7 +52,7 @@
   </time></p>
   <p><a href="https://buttondown.email/laymansguide/archive/"><strong>Previously:</strong></a> Web apps have limited access to the device’ storage, and can only store data in browser-managed databases. Progressive Web Apps (PWAs) can additionally register service workers that run in the background. Because they are so cleanly sandboxed, they can be easily removed by clearing the browser cache and storage, and deregistering any service workers manually.</p>
 <p>Apps once lived on a computer. You double-clicked them or pressed Enter or right-clicked Run, a window pops up and a rectangle appears on your taskbar. If Task Manager is showing you that it is using up gobs of memory, you just End Task and the rectangle disappears. Later in this season I’ll say more about what it is like to live in a computer, but we are on web apps now.</p>
-<p>Web apps are somewhat more complicated. Because they are so tidily sandboxed (<a href="https://ngjunsiang.github.io/laymansguide/issue092.html">Issue 92</a>)), they cannot actually live on your computer. Instead, they live in your browser.</p>
+<p>Web apps are somewhat more complicated. Because they are so tidily sandboxed (<a href="./issue092.html">Issue 92</a>)), they cannot actually live on your computer. Instead, they live in your browser.</p>
 <h2>Living in a web browser</h2>
 <p>Living in a computer means that the operating system (OS) takes care of you; it gives you the memory and disk space you need, gives you CPU time to run your processes, and gives you access to devices (such as the screen and keyboard).</p>
 <p>When you live in the browser, the browser takes care of you. Everything you need is requested from the operating system (OS) by the browser. The space that the web app uses in localstorage, sessionstorage, IndexedDB, and the cache, is space that the browser requested. The CPU cycles that the web app needs are cycles that the browser has requested.</p>
@@ -49,19 +61,19 @@
 <h2>A web app’s needs</h2>
 <p>I have a browser tab open now, with a Google Sheet loaded. What is the Google Sheet app doing on that page? Let’s open DevTools and find out.</p>
 <p>DevTools has a really cool tab labelled “Memory”, and it has a nice visual depiction of what the app is doing with all that memory:</p>
-<p><img alt="Firefox DevTools, showing the Memory tab. The app is using 83.84MB of memory, and 32MiB of that is used by objects." src="https://ngjunsiang.github.io/laymansguide/issue094_01.png"><br>
+<p><img alt="Firefox DevTools, showing the Memory tab. The app is using 83.84MB of memory, and 32MiB of that is used by objects." src="./issue094_01.png"><br>
 <em>DevTools in Firefox lets you inspect the memory that web apps use.<br />The Memory tab shows what is stored in memory.<br />Most of the memory here is being taken up by javascript objects.</em>    </p>
-<p>Javascript <code>object</code>s here are Javascript’s own internal representation of data, which is quite similar to a document database’s format. Altogether, they take up 32 MiB of memory space (difference between MB and MiB is covered in <a href="https://ngjunsiang.github.io/laymansguide/issue040.html">Issue 40</a>)). Google Sheets is juggling a lot of data internally, data which is not stored in IndexedDB or localstorage!</p>
+<p>Javascript <code>object</code>s here are Javascript’s own internal representation of data, which is quite similar to a document database’s format. Altogether, they take up 32 MiB of memory space (difference between MB and MiB is covered in <a href="./issue040.html">Issue 40</a>)). Google Sheets is juggling a lot of data internally, data which is not stored in IndexedDB or localstorage!</p>
 <p><code>other</code>, taking up 15 MiB, seems to be pointing to a javascript library that Google Sheets is using to render the spreadsheet.</p>
 <p><code>strings</code> are simpler than <code>object</code>s, each one representing a snippet of text, or possibly even a number. They only take up 5MiB. <code>scripts</code> are the internally stored scripts that the page is executing; they take up 11 MiB.</p>
-<p><code>domNode</code> is where it gets interesting. We are used to seeing HTML documents (<a href="https://ngjunsiang.github.io/laymansguide/issue050.html">Issue 50</a>)) as a plain text document with lots of formatting, but in a browser it becomes more than just text. Each part of the page, an HTML element, can have its properties changed by Javascript as the page reacts to new data, or to user input.</p>
+<p><code>domNode</code> is where it gets interesting. We are used to seeing HTML documents (<a href="./issue050.html">Issue 50</a>)) as a plain text document with lots of formatting, but in a browser it becomes more than just text. Each part of the page, an HTML element, can have its properties changed by Javascript as the page reacts to new data, or to user input.</p>
 <h2>The HTML Document Object Model</h2>
 <p>It would be too computationally taxing to keep scanning through the text document to figure out which part of the page is meant to be changed. Instead, the browser has its own way of storing the <em>hierarchy</em> of elements: each menu option falls under a menu heading, which falls under the navigation bar, which falls under the header, which falls under the main document, and so on. If each browser had its own way of doing that, a web developer would have to learn all of them to make a webpage that worked across all browsers; that’s terrible!</p>
 <p>Instead, the web standardised on one way of doing so: the HTML <strong>Document Object Model (DOM)</strong>.</p>
 <p>Internally, a web browser converts the HTML page into a DOM—a data structure that makes it easy to find the specific HTML element (or elements) that need to be modified by each function. The HTML DOM for the page I’m on takes up 14 MiB, which may sound like a lot, until you remember that each element also has associated metadata stored along with its content. And Google Sheets has lots of elements!</p>
 <hr>
 <p><strong>Issue summary:</strong> Web apps require the browser to request memory on their behalf, and thus their memory usage shows up under the browser process in the OS Task Manager. Web apps use this data to store a more convenient (but larger) representation of the webpage document, and to store the data needed by the app.</p>
-<p>And that is how a web app uses up 84MiB of memory space. If you have multiple tabs running the same app (e.g. multiple Google Sheets open), some of the memory can be shared (<a href="https://ngjunsiang.github.io/laymansguide/issue065.html">Issue 84</a>)) by these tabs (e.g. <code>scripts</code>), but otherwise each tab is going to have its own memory needs.</p>
+<p>And that is how a web app uses up 84MiB of memory space. If you have multiple tabs running the same app (e.g. multiple Google Sheets open), some of the memory can be shared (<a href="./issue065.html">Issue 84</a>)) by these tabs (e.g. <code>scripts</code>), but otherwise each tab is going to have its own memory needs.</p>
 <p>In the earlier days of the internet, when spreadsheets were still a separate app, this memory usage would have showed up in the OS Task Manager under Lotus 1-2-3, Microsoft Excel, or some other spreadsheet program. Today, it shows up under Chrome or Firefox, and the details are only inspectable through the browser’s Task Manager.</p>
 <p>No wonder browsers get all the blame these days.</p>
 <h2>What I’ll be covering next</h2>
@@ -84,18 +96,28 @@
     </time></p>
  -->
     <address>
-      By           <a href="https://ngjunsiang.github.io/laymansguide/author/j-s-ng.html">J S Ng</a>
+      By           <a href="./author/j-s-ng.html">J S Ng</a>
     </address>
     <p>
         Tags:
-            <a href="https://ngjunsiang.github.io/laymansguide/tag/app.html">app</a>
-            <a href="https://ngjunsiang.github.io/laymansguide/tag/cache.html">cache</a>
-            <a href="https://ngjunsiang.github.io/laymansguide/tag/memory.html">memory</a>
-            <a href="https://ngjunsiang.github.io/laymansguide/tag/operating-system.html">operating system</a>
+            <a href="./tag/app.html">app</a>
+            <a href="./tag/cache.html">cache</a>
+            <a href="./tag/memory.html">memory</a>
+            <a href="./tag/operating-system.html">operating system</a>
     </p>
   </footer>
-  </article>
+</article>
 <ul>
+        <li>
+            <a href="./issue093.html">
+                Issue 93: What's in a web app?
+            </a>
+        </li>
+        <li>
+            <a href="./issue095.html">
+                Issue 95: What’s in a mobile app?
+            </a>
+        </li>
 </ul>
         </main>
         <footer>

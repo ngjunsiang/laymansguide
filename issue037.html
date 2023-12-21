@@ -16,18 +16,30 @@
 
 <body>
         <header>
-              <hgroup><h1><a href="https://ngjunsiang.github.io/laymansguide/">Layman's Guide to Computing</a></h1></hgroup>
+              <hgroup><h1><a href="./">Layman's Guide to Computing</a></h1></hgroup>
         <nav><ul>
-            <li><a href="/categories">Seasons</a></li>
-            <li><a href="/tags">Tags</a></li>
+            <li><a href="./categories">Seasons</a></li>
+            <li><a href="./tags">Tags</a></li>
         </ul></nav>
         </header>
         <main>
+<ul>
+        <li>
+            <a href="./issue036.html">
+                Issue 36: Latency
+            </a>
+        </li>
+        <li>
+            <a href="./issue038.html">
+                Issue 38: Loading a web page
+            </a>
+        </li>
+</ul>
 <article>
-  <p><a href="https://ngjunsiang.github.io/laymansguide/category/season-03.html">Season 03</a></p>
+  <p><a href="./category/season-03.html">Season 03</a></p>
   <header>
     <h2>
-      <a href="https://ngjunsiang.github.io/laymansguide/issue037.html" rel="bookmark"
+      <a href="./issue037.html" rel="bookmark"
          title="Permalink to Issue 37: Traceroute–Google Maps for data packets">Issue 37: Traceroute–Google Maps for data packets</a></h2>
  
   </header>
@@ -37,7 +49,7 @@
   <p><strong>Previously:</strong> Latency is the time duration between a ping packet being sent out and its response being received. It is an indication of how far away a target server is.</p>
 <p>Last issue, we saw that the latency for google.com's servers was almost 8× shorter than that for baidu.com's servers. Let's see why.</p>
 <h2>traceroute</h2>
-<p>I use the commandline application (<a href="https://ngjunsiang.github.io/laymansguide/issue015.html">Issue 15</a>)) <code>traceroute</code> to display the entire route taken by the data packet. The commandline prompt in Linux usually starts with a <code>$</code>, so any text you see after a beginning <code>$</code> in the same line is the command I am using. Everything that follows is the output from the <code>traceroute</code> application. the <code>-T</code> option tells <code>traceroute</code> to use TCP packets to trace the path of our data packets.</p>
+<p>I use the commandline application (<a href="./issue015.html">Issue 15</a>)) <code>traceroute</code> to display the entire route taken by the data packet. The commandline prompt in Linux usually starts with a <code>$</code>, so any text you see after a beginning <code>$</code> in the same line is the command I am using. Everything that follows is the output from the <code>traceroute</code> application. the <code>-T</code> option tells <code>traceroute</code> to use TCP packets to trace the path of our data packets.</p>
 <div class="highlight"><pre><span></span><code>$<span class="w"> </span>traceroute<span class="w"> </span>-T<span class="w"> </span>google.com
 traceroute<span class="w"> </span>to<span class="w"> </span>google.com<span class="w"> </span><span class="o">(</span><span class="m">74</span>.125.24.138<span class="o">)</span>,<span class="w"> </span><span class="m">30</span><span class="w"> </span>hops<span class="w"> </span>max,<span class="w"> </span><span class="m">60</span><span class="w"> </span>byte<span class="w"> </span>packets
 <span class="w"> </span><span class="m">1</span><span class="w">  </span>_gateway<span class="w"> </span><span class="o">(</span><span class="m">192</span>.168.1.1<span class="o">)</span><span class="w">  </span><span class="m">0</span>.971<span class="w"> </span>ms<span class="w">  </span><span class="m">0</span>.959<span class="w"> </span>ms<span class="w">  </span><span class="m">0</span>.951<span class="w"> </span>ms
@@ -62,14 +74,14 @@ traceroute<span class="w"> </span>to<span class="w"> </span>google.com<span clas
 </code></pre></div>
 
 <p>Wall of numbers and text! Whoa, scary! It’s all right, I’ll throw that output into Google Sheets and prettify it a bit:</p>
-<p><img alt="prettified traceroute output for google.com" src="https://ngjunsiang.github.io/laymansguide/issue037_01.png"><br>
+<p><img alt="prettified traceroute output for google.com" src="./issue037_01.png"><br>
 <em>The traceroute output for google.com, prettified</em>    </p>
 <p><code>traceroute</code> sends 3 TCP packets, tracing the path they take to the destination IP address. Each time the data packet gets forwarded to another gateway, it is considered a ‘hop’.</p>
-<p><code>traceroute</code> also helps us do a <strong>reverse DNS lookup</strong>; a DNS query is when you want to find out the IP address associated with a hostname, a <strong>reverse DNS lookup</strong> helps you find out which hostname is associated with an IP address. IP addresses with successful reverse DNS lookups have the hostname shown for easier reading; those that didn’t will have only the IP address shown. Some servers are configured to block <code>traceroute</code> packets (done by the <a href="https://ngjunsiang.github.io/laymansguide/issue034.html">firewall</a>)), and thus return no information; these are represented by asterisks (<code>*</code>) in the output.</p>
+<p><code>traceroute</code> also helps us do a <strong>reverse DNS lookup</strong>; a DNS query is when you want to find out the IP address associated with a hostname, a <strong>reverse DNS lookup</strong> helps you find out which hostname is associated with an IP address. IP addresses with successful reverse DNS lookups have the hostname shown for easier reading; those that didn’t will have only the IP address shown. Some servers are configured to block <code>traceroute</code> packets (done by the <a href="./issue034.html">firewall</a>)), and thus return no information; these are represented by asterisks (<code>*</code>) in the output.</p>
 <p>As the data packets are sent from my router (<code>_gateway</code> in the output) to the first ISP gateway (<code>27.104.128.1</code>), they don’t always take the same path to the destination. Some of the internet servers along the path are programmed with algorithms that will send the data packets to a group of servers. This group of servers are configured to work together to share the packet-routing load. Two data packets sent through the same internet server may end up getting routed to different places along the route.</p>
 <p>Notice that each hop has a latency associated with it. This is the time taken for the server to decode the packet, figure out what is the next destination, and send it forward. This will often not happen immediately. The data packet joins a queue of other data packets waiting to be dispatched; when the server is under a heavy load, with many data packets waiting to be dispatched (perhaps a whole deluge of Google searches are happening?), the waiting time can rise to hundreds of milliseconds or even a few seconds! (Simply unbearable …)</p>
 <p>Let’s look the <code>traceroute</code> output for baidu.com:</p>
-<p><img alt="prettified traceroute output for baidu.com" src="https://ngjunsiang.github.io/laymansguide/issue037_02.png"><br>
+<p><img alt="prettified traceroute output for baidu.com" src="./issue037_02.png"><br>
 <em>The traceroute output for baidu.com, prettified</em>    </p>
 <p>Notice that:</p>
 <ol>
@@ -104,7 +116,7 @@ traceroute<span class="w"> </span>to<span class="w"> </span>google.com<span clas
 <hr>
 <ol>
 <li id="fn:1">
-<p>Remember that internet servers are supposed to cooperate with each other and forward data packets properly according to Internet Protocol (<a href="https://ngjunsiang.github.io/laymansguide/issue027.html">Issue 27</a>)). That is how the Internet can continue running smoothly. If servers stop obeying this protocol, the Internet will no longer be a connected space, but will become segregated depending on which servers are willing to forward data packets to each other.<br/>
+<p>Remember that internet servers are supposed to cooperate with each other and forward data packets properly according to Internet Protocol (<a href="./issue027.html">Issue 27</a>)). That is how the Internet can continue running smoothly. If servers stop obeying this protocol, the Internet will no longer be a connected space, but will become segregated depending on which servers are willing to forward data packets to each other.<br/>
 For instance, if China blocks some web services (Facebook, Twitter, et al), then packets from those services cannot be routed through China’s servers.&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
 </li>
 </ol>
@@ -115,11 +127,21 @@ For instance, if China blocks some web services (Facebook, Twitter, et al), then
     </time></p>
  -->
     <address>
-      By           <a href="https://ngjunsiang.github.io/laymansguide/author/j-s-ng.html">J S Ng</a>
+      By           <a href="./author/j-s-ng.html">J S Ng</a>
     </address>
   </footer>
-  </article>
+</article>
 <ul>
+        <li>
+            <a href="./issue036.html">
+                Issue 36: Latency
+            </a>
+        </li>
+        <li>
+            <a href="./issue038.html">
+                Issue 38: Loading a web page
+            </a>
+        </li>
 </ul>
         </main>
         <footer>

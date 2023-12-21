@@ -19,18 +19,30 @@
 
 <body>
         <header>
-              <hgroup><h1><a href="https://ngjunsiang.github.io/laymansguide/">Layman's Guide to Computing</a></h1></hgroup>
+              <hgroup><h1><a href="./">Layman's Guide to Computing</a></h1></hgroup>
         <nav><ul>
-            <li><a href="/categories">Seasons</a></li>
-            <li><a href="/tags">Tags</a></li>
+            <li><a href="./categories">Seasons</a></li>
+            <li><a href="./tags">Tags</a></li>
         </ul></nav>
         </header>
         <main>
+<ul>
+        <li>
+            <a href="./issue100.html">
+                Issue 100: Where does all the app data go? A look at Windows systems
+            </a>
+        </li>
+        <li>
+            <a href="./issue102.html">
+                Issue 102:  Threading
+            </a>
+        </li>
+</ul>
 <article>
-  <p><a href="https://ngjunsiang.github.io/laymansguide/category/season-08.html">Season 08</a></p>
+  <p><a href="./category/season-08.html">Season 08</a></p>
   <header>
     <h2>
-      <a href="https://ngjunsiang.github.io/laymansguide/issue101.html" rel="bookmark"
+      <a href="./issue101.html" rel="bookmark"
          title="Permalink to Issue 101: Why apps crash">Issue 101: Why apps crash</a></h2>
  
   </header>
@@ -49,7 +61,7 @@
 <p>Well, a whole bunch of things can go wrong. And when they do, the OS throws an error. If the app does not have any code to handle that error ... game over, it cannot proceed and it crashes abruptly.</p>
 <p>This is a lot more common than you think, even for experienced programmers, especially when a process that isn’t expected to throw an error actually does it. And sometimes it just can’t be helped: when your computer runs out of memory, and an app requests for more memory but doesn’t get it, and it just cant go on without that memory ... it crashes.</p>
 <h3>Illegal instructions</h3>
-<p>Memory in the computer is managed by the OS (<a href="https://ngjunsiang.github.io/laymansguide/issue065.html">Issue 65</a>)), which partitions it into different zones. The memory used by OS processes is protected from access by other apps (for your privacy and protection), and memory used by an app cannot be used by another app, unless it is shared memory space.</p>
+<p>Memory in the computer is managed by the OS (<a href="./issue065.html">Issue 65</a>)), which partitions it into different zones. The memory used by OS processes is protected from access by other apps (for your privacy and protection), and memory used by an app cannot be used by another app, unless it is shared memory space.</p>
 <p>So when an app sends an instruction requesting to access memory space it does not have authorisation to, or when the OS itself attempts to access an address that it can’t (especially addresses that point to hardware devices) ... it crashes. An app crash just brings you back to your desktop, but an OS crash usually leads to the famous Blue Screen Of Death (BSOD).</p>
 <p>These days, OSes are better at handling crashes. If the crash occurs in the window management system (the part that lets apps create windows on screen and icons in the taskbar), Windows can often just restart it without restarting or touching the rest of the OS. But if it happens in a critical part that can’t be restarted by itself, then ... BSOD :)</p>
 <p><strong>Issue summary:</strong> An app crashes when it encounters a situation it can’t handle, or when it attempts to perform an operation that is disallowed by the operating system.</p>
@@ -76,17 +88,27 @@
     </time></p>
  -->
     <address>
-      By           <a href="https://ngjunsiang.github.io/laymansguide/author/j-s-ng.html">J S Ng</a>
+      By           <a href="./author/j-s-ng.html">J S Ng</a>
     </address>
     <p>
         Tags:
-            <a href="https://ngjunsiang.github.io/laymansguide/tag/app.html">app</a>
-            <a href="https://ngjunsiang.github.io/laymansguide/tag/memory.html">memory</a>
-            <a href="https://ngjunsiang.github.io/laymansguide/tag/operating-system.html">operating system</a>
+            <a href="./tag/app.html">app</a>
+            <a href="./tag/memory.html">memory</a>
+            <a href="./tag/operating-system.html">operating system</a>
     </p>
   </footer>
-  </article>
+</article>
 <ul>
+        <li>
+            <a href="./issue100.html">
+                Issue 100: Where does all the app data go? A look at Windows systems
+            </a>
+        </li>
+        <li>
+            <a href="./issue102.html">
+                Issue 102:  Threading
+            </a>
+        </li>
 </ul>
         </main>
         <footer>

@@ -16,18 +16,30 @@
 
 <body>
         <header>
-              <hgroup><h1><a href="https://ngjunsiang.github.io/laymansguide/">Layman's Guide to Computing</a></h1></hgroup>
+              <hgroup><h1><a href="./">Layman's Guide to Computing</a></h1></hgroup>
         <nav><ul>
-            <li><a href="/categories">Seasons</a></li>
-            <li><a href="/tags">Tags</a></li>
+            <li><a href="./categories">Seasons</a></li>
+            <li><a href="./tags">Tags</a></li>
         </ul></nav>
         </header>
         <main>
+<ul>
+        <li>
+            <a href="./issue159.html">
+                Issue 159: Wifi & cell tower location tracking
+            </a>
+        </li>
+        <li>
+            <a href="./issue161.html">
+                Issue 161: Security and XSS
+            </a>
+        </li>
+</ul>
 <article>
-  <p><a href="https://ngjunsiang.github.io/laymansguide/category/season-13.html">Season 13</a></p>
+  <p><a href="./category/season-13.html">Season 13</a></p>
   <header>
     <h2>
-      <a href="https://ngjunsiang.github.io/laymansguide/issue160.html" rel="bookmark"
+      <a href="./issue160.html" rel="bookmark"
          title="Permalink to Issue 160: CDNs and content distribution">Issue 160: CDNs and content distribution</a></h2>
  
   </header>
@@ -36,14 +48,14 @@
   </time></p>
   <p><a href="https://buttondown.email/laymansguide/archive/"><strong>Previously:</strong></a> Instead of GPS satellites, smartphones can also use wifi points and cell towers to determine their position (if enabled in the OS).</p>
 <p>All businessmen know that distribution is everything. How good your product is, is secondary to how you get your product to the customer. This act of getting things to your customer—it’s called distribution, and entire businesses have been built around excellent distribution.</p>
-<p>In <a href="https://ngjunsiang.github.io/laymansguide/issue157.html">Issue 157</a>), I described how time is synchronised from time source to server and on to other servers, down the strata of the hierarchy tree of time servers. Whereas GPS/wifi location (<a href="https://ngjunsiang.github.io/laymansguide/issue158.html">Issue 158</a>)) has a much shallower distribution system: everybody gets their location directly from a GPS satellite if there’s nothing else available, otherwise they get it from the nearest wifi point or cell tower.</p>
+<p>In <a href="./issue157.html">Issue 157</a>), I described how time is synchronised from time source to server and on to other servers, down the strata of the hierarchy tree of time servers. Whereas GPS/wifi location (<a href="./issue158.html">Issue 158</a>)) has a much shallower distribution system: everybody gets their location directly from a GPS satellite if there’s nothing else available, otherwise they get it from the nearest wifi point or cell tower.</p>
 <p>What about content?</p>
 <h2>The difficulties of content</h2>
 <p>You make a website, type in the headers and body text, upload the images and videos … and it just works right?</p>
-<p>Let’s think through the <strong>distribution</strong> of that content. Text is generally small in size and easy to pass around, even through multiple hops (<a href="https://ngjunsiang.github.io/laymansguide/issue036.html">Issue 36</a>)) from server to client.</p>
+<p>Let’s think through the <strong>distribution</strong> of that content. Text is generally small in size and easy to pass around, even through multiple hops (<a href="./issue036.html">Issue 36</a>)) from server to client.</p>
 <h3>Server load</h3>
-<p>What about the heavy stuff, like hi-res images and videos? Thousands or millions of clients all requesting the same large video file from your hosting server. That server is going to be spending many CPU cycles (<a href="https://ngjunsiang.github.io/laymansguide/issue058.html">Issue 58</a>)) receiving requests, retrieving the data, splitting and encapsulating it into data packets to be sent out. All that processing adds to the server load. If there are too many clients waiting for the same data ... they gonna wait. And that adds to latency (<a href="https://ngjunsiang.github.io/laymansguide/issue036.html">Issue 36</a>)); those viewers are going to be seeing loading spinners for a while.</p>
-<p>Some of that processing can be mitigated with techniques such as caching (<a href="https://ngjunsiang.github.io/laymansguide/issue039.html">Issue 39</a>)), but not enough; you will eventually need to add more servers.</p>
+<p>What about the heavy stuff, like hi-res images and videos? Thousands or millions of clients all requesting the same large video file from your hosting server. That server is going to be spending many CPU cycles (<a href="./issue058.html">Issue 58</a>)) receiving requests, retrieving the data, splitting and encapsulating it into data packets to be sent out. All that processing adds to the server load. If there are too many clients waiting for the same data ... they gonna wait. And that adds to latency (<a href="./issue036.html">Issue 36</a>)); those viewers are going to be seeing loading spinners for a while.</p>
+<p>Some of that processing can be mitigated with techniques such as caching (<a href="./issue039.html">Issue 39</a>)), but not enough; you will eventually need to add more servers.</p>
 <h3>Bandwidth and transfer fees</h3>
 <p>Your hosting provider is going to be paying lots of egress fees to transfer your data out of their servers (imagine sending the same 4GB video to a few thousand Youtube viewers), and they’ll likely pass on the fees to you as well.</p>
 <h3>Latency again</h3>
@@ -71,11 +83,21 @@
     </time></p>
  -->
     <address>
-      By           <a href="https://ngjunsiang.github.io/laymansguide/author/j-s-ng.html">J S Ng</a>
+      By           <a href="./author/j-s-ng.html">J S Ng</a>
     </address>
   </footer>
-  </article>
+</article>
 <ul>
+        <li>
+            <a href="./issue159.html">
+                Issue 159: Wifi & cell tower location tracking
+            </a>
+        </li>
+        <li>
+            <a href="./issue161.html">
+                Issue 161: Security and XSS
+            </a>
+        </li>
 </ul>
         </main>
         <footer>

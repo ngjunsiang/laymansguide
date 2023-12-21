@@ -17,18 +17,30 @@
 
 <body>
         <header>
-              <hgroup><h1><a href="https://ngjunsiang.github.io/laymansguide/">Layman's Guide to Computing</a></h1></hgroup>
+              <hgroup><h1><a href="./">Layman's Guide to Computing</a></h1></hgroup>
         <nav><ul>
-            <li><a href="/categories">Seasons</a></li>
-            <li><a href="/tags">Tags</a></li>
+            <li><a href="./categories">Seasons</a></li>
+            <li><a href="./tags">Tags</a></li>
         </ul></nav>
         </header>
         <main>
+<ul>
+        <li>
+            <a href="./issue115.html">
+                Issue 115: Shutdown & standby
+            </a>
+        </li>
+        <li>
+            <a href="./issue117.html">
+                Issue 117: Swap space
+            </a>
+        </li>
+</ul>
 <article>
-  <p><a href="https://ngjunsiang.github.io/laymansguide/category/season-09.html">Season 09</a></p>
+  <p><a href="./category/season-09.html">Season 09</a></p>
   <header>
     <h2>
-      <a href="https://ngjunsiang.github.io/laymansguide/issue116.html" rel="bookmark"
+      <a href="./issue116.html" rel="bookmark"
          title="Permalink to Issue 116: Hibernation">Issue 116: Hibernation</a></h2>
  
   </header>
@@ -42,7 +54,7 @@
 <h2>Hibernation</h2>
 <p>How is it possible to preserve data configuration in memory without any power at all? Any time you notice magic like this happening, you should immediately suspect that data storage is involved somehow.</p>
 <p>When you put a computer into hibernate, Windows dumps the contents of computer memory into a hibernation file on your storage disk (check if you have <code>C:\hiberfil.sys</code> on your computer disk; that’s the one), then <em>shuts down</em> your computer. Yup, it’s a shutdown, except the programs don’t have to exit (because remember, the data configuration is already preserved). So this is much faster than a normal shutdown, but not as fast as standby which involves no shutdown at all.</p>
-<p>When you press the power button again to bring the system back, the computer still has to go through the bootup sequence (memory was completely wiped, remember). But at the point where control is handed over to the OS (<a href="https://ngjunsiang.github.io/laymansguide/issue112.html">Issue 112</a>)), the OS does not carry out its usual preparations. Instead, it reads the contents of the hibernation file into memory, then acts as though the system is already booted up! You just log in, and everything is the way it was just before hibernation (keeping fingers crossed …)</p>
+<p>When you press the power button again to bring the system back, the computer still has to go through the bootup sequence (memory was completely wiped, remember). But at the point where control is handed over to the OS (<a href="./issue112.html">Issue 112</a>)), the OS does not carry out its usual preparations. Instead, it reads the contents of the hibernation file into memory, then acts as though the system is already booted up! You just log in, and everything is the way it was just before hibernation (keeping fingers crossed …)</p>
 <p><strong>Issue summary:</strong> Hibernation mode causes the computer to store the data configuration into a hibernation file on disk. When powered up, the OS reads the data configuration from the file back into memory. This lets the system avoid having to do a full shutdown and bootup; it performs a shorter version of these two sequences instead.</p>
 <p>Okay, so that’s one more mystery explained.</p>
 <p>One thing I didn’t think was critical to explain above, but which eventually crops up for most people, is that the hibernation file takes up a lot of space! It needs to contain all the data in memory, so if you have a laptop with 16GB of memory, your hibernation file will be around that size too. If you’re wondering why Windows is taking up so much space, this is usually one of those reasons.</p>
@@ -65,15 +77,25 @@
     </time></p>
  -->
     <address>
-      By           <a href="https://ngjunsiang.github.io/laymansguide/author/j-s-ng.html">J S Ng</a>
+      By           <a href="./author/j-s-ng.html">J S Ng</a>
     </address>
     <p>
         Tags:
-            <a href="https://ngjunsiang.github.io/laymansguide/tag/operating-system.html">operating system</a>
+            <a href="./tag/operating-system.html">operating system</a>
     </p>
   </footer>
-  </article>
+</article>
 <ul>
+        <li>
+            <a href="./issue115.html">
+                Issue 115: Shutdown & standby
+            </a>
+        </li>
+        <li>
+            <a href="./issue117.html">
+                Issue 117: Swap space
+            </a>
+        </li>
 </ul>
         </main>
         <footer>

@@ -17,18 +17,30 @@
 
 <body>
         <header>
-              <hgroup><h1><a href="https://ngjunsiang.github.io/laymansguide/">Layman's Guide to Computing</a></h1></hgroup>
+              <hgroup><h1><a href="./">Layman's Guide to Computing</a></h1></hgroup>
         <nav><ul>
-            <li><a href="/categories">Seasons</a></li>
-            <li><a href="/tags">Tags</a></li>
+            <li><a href="./categories">Seasons</a></li>
+            <li><a href="./tags">Tags</a></li>
         </ul></nav>
         </header>
         <main>
+<ul>
+        <li>
+            <a href="./issue046.html">
+                Issue 46: Lossy compression
+            </a>
+        </li>
+        <li>
+            <a href="./issue048.html">
+                Issue 48: Of containers and codecs
+            </a>
+        </li>
+</ul>
 <article>
-  <p><a href="https://ngjunsiang.github.io/laymansguide/category/season-04.html">Season 04</a></p>
+  <p><a href="./category/season-04.html">Season 04</a></p>
   <header>
     <h2>
-      <a href="https://ngjunsiang.github.io/laymansguide/issue047.html" rel="bookmark"
+      <a href="./issue047.html" rel="bookmark"
          title="Permalink to Issue 47: Lossless compression">Issue 47: Lossless compression</a></h2>
  
   </header>
@@ -45,7 +57,7 @@
 <p>In lossless compression, the predictive algorithm already knows what the next sample is, so most of the work is in calculating exactly what those percentages are. It does so by making an initial guess, then refining that guess in successive stages of calculation, each stage bringing it closer to the original waveform. This requires a lot of computation time. If such a setting is available, the algorithm can shorten the process, leading to a poorer guess. It then calculates the difference between the best guess and the original sample, and stores the difference between the two. This part is what makes it lossless rather than lossy.</p>
 <h1>Lossless image compression</h1>
 <p>The most common image formats that use compression are GIF (yes, really) and PNG. Some kinds of images, such as screenshots, have patterns that are repeated. The algorithm used in GIF and PNG, LZ77, attempts to spot these patterns, and reduce them to 1) the repeating portion, and 2) the number of repetitions. This is known as <strong>run-length encoding</strong>. The nature of images makes the process easier, as each pixel only has 256 possible values rather than 65536.</p>
-<p>Those patterns are stored in a table, and <em>references</em> to them are used instead. So instead of saying “Pattern 0101011101110110”, the algorithm will store a list of these patterns, and refer to them as Pattern 0, Pattern 1, Pattern 10, Pattern 11, … (these are 1, 2, 3, and 4 respectively, in binary representation (<a href="https://ngjunsiang.github.io/laymansguide/issue040.html">Issue 40</a>))).</p>
+<p>Those patterns are stored in a table, and <em>references</em> to them are used instead. So instead of saying “Pattern 0101011101110110”, the algorithm will store a list of these patterns, and refer to them as Pattern 0, Pattern 1, Pattern 10, Pattern 11, … (these are 1, 2, 3, and 4 respectively, in binary representation (<a href="./issue040.html">Issue 40</a>))).</p>
 <p>This is known as <strong>entropy coding</strong>. By linking the longest pattern with the smallest reference number (i.e. Pattern 0), the next-longest pattern with the next-smallest reference number (Pattern 1, 10, 11, 100, 101, 110, …) you can reduce quite significantly the number of bits needed to represent the image.</p>
 <h1>Text compression</h1>
 <p>Text lends itself very well to compression, since there are so many repeated words and phrases. In general, text compression algorithms will use a combination of entropy coding and run-length encoding to reduce a document of text into repeating patterns, and using shorter references to those patterns rather than the full pattern itself.</p>
@@ -57,7 +69,7 @@
 <h1>When I put a zip file in another zip file, why is the second zip file no smaller in size that the first?</h1>
 <p>When the first zip file compressed its contents, the predictability of the resulting data decreased (ever tried compressing shorthand?). You won’t get very far trying to compress unpredictable data.</p>
 <p>If you want greater compression, use a higher compression setting on the original file instead.</p>
-<p><img alt="7zip archive settings, showing options for compression level, compression method, and dictionary size" src="https://ngjunsiang.github.io/laymansguide/issue047_01.png"><br>
+<p><img alt="7zip archive settings, showing options for compression level, compression method, and dictionary size" src="./issue047_01.png"><br>
 <em>7zip archive settings for zip files.<br />Image from <a href="https://en.wikipedia.org/wiki/File:Colorcomp.jpg">Wikimedia Commons</a></em>    </p>
 <p>A higher <em>compression level</em> generally causes the algorithm to try more combinations and iterations of compression, a larger <em>dictionary size</em> enables the algorithm to use more pattern references. Play with these two settings to find the best tradeoff between compression time and compression ratio (the ratio of final filesize to original filesize).</p>
 <h1>Why do Powerpoint files sometimes compress very well and sometimes not at all?</h1>
@@ -101,15 +113,25 @@
     </time></p>
  -->
     <address>
-      By           <a href="https://ngjunsiang.github.io/laymansguide/author/j-s-ng.html">J S Ng</a>
+      By           <a href="./author/j-s-ng.html">J S Ng</a>
     </address>
     <p>
         Tags:
-            <a href="https://ngjunsiang.github.io/laymansguide/tag/compression.html">compression</a>
+            <a href="./tag/compression.html">compression</a>
     </p>
   </footer>
-  </article>
+</article>
 <ul>
+        <li>
+            <a href="./issue046.html">
+                Issue 46: Lossy compression
+            </a>
+        </li>
+        <li>
+            <a href="./issue048.html">
+                Issue 48: Of containers and codecs
+            </a>
+        </li>
 </ul>
         </main>
         <footer>

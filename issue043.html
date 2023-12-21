@@ -16,18 +16,30 @@
 
 <body>
         <header>
-              <hgroup><h1><a href="https://ngjunsiang.github.io/laymansguide/">Layman's Guide to Computing</a></h1></hgroup>
+              <hgroup><h1><a href="./">Layman's Guide to Computing</a></h1></hgroup>
         <nav><ul>
-            <li><a href="/categories">Seasons</a></li>
-            <li><a href="/tags">Tags</a></li>
+            <li><a href="./categories">Seasons</a></li>
+            <li><a href="./tags">Tags</a></li>
         </ul></nav>
         </header>
         <main>
+<ul>
+        <li>
+            <a href="./issue042.html">
+                Issue 42: Unicode, computers go international
+            </a>
+        </li>
+        <li>
+            <a href="./issue044.html">
+                Issue 44: Image resolution
+            </a>
+        </li>
+</ul>
 <article>
-  <p><a href="https://ngjunsiang.github.io/laymansguide/category/season-04.html">Season 04</a></p>
+  <p><a href="./category/season-04.html">Season 04</a></p>
   <header>
     <h2>
-      <a href="https://ngjunsiang.github.io/laymansguide/issue043.html" rel="bookmark"
+      <a href="./issue043.html" rel="bookmark"
          title="Permalink to Issue 43: Images, a mosaic of 3 colours">Issue 43: Images, a mosaic of 3 colours</a></h2>
  
   </header>
@@ -41,19 +53,19 @@
 <p>In this issue, I’ll be summarising and oversimplifying decades of colour theory and colour vision research. Buckle up!</p>
 <h2>The human eye</h2>
 <p>Any effective colour system must take into account how the human eye is structured, and how vision occurs. Today, we understand that humans are trichromatic: there are 3 types of cone cells in the eye (and also 1 type of rod cell, which I won’t be explaining here), and each one recognises a different shade of colour: red, green, blue. Each type of cone cell can differentiate roughly 100 different shades, which theoretically enables us to distinguish 1 million shades of colour (100^3).</p>
-<p>So it makes good sense that our colour systems in computers evolved similarly, to store single dots of colour as a combination of red, green, and blue. To be able to store 100 different shades, we will need at least 7 bits (2^7 = 128), but <a href="https://ngjunsiang.github.io/laymansguide/issue040.html">computer systems like things in 8s</a>). For this and other historical reasons, 1 byte (8 bits) are used for each shade, giving us 256 shades of red, green, and blue each. That’s over 16 million (256^3) shades of colour!</p>
+<p>So it makes good sense that our colour systems in computers evolved similarly, to store single dots of colour as a combination of red, green, and blue. To be able to store 100 different shades, we will need at least 7 bits (2^7 = 128), but <a href="./issue040.html">computer systems like things in 8s</a>). For this and other historical reasons, 1 byte (8 bits) are used for each shade, giving us 256 shades of red, green, and blue each. That’s over 16 million (256^3) shades of colour!</p>
 <h2>Colour encoding</h2>
 <p>Since one byte stores one colour value, three bytes are needed for a single spot of colour combining red, green, and blue—a combination commonly called <strong>RGB</strong>. In a computer, each byte represents the level of that colour; 0 means minimum level (i.e. black) while 255 means maximum level (complete saturation of that colour). So any of those 16 million colours can be stored as a number triplet, representing the red, green, and blue values respectively.</p>
 <p>(0,0,0) is black
 (255,255,255) is white</p>
 <p>So now you know what to do with colour pickers in applications: just find the combination of red, green, and blue that is closest to the colour you want!</p>
-<p><img alt="The Microsoft Paint colour picker" src="https://ngjunsiang.github.io/laymansguide/issue043_01.png"><br>
+<p><img alt="The Microsoft Paint colour picker" src="./issue043_01.png"><br>
 <em>A colour picker, common in graphics applications. This one is from Microsoft Paint.</em>    </p>
 <p>You can play with a simple colour wheel on <a href="https://www.colorspire.com/rgb-color-wheel/">colorspire.com</a>, or if you’re feeling more adventurous, try the more technical one on <a href="https://www.rapidtables.com/web/color/RGB_Color.html">rapidtables.com</a>.</p>
 <h2>Colour production</h2>
 <p>On a screen, colours are produced by millions of liquid crystals (in LCDs) or light-emitting diodes (in LED displays). These are arranged in a rectangular grid pattern, and each one is known as a <strong>pixel</strong> (shortened from <em>picture element</em>). Each pixel is capable of producing 256 shades of red, green, or blue.</p>
 <p>It is extremely difficult to manufacture pixels that can produce any colour; this would require that the crystal or diode can emit light of different frequencies. Instead, the display industry has settled on combining 3 sub-pixels into a pixel. Each sub-pixel produces—you guessed it—either red, green, or blue light.</p>
-<p><img alt="Close-up of LCD/LED pixels from various displays" src="https://ngjunsiang.github.io/laymansguide/issue043_02.png"><br />
+<p><img alt="Close-up of LCD/LED pixels from various displays" src="./issue043_02.png"><br />
 <small>Extreme close-up shots of pixels.<br />
 Taken from <a href="http://lcdtech.info/en/tests/lcd.pixels.structure.htm">lcdtech.info</a>.</small></p>
 <p>When colour information is sent from the computer to the display (through the video cable) and decoded in the display, it also uses RGB values. In this sense there is remarkable consistency in computer systems in how colour is stored, sent, and displayed. That minimises the amount of time spent by computers converting from one format to another.</p>
@@ -73,7 +85,7 @@ colour is stored as one byte (8 bits), allowing for 256 different levels. An ima
 <p>I get carried away easily explaining colour, and it took incredible discipline to rein that exploratory instinct in and stick to the most essential parts. There’s so much to go into, even for laypeople! But, I know, one idea a week, and I’ve sort of worked out where the other ideas should go, so we’ll have a nice and gradual introduction to colour over the course of several seasons.</p>
 <h2>What I’ll be covering next</h2>
 <p><strong>Next issue:</strong> Image resolution</p>
-<p><img alt="Meme: One does not simply resize an image" src="https://ngjunsiang.github.io/laymansguide/issue043_03.jpg"></p>
+<p><img alt="Meme: One does not simply resize an image" src="./issue043_03.jpg"></p>
 <p>After examining a single pixel, I’ll look at a whole image: what does it take to trick our brains into seeing an image instead of a collection of pixels?</p>
 <p><strong>Sometime in the future:</strong> What is:</p>
 <ul>
@@ -94,11 +106,21 @@ colour is stored as one byte (8 bits), allowing for 256 different levels. An ima
     </time></p>
  -->
     <address>
-      By           <a href="https://ngjunsiang.github.io/laymansguide/author/j-s-ng.html">J S Ng</a>
+      By           <a href="./author/j-s-ng.html">J S Ng</a>
     </address>
   </footer>
-  </article>
+</article>
 <ul>
+        <li>
+            <a href="./issue042.html">
+                Issue 42: Unicode, computers go international
+            </a>
+        </li>
+        <li>
+            <a href="./issue044.html">
+                Issue 44: Image resolution
+            </a>
+        </li>
 </ul>
         </main>
         <footer>

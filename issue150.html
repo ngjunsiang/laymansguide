@@ -16,18 +16,30 @@
 
 <body>
         <header>
-              <hgroup><h1><a href="https://ngjunsiang.github.io/laymansguide/">Layman's Guide to Computing</a></h1></hgroup>
+              <hgroup><h1><a href="./">Layman's Guide to Computing</a></h1></hgroup>
         <nav><ul>
-            <li><a href="/categories">Seasons</a></li>
-            <li><a href="/tags">Tags</a></li>
+            <li><a href="./categories">Seasons</a></li>
+            <li><a href="./tags">Tags</a></li>
         </ul></nav>
         </header>
         <main>
+<ul>
+        <li>
+            <a href="./issue149.html">
+                Issue 149: History of commercial computing - containerisation
+            </a>
+        </li>
+        <li>
+            <a href="./issue151.html">
+                Issue 151: the Java VM
+            </a>
+        </li>
+</ul>
 <article>
-  <p><a href="https://ngjunsiang.github.io/laymansguide/category/season-12.html">Season 12</a></p>
+  <p><a href="./category/season-12.html">Season 12</a></p>
   <header>
     <h2>
-      <a href="https://ngjunsiang.github.io/laymansguide/issue150.html" rel="bookmark"
+      <a href="./issue150.html" rel="bookmark"
          title="Permalink to Issue 150: System VMs vs Process VMs">Issue 150: System VMs vs Process VMs</a></h2>
  
   </header>
@@ -41,14 +53,14 @@
 <p>What if I want to write software that will work the same on multiple OSes? Is that possible?</p>
 <p>Before 1995, no!</p>
 <h2>OS-level details are tricky</h2>
-<p>OSes mediate access to resources through libraries (<a href="https://ngjunsiang.github.io/laymansguide/issue017.html">Issue 17</a>)). Instead of having to deal with storage disk sectors and blocks, you can just use library features to ask the OS to help you create a file and write data to it. The OS and filesystem (<a href="https://ngjunsiang.github.io/laymansguide/issue106.html">Issue 106</a>)) take care of the details.</p>
+<p>OSes mediate access to resources through libraries (<a href="./issue017.html">Issue 17</a>)). Instead of having to deal with storage disk sectors and blocks, you can just use library features to ask the OS to help you create a file and write data to it. The OS and filesystem (<a href="./issue106.html">Issue 106</a>)) take care of the details.</p>
 <p>I don’t know how to explain this more clearly without showing some programming code; the OS controls a lot of things! Which is a problem when it comes to multi-OS support, because different OSes control different things differently.</p>
 <p>The library features for lots of things — storage, searching through directories, networking, etc — are different between Windows, Linux, MacOS, ...</p>
 <h2>Abstracting away the details</h2>
 <p>Can’t we program in a higher-level language, and use another program (the code interpreter) to break it down to different types of operations on different operating systems? E.g. <code>python.exe</code> on Windows will try to make my Python code work in Windows by using Windows libraries, <code>python</code> on Linux will do so using Linux libraries, and <code>python</code> on MacOS will do so using macOS libraries. Javascript, Ruby, Perl, VBScript, and other <strong>interpreted programming languages</strong> work this way too<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup>.</p>
 <p>To a large extent, this is possible. But there remain some irreconcilable differences:</p>
 <ul>
-<li>if you need to use Python to run a command-line program, such as a shell script (<a href="https://ngjunsiang.github.io/laymansguide/issue016.html">Issue 16</a>)), those will depend on terminal availability: not all terminals have cross-OS support!</li>
+<li>if you need to use Python to run a command-line program, such as a shell script (<a href="./issue016.html">Issue 16</a>)), those will depend on terminal availability: not all terminals have cross-OS support!</li>
 <li>If you need to specify a file location, Windows and Linux do not use the same path separators (the character that separates folder names in a folder hierarchy); Windows uses <code>\</code> to separate directory names, while Linux and MacOS uses <code>/</code>. This is often a source of bugs and headaches.</li>
 <li>Important advanced features, such as multiprocessing (on multiple CPU cores simultaneously), are <a href="https://rhodesmill.org/brandon/2010/python-multiprocessing-linux-windows/">handled differently in different OSes</a> in ways that may be incompatible within the same program.</li>
 </ul>
@@ -72,7 +84,7 @@
 <hr>
 <ol>
 <li id="fn:1">
-<p>As opposed to <strong>compiled programming languages</strong> (<a href="https://ngjunsiang.github.io/laymansguide/issue054.html">Issue 54</a>)), where code is compiled into CPU instructions for one hardware platform for one OS only.&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+<p>As opposed to <strong>compiled programming languages</strong> (<a href="./issue054.html">Issue 54</a>)), where code is compiled into CPU instructions for one hardware platform for one OS only.&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
 </li>
 </ol>
 </div>
@@ -82,11 +94,21 @@
     </time></p>
  -->
     <address>
-      By           <a href="https://ngjunsiang.github.io/laymansguide/author/j-s-ng.html">J S Ng</a>
+      By           <a href="./author/j-s-ng.html">J S Ng</a>
     </address>
   </footer>
-  </article>
+</article>
 <ul>
+        <li>
+            <a href="./issue149.html">
+                Issue 149: History of commercial computing - containerisation
+            </a>
+        </li>
+        <li>
+            <a href="./issue151.html">
+                Issue 151: the Java VM
+            </a>
+        </li>
 </ul>
         </main>
         <footer>

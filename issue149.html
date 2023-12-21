@@ -16,18 +16,30 @@
 
 <body>
         <header>
-              <hgroup><h1><a href="https://ngjunsiang.github.io/laymansguide/">Layman's Guide to Computing</a></h1></hgroup>
+              <hgroup><h1><a href="./">Layman's Guide to Computing</a></h1></hgroup>
         <nav><ul>
-            <li><a href="/categories">Seasons</a></li>
-            <li><a href="/tags">Tags</a></li>
+            <li><a href="./categories">Seasons</a></li>
+            <li><a href="./tags">Tags</a></li>
         </ul></nav>
         </header>
         <main>
+<ul>
+        <li>
+            <a href="./issue148.html">
+                Issue 148: History of commercial computing - cohosting
+            </a>
+        </li>
+        <li>
+            <a href="./issue150.html">
+                Issue 150: System VMs vs Process VMs
+            </a>
+        </li>
+</ul>
 <article>
-  <p><a href="https://ngjunsiang.github.io/laymansguide/category/season-12.html">Season 12</a></p>
+  <p><a href="./category/season-12.html">Season 12</a></p>
   <header>
     <h2>
-      <a href="https://ngjunsiang.github.io/laymansguide/issue149.html" rel="bookmark"
+      <a href="./issue149.html" rel="bookmark"
          title="Permalink to Issue 149: History of commercial computing - containerisation">Issue 149: History of commercial computing - containerisation</a></h2>
  
   </header>
@@ -45,7 +57,7 @@
 <p>To recap: when we virtualise the hardware, we provide virtual drivers that the OS can accept as valid hardware.</p>
 <p>But programs don’t need real or virtual hardware; they need OS libraries which provide common resources and services: network, storage, compute, memory, windowing/display. If we can provide <em>virtual libraries</em> which respond like the actual OS libraries would, the programs would be able to run as normal.</p>
 <p>The technology that enables OSes to let programs think they are running exclusively, protected from other programs, is called OS-level virtualisation, but more widely referred to as <strong>containerisation</strong>.</p>
-<p>An OS (with the appropriate software &amp; support) can run multiple <strong>containers</strong>, each container acting like a sandbox (<a href="https://ngjunsiang.github.io/laymansguide/issue092.html">Issue 92</a>)) for the software within. In each container, software has access to OS features, but are unable to affect software outside of the container. Each container appears to have exclusive access to (a portion of) the system’s network, storage, compute, and memory resources.</p>
+<p>An OS (with the appropriate software &amp; support) can run multiple <strong>containers</strong>, each container acting like a sandbox (<a href="./issue092.html">Issue 92</a>)) for the software within. In each container, software has access to OS features, but are unable to affect software outside of the container. Each container appears to have exclusive access to (a portion of) the system’s network, storage, compute, and memory resources.</p>
 <h2>Managing containers</h2>
 <p>The word <strong>containers</strong> may seem like a misnomer, for what are effectively software wrappers. But these do work almost like shipping containers: set up a container in an OS, install the required software, configure it, and now you have a container ready to meet business needs. You could send this container to any virtualisation service, they drop that container into their hosting system, and it runs like you expect.</p>
 <p><strong>Issue summary:</strong> Containers are one layer of virtualisation above virtual machines: containerisation systems virtualise access to the operating system, presenting a virtual interface that provides software with the resources it needs, without being aware of software running in other containers on the same system.</p>
@@ -65,11 +77,21 @@
     </time></p>
  -->
     <address>
-      By           <a href="https://ngjunsiang.github.io/laymansguide/author/j-s-ng.html">J S Ng</a>
+      By           <a href="./author/j-s-ng.html">J S Ng</a>
     </address>
   </footer>
-  </article>
+</article>
 <ul>
+        <li>
+            <a href="./issue148.html">
+                Issue 148: History of commercial computing - cohosting
+            </a>
+        </li>
+        <li>
+            <a href="./issue150.html">
+                Issue 150: System VMs vs Process VMs
+            </a>
+        </li>
 </ul>
         </main>
         <footer>

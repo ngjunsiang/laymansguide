@@ -17,18 +17,30 @@
 
 <body>
         <header>
-              <hgroup><h1><a href="https://ngjunsiang.github.io/laymansguide/">Layman's Guide to Computing</a></h1></hgroup>
+              <hgroup><h1><a href="./">Layman's Guide to Computing</a></h1></hgroup>
         <nav><ul>
-            <li><a href="/categories">Seasons</a></li>
-            <li><a href="/tags">Tags</a></li>
+            <li><a href="./categories">Seasons</a></li>
+            <li><a href="./tags">Tags</a></li>
         </ul></nav>
         </header>
         <main>
+<ul>
+        <li>
+            <a href="./issue087.html">
+                Issue 87: Relational Databases
+            </a>
+        </li>
+        <li>
+            <a href="./issue089.html">
+                Issue 89: Graph Databases
+            </a>
+        </li>
+</ul>
 <article>
-  <p><a href="https://ngjunsiang.github.io/laymansguide/category/season-07.html">Season 07</a></p>
+  <p><a href="./category/season-07.html">Season 07</a></p>
   <header>
     <h2>
-      <a href="https://ngjunsiang.github.io/laymansguide/issue088.html" rel="bookmark"
+      <a href="./issue088.html" rel="bookmark"
          title="Permalink to Issue 88: Document Databases">Issue 88: Document Databases</a></h2>
  
   </header>
@@ -91,7 +103,7 @@
 <p>Since this is not a relational database, you don’t have the protection of foreign keys and other features that stop you from making the data inconsistent—there’s no concept of enforced consistency here! You’ll have to write those rules into your app when it accesses the document database; the database won’t enforce them for you.</p>
 <h2>Advantages</h2>
 <p>Data organised as documents tends to be more self-contained. Since the database does not enforce consistency, it has less to worry about when edits or changes are made to the database. In a distributed document database, we thus sacrifice some consistency—unless we make pains to ensure it in our application code.</p>
-<p>This does provide an advantage: when the distributed document database suffers a network outage, causing it to partition into multiple clusters (<a href="https://ngjunsiang.github.io/laymansguide/issue086.html">Issue 86</a>)), the database can continue to operate. However, each cluster only has access to its own data, and not data on the other clusters. Over time, each cluster will become less and less consistent, since changes in each cluster are not synchronised to other clusters.</p>
+<p>This does provide an advantage: when the distributed document database suffers a network outage, causing it to partition into multiple clusters (<a href="./issue086.html">Issue 86</a>)), the database can continue to operate. However, each cluster only has access to its own data, and not data on the other clusters. Over time, each cluster will become less and less consistent, since changes in each cluster are not synchronised to other clusters.</p>
 <p>Once the network issue is resolved and the clusters are synchronised again, these changes can subsequently be merged following rules for resolving conflicts. The database remains operational throughout the ordeal, just with some desynchronisation.</p>
 <p><strong>Issue summary:</strong> Document databases organise data into documents, each containing a number of field-value pairs. Each value can itself be a document, and multiple values/documents can be grouped under a field. Document databases do not enforce data consistency across documents, so those rules need to be managed by the application which is using the database. This allows document databases to continue operating even when partitioned, at the cost of some consistency.</p>
 <h2>What I’ll be covering next</h2>
@@ -116,15 +128,25 @@
     </time></p>
  -->
     <address>
-      By           <a href="https://ngjunsiang.github.io/laymansguide/author/j-s-ng.html">J S Ng</a>
+      By           <a href="./author/j-s-ng.html">J S Ng</a>
     </address>
     <p>
         Tags:
-            <a href="https://ngjunsiang.github.io/laymansguide/tag/document.html">document</a>
+            <a href="./tag/document.html">document</a>
     </p>
   </footer>
-  </article>
+</article>
 <ul>
+        <li>
+            <a href="./issue087.html">
+                Issue 87: Relational Databases
+            </a>
+        </li>
+        <li>
+            <a href="./issue089.html">
+                Issue 89: Graph Databases
+            </a>
+        </li>
 </ul>
         </main>
         <footer>

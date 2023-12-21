@@ -16,18 +16,30 @@
 
 <body>
         <header>
-              <hgroup><h1><a href="https://ngjunsiang.github.io/laymansguide/">Layman's Guide to Computing</a></h1></hgroup>
+              <hgroup><h1><a href="./">Layman's Guide to Computing</a></h1></hgroup>
         <nav><ul>
-            <li><a href="/categories">Seasons</a></li>
-            <li><a href="/tags">Tags</a></li>
+            <li><a href="./categories">Seasons</a></li>
+            <li><a href="./tags">Tags</a></li>
         </ul></nav>
         </header>
         <main>
+<ul>
+        <li>
+            <a href="./issue086.html">
+                Issue 86: Distributed databases
+            </a>
+        </li>
+        <li>
+            <a href="./issue088.html">
+                Issue 88: Document Databases
+            </a>
+        </li>
+</ul>
 <article>
-  <p><a href="https://ngjunsiang.github.io/laymansguide/category/season-07.html">Season 07</a></p>
+  <p><a href="./category/season-07.html">Season 07</a></p>
   <header>
     <h2>
-      <a href="https://ngjunsiang.github.io/laymansguide/issue087.html" rel="bookmark"
+      <a href="./issue087.html" rel="bookmark"
          title="Permalink to Issue 87: Relational Databases">Issue 87: Relational Databases</a></h2>
  
   </header>
@@ -35,15 +47,15 @@
     Sat 12 September 2020
   </time></p>
   <p><a href="https://buttondown.email/laymansguide/archive/"><strong>Previously:</strong></a> To increase the performance of a distributed database, we can scale up/scale vertically by increasing the computers’ performance, or scale out/scale horizontally by adding more computers. Distributed databases can only prioritise two of the following three factors: consistency, availability, partitioning (CAP theorem).</p>
-<p>I’ve already discussed one big strength of relational databases in <a href="https://ngjunsiang.github.io/laymansguide/issue084.html">Issue 84</a>) when I illustrated how the JOIN keyword, one of many SQL commands (<a href="https://ngjunsiang.github.io/laymansguide/issue083.html">Issue 83</a>)), can join our data from multiple tables into a single view. This is where we look under the surface to see what makes that possible.</p>
+<p>I’ve already discussed one big strength of relational databases in <a href="./issue084.html">Issue 84</a>) when I illustrated how the JOIN keyword, one of many SQL commands (<a href="./issue083.html">Issue 83</a>)), can join our data from multiple tables into a single view. This is where we look under the surface to see what makes that possible.</p>
 <h2>Linking tables through foreign keys</h2>
-<p>From <a href="https://ngjunsiang.github.io/laymansguide/issue084.html">Issue 84</a>):</p>
+<p>From <a href="./issue084.html">Issue 84</a>):</p>
 <blockquote>
 <p>To join the <code>Customer</code> and <code>Sales</code> data so that we get the sales data along with <code>custName</code>, we would write a SQL query like this:</p>
 <p><code>SELECT salesID, orderDate, custID FROM Sales
 JOIN Customer ON Sales.custID = Customer.custID</code></p>
 <p>Here, <code>Sales.custID</code> refers to the <code>custID</code> of the <code>Sales</code> table, while <code>Customer.custID</code> refers to the <code>custID</code> of the <code>Customer</code> table. This query effectively says “select the <code>salesID</code>, <code>orderDate</code>, and <code>custID</code> columns from <code>Sales</code> table, and add data from the <code>Customer</code> table where the <code>custID</code> column matches”. This will return:</p>
-<p><img alt="Screenshot of an INNER JOIN operation between the Sales and Customer data tables, merged using custID values." src="https://ngjunsiang.github.io/laymansguide/issue084_04.png"></p>
+<p><img alt="Screenshot of an INNER JOIN operation between the Sales and Customer data tables, merged using custID values." src="./issue084_04.png"></p>
 </blockquote>
 <p>Did you catch the fact that there were actually <em>two</em> <code>custID</code> columns? One in the <code>Sales</code> table, and one in the <code>Customer</code> table ... by linking two tables like that, we actually introduce a point of potential breakage.</p>
 <p>Suppose one day, a customer goes out of business, or changes name, and the corresponding <code>Customer</code> entry gets deleted. Now if we accidentally attempt to retrieve <code>Sales</code> to that customer, the SQL command will fail because it is unable to find the entry.</p>
@@ -83,11 +95,21 @@ JOIN Customer ON Sales.custID = Customer.custID</code></p>
     </time></p>
  -->
     <address>
-      By           <a href="https://ngjunsiang.github.io/laymansguide/author/j-s-ng.html">J S Ng</a>
+      By           <a href="./author/j-s-ng.html">J S Ng</a>
     </address>
   </footer>
-  </article>
+</article>
 <ul>
+        <li>
+            <a href="./issue086.html">
+                Issue 86: Distributed databases
+            </a>
+        </li>
+        <li>
+            <a href="./issue088.html">
+                Issue 88: Document Databases
+            </a>
+        </li>
 </ul>
         </main>
         <footer>
