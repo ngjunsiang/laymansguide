@@ -62,13 +62,13 @@ p{
     margin: 0em 0em 1.75em 0em;
 }
 
-body > nav ul{
+header > nav ul{
     display: flex;
     padding: 0px;
     margin-bottom: 0px;
 }
 
-body > nav li{
+header > nav li{
     padding: 0em 1em 0em 0em;
     list-style: none;
     font-weight: 600;
