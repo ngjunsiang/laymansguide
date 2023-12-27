@@ -16,30 +16,43 @@
 
 <body>
         <header>
-              <hgroup><h1><a href="./">Layman's Guide to Computing</a></h1></hgroup>
+              <hgroup><h1><a href="https://ngjunsiang.github.io/laymansguide/">Layman's Guide to Computing</a></h1></hgroup>
         <nav><ul>
+<<<<<<< HEAD
             <li><a href="./categories">Seasons</a></li>
             <li><a href="./tags">Tags</a></li>
+=======
+            <li><a href="https://ngjunsiang.github.io/laymansguide/categories">Seasons</a></li>
+            <li><a href="https://ngjunsiang.github.io/laymansguide/tags">Tags</a></li>
+>>>>>>> e8d061c (publish)
         </ul></nav>
         </header>
         <main>
 <ul>
         <li>
+<<<<<<< HEAD
             <a href="./issue083.html">
+=======
+            <a href="https://ngjunsiang.github.io/laymansguide/issue083.html">
+>>>>>>> e8d061c (publish)
                 Issue 83: Structured Query Language
             </a>
         </li>
         <li>
+<<<<<<< HEAD
             <a href="./issue085.html">
+=======
+            <a href="https://ngjunsiang.github.io/laymansguide/issue085.html">
+>>>>>>> e8d061c (publish)
                 Issue 85: SQL Injections
             </a>
         </li>
 </ul>
 <article>
-  <p><a href="./category/season-07.html">Season 07</a></p>
+  <p><a href="https://ngjunsiang.github.io/laymansguide/category/season-07.html">Season 07</a></p>
   <header>
     <h2>
-      <a href="./issue084.html" rel="bookmark"
+      <a href="https://ngjunsiang.github.io/laymansguide/issue084.html" rel="bookmark"
          title="Permalink to Issue 84: JOIN – supercharged VLOOKUP">Issue 84: JOIN – supercharged VLOOKUP</a></h2>
  
   </header>
@@ -49,11 +62,11 @@
   <p><a href="https://buttondown.email/laymansguide/archive/"><strong>Previously:</strong></a> Structured Query Language (SQL) is a computer language for managing data in databases. It has keywords and keyphrases that let you filter rows and columns, group and order data, perform basic arithmetic on data, and more. It is complex and powerful, but astute and efficient use requires specialised training.</p>
 <h2>VLOOKUP: The bread-and-butter of spreadsheets</h2>
 <p>If I have a <code>Customer</code> data table that looks like this:</p>
-<p><img alt="Screenshot of a Customer data table, with custID, custName, custEmail, and custContact columns." src="./issue084_01.png"></p>
+<p><img alt="Screenshot of a Customer data table, with custID, custName, custEmail, and custContact columns." src="https://ngjunsiang.github.io/laymansguide/issue084_01.png"></p>
 <p>And a <code>Sales</code> data table that looks like this:</p>
-<p><img alt="Screenshot of a Sales data table, with salesID, orderDate, and custID columns." src="./issue084_02.png"></p>
+<p><img alt="Screenshot of a Sales data table, with salesID, orderDate, and custID columns." src="https://ngjunsiang.github.io/laymansguide/issue084_02.png"></p>
 <p>I could add a <code>custName</code> column to the sales table that <em>looks up</em> the <code>custID</code>, and inserts the <code>custName</code> info from the same row. This feature of spreadsheets is known as <strong>VLOOKUP</strong> (vertical lookup)<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup>. This is what the formula for each cell in <code>custName</code> would look like:</p>
-<p><img alt="Screenshot of a Sales data table, with salesID, orderDate, and custID columns." src="./issue084_03.png"></p>
+<p><img alt="Screenshot of a Sales data table, with salesID, orderDate, and custID columns." src="https://ngjunsiang.github.io/laymansguide/issue084_03.png"></p>
 <p>Let’s break down each part of that formula:</p>
 <p><code>=VLOOKUP(C2,Customer!A:D,2)</code></p>
 <p>This means “in columns <strong>A:D</strong> of the <strong>Customer</strong> table, look for the value from cell <strong>C2</strong> (which is <code>1</code>) in the first column of the <strong>Customer</strong> table, and return the value from the same-row cell in the <strong>2</strong>nd column of the <strong>Customer</strong> table.”</p>
@@ -66,7 +79,7 @@ JOIN Customer ON Sales.custID = Customer.custID
 </code></pre></div>
 
 <p>Here, <code>Sales.custID</code> refers to the <code>custID</code> of the <code>Sales</code> table, while <code>Customer.custID</code> refers to the <code>custID</code> of the <code>Customer</code> table. This query effectively says “select the <code>salesID</code>, <code>orderDate</code>, and <code>custID</code> columns from <code>Sales</code> table, and add data from the <code>Customer</code> table where the <code>custID</code> column matches”. This will return:</p>
-<p><img alt="Screenshot of an INNER JOIN operation between the Sales and Customer data tables, merged using custID values." src="./issue084_04.png"></p>
+<p><img alt="Screenshot of an INNER JOIN operation between the Sales and Customer data tables, merged using custID values." src="https://ngjunsiang.github.io/laymansguide/issue084_04.png"></p>
 <p>That is much easier—once you’ve been trained in SQL syntax—than writing separate VLOOKUP formulas for each column you want, and having to maintain a whole table of formulas!</p>
 <p>You can even join more than two tables together with a query like:</p>
 <div class="highlight"><pre><span></span><code>SELECT salesID, orderDate, custID, invoiceID, Customer.custName, Customer.custContact, invoiceDate, invoiceAmt FROM Sales
@@ -106,18 +119,18 @@ JOIN Invoice ON Sales.invoiceID = Invoice.invoiceID
     </time></p>
  -->
     <address>
-      By           <a href="./author/j-s-ng.html">J S Ng</a>
+      By           <a href="https://ngjunsiang.github.io/laymansguide/author/j-s-ng.html">J S Ng</a>
     </address>
   </footer>
 </article>
 <ul>
         <li>
-            <a href="./issue083.html">
+            <a href="https://ngjunsiang.github.io/laymansguide/issue083.html">
                 Issue 83: Structured Query Language
             </a>
         </li>
         <li>
-            <a href="./issue085.html">
+            <a href="https://ngjunsiang.github.io/laymansguide/issue085.html">
                 Issue 85: SQL Injections
             </a>
         </li>

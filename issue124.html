@@ -16,30 +16,43 @@
 
 <body>
         <header>
-              <hgroup><h1><a href="./">Layman's Guide to Computing</a></h1></hgroup>
+              <hgroup><h1><a href="https://ngjunsiang.github.io/laymansguide/">Layman's Guide to Computing</a></h1></hgroup>
         <nav><ul>
+<<<<<<< HEAD
             <li><a href="./categories">Seasons</a></li>
             <li><a href="./tags">Tags</a></li>
+=======
+            <li><a href="https://ngjunsiang.github.io/laymansguide/categories">Seasons</a></li>
+            <li><a href="https://ngjunsiang.github.io/laymansguide/tags">Tags</a></li>
+>>>>>>> e8d061c (publish)
         </ul></nav>
         </header>
         <main>
 <ul>
         <li>
+<<<<<<< HEAD
             <a href="./issue123.html">
+=======
+            <a href="https://ngjunsiang.github.io/laymansguide/issue123.html">
+>>>>>>> e8d061c (publish)
                 Issue 123: Graphics cards: The Pixel Factory
             </a>
         </li>
         <li>
+<<<<<<< HEAD
             <a href="./issue125.html">
+=======
+            <a href="https://ngjunsiang.github.io/laymansguide/issue125.html">
+>>>>>>> e8d061c (publish)
                 Issue 125: Analog and digital conversion
             </a>
         </li>
 </ul>
 <article>
-  <p><a href="./category/season-10.html">Season 10</a></p>
+  <p><a href="https://ngjunsiang.github.io/laymansguide/category/season-10.html">Season 10</a></p>
   <header>
     <h2>
-      <a href="./issue124.html" rel="bookmark"
+      <a href="https://ngjunsiang.github.io/laymansguide/issue124.html" rel="bookmark"
          title="Permalink to Issue 124: Video formats">Issue 124: Video formats</a></h2>
  
   </header>
@@ -53,13 +66,13 @@
 <h2>Cathode-ray tube (CRT) televisions</h2>
 <p>Early colour television screens had primary-colour (red, blue, and green) phosphor dots embedded in the user-facing portion of the screen. These dots emit coloured light when struck by electrons. At the back of the television, cathodes made of barium oxide are heated, causing them to emit electrons.</p>
 <p>These electrons, when emitted, fly in all directions, but they are shaped into a beam by an electric field (hence the name “cathode <em>ray</em> tube”, which you might have seen in the form of the acronym <strong>CRT</strong>).</p>
-<p><img alt="Cutaway of a CRT, showing the phosphor dot screen" src="./issue124_01.png"><br />
+<p><img alt="Cutaway of a CRT, showing the phosphor dot screen" src="https://ngjunsiang.github.io/laymansguide/issue124_01.png"><br />
 <small>1: Barium oxide cathode, which is heated to emit electrons (labelled “2”), which are shaped into a a beam by an electric field (labelled “3”)<br />
 4: Deflecting coils, discussed in the next paragraph<br />
 8: Coloured phosphor dots, arranged on a flat screen (labelled “7”).<br />
 Image via <a href="https://en.wikipedia.org/wiki/Cathode-ray_tube">Wikipedia</a></small></p>
 <p>This electron beam could be aimed at any of the phosphor dots by a set of electromagnetic deflecting coils mounted along the sides of the TV, on the inside surface. One set, oriented vertically (mounted left-right), controlled the horizontal deflection of the electron beam, while another set, oriented horizontally (mounted top-bottom), controlled the vertical deflection.</p>
-<p><img alt="Graphic showing an electron beam deflected upwards by deflecting coils in a CRT" src="./issue124_02.png"><br />
+<p><img alt="Graphic showing an electron beam deflected upwards by deflecting coils in a CRT" src="https://ngjunsiang.github.io/laymansguide/issue124_02.png"><br />
 <small>The electron beam produced by the cathode is deflected by (electromagnetic) deflecting coils.<br />
 Image via <a href="https://en.wikipedia.org/wiki/Cathode-ray_tube">Wikipedia</a></small></p>
 <p>To produce an image, the electron beam is manipulated to scan across the screen, one line at a time. Each pass across the screen causes it to strike phosphor dots, emitting light in a line. A variety of techniques (microdeflections, masks, and filters) are used to ensure the correct dots are struck.</p>
@@ -67,21 +80,21 @@ Image via <a href="https://en.wikipedia.org/wiki/Cathode-ray_tube">Wikipedia</a>
 <p>To make this happen, a varying voltage is applied across the two sets of deflecting coils. The required pattern for the deflecting coils has to come from the television signal source; the television signal from the broadcasting station, therefore, closely resembles the pattern required by the deflecting coils. The television itself applies almost no processing to this signal! (Remember that the chips used to do this kind of processing had not been invented yet.)</p>
 <p>These are what we call <strong>analog</strong> signals. Phonographs and early telephones also used analog signals.</p>
 <h2>Video Graphics Array (VGA)</h2>
-<p>So when the computer was first invented, and these screens were widely available, there was no need to reinvent the screen. Graphics cards (<a href="./issue123.html">Issue 123</a>)) simply had to figure out how to emit analog signals that would work with CRT screens.</p>
+<p>So when the computer was first invented, and these screens were widely available, there was no need to reinvent the screen. Graphics cards (<a href="https://ngjunsiang.github.io/laymansguide/issue123.html">Issue 123</a>)) simply had to figure out how to emit analog signals that would work with CRT screens.</p>
 <p>The graphics standard for doing so is called <strong>VGA</strong> (Video Graphics Array), and was first released by IBM in 1986. An organisation, the Video Electronics Standards Association (<strong>VESA</strong>), was quickly formed in 1989, spearheaded by Nippon Electric Company (NEC), to extend this standard and allow it to support higher resolutions (up to 1080p!).</p>
 <h2>LCDs replaced CRTs</h2>
 <p>As CRTs grow larger, they ran into a few problems. CRTs were big, bulky, and heavy. The larger you made them, the longer you had to make the cathode ray tube, which made them immensely heavy!</p>
 <p>By this point, LCD technology had been developed. Instead of using a scanning electron beam, it consisted of a backlight<sup id="fnref:2"><a class="footnote-ref" href="#fn:2">2</a></sup> behind a liquid crystal layer (hence the term liquid crystal display, <strong>LCD</strong>).</p>
 <p>The liquid crystal layer consisted of pixels of each primary colour. Each pixel had an adjustable transparency, which depended on the voltage applied across it (high voltage = transparent, low voltage = opaque); a cluster of red, green, and blue pixels formed a single image pixel on screen. By applying different voltages across each primary-colour pixel, we can put an image together.</p>
 <h2>Digital signals</h2>
-<p>CRTs controlled the voltage plates directly to deflect an electron beam, through an analog signal. But LCDs use an internal processor to determine what voltage to apply across each liquid crystal pixel. As the technology improved, lower voltages could be used to reduce power usage. So LCDs need a different kind of signal: a <strong>digital</strong> one, consisting of the <em>raw image data</em> (<a href="./issue043.html">Issue 43</a>)).</p>
+<p>CRTs controlled the voltage plates directly to deflect an electron beam, through an analog signal. But LCDs use an internal processor to determine what voltage to apply across each liquid crystal pixel. As the technology improved, lower voltages could be used to reduce power usage. So LCDs need a different kind of signal: a <strong>digital</strong> one, consisting of the <em>raw image data</em> (<a href="https://ngjunsiang.github.io/laymansguide/issue043.html">Issue 43</a>)).</p>
 <h2>The exodus to digital formats</h2>
 <p>As digital television became more feasible due to decreasing microprocessor and LCD screen costs, digital formats sprung up to replace VGA.</p>
 <p>An early competitor, Digital Visual Interface (<strong>DVI</strong>), was launched by a working group convened by some computer makers (Intel, Silicon Image, Compaq, Fujitsu, HP, IBM, NEC). It was very quickly superceded by High-Definition Multimedia Interface (<strong>HDMI</strong>), an interface which implemented standards set by consumer electronics companies (Hitachi, Sanyo, Silicon Image, Sony, Technicolor, Toshiba).</p>
-<p><img alt="HDMI and mini-HDMI connectors displayed top-to-bottom" src="./issue124_03.jpg"><br>
+<p><img alt="HDMI and mini-HDMI connectors displayed top-to-bottom" src="https://ngjunsiang.github.io/laymansguide/issue124_03.jpg"><br>
 <em>HDMI and mini-HDMI connectors displayed from top to bottom. Both support the HDMI video standard<br />Image via <a href="https://www.datapro.net/techinfo/hdmi_info.html">DataPro</a></em>    </p>
 <p>This was followed by the DisplayPort (<strong>DP</strong>) standard, developed by PC and chip manufacturers and standardised by VESA, and released in in 2006.</p>
-<p><img alt="DisplayPort, mini-DisplayPort, and Thunderbolt Type-C connectors displayed side-by-side" src="./issue124_04.jpg"><br>
+<p><img alt="DisplayPort, mini-DisplayPort, and Thunderbolt Type-C connectors displayed side-by-side" src="https://ngjunsiang.github.io/laymansguide/issue124_04.jpg"><br>
 <em>DisplayPort, mini-DisplayPort, and Thunderbolt Type-C connectors displayed from left to right. All three support the DisplayPort video standard<br />Image via <a href="https://www.datapro.net/techinfo/displayport_info.html">DataPro</a></em>    </p>
 <p><strong>Issue summary:</strong> The VGA video format originated in the time of cathode-ray televisions (CRTs). It was superseded by HDMI, a video format standardised by consumer electronics companies. DisplayPort, on the other hand, is a video format standardised by computer display companies.</p>
 <p>Phew. This issue is much longer than I would like; there is so much history to these things! The HDMI-vs-DisplayPort question/complaint I keep hearing is one that only made sense for me in the context of the respective industries they sprung from, and this is something I think most layfolks could definitely understand.</p>
@@ -111,18 +124,18 @@ Image via <a href="https://en.wikipedia.org/wiki/Cathode-ray_tube">Wikipedia</a>
     </time></p>
  -->
     <address>
-      By           <a href="./author/j-s-ng.html">J S Ng</a>
+      By           <a href="https://ngjunsiang.github.io/laymansguide/author/j-s-ng.html">J S Ng</a>
     </address>
   </footer>
 </article>
 <ul>
         <li>
-            <a href="./issue123.html">
+            <a href="https://ngjunsiang.github.io/laymansguide/issue123.html">
                 Issue 123: Graphics cards: The Pixel Factory
             </a>
         </li>
         <li>
-            <a href="./issue125.html">
+            <a href="https://ngjunsiang.github.io/laymansguide/issue125.html">
                 Issue 125: Analog and digital conversion
             </a>
         </li>

@@ -18,30 +18,43 @@
 
 <body>
         <header>
-              <hgroup><h1><a href="./">Layman's Guide to Computing</a></h1></hgroup>
+              <hgroup><h1><a href="https://ngjunsiang.github.io/laymansguide/">Layman's Guide to Computing</a></h1></hgroup>
         <nav><ul>
+<<<<<<< HEAD
             <li><a href="./categories">Seasons</a></li>
             <li><a href="./tags">Tags</a></li>
+=======
+            <li><a href="https://ngjunsiang.github.io/laymansguide/categories">Seasons</a></li>
+            <li><a href="https://ngjunsiang.github.io/laymansguide/tags">Tags</a></li>
+>>>>>>> e8d061c (publish)
         </ul></nav>
         </header>
         <main>
 <ul>
         <li>
+<<<<<<< HEAD
             <a href="./issue102.html">
+=======
+            <a href="https://ngjunsiang.github.io/laymansguide/issue102.html">
+>>>>>>> e8d061c (publish)
                 Issue 102:  Threading
             </a>
         </li>
         <li>
+<<<<<<< HEAD
             <a href="./issue104.html">
+=======
+            <a href="https://ngjunsiang.github.io/laymansguide/issue104.html">
+>>>>>>> e8d061c (publish)
                 Issue 104: Storing sensitive data
             </a>
         </li>
 </ul>
 <article>
-  <p><a href="./category/season-08.html">Season 08</a></p>
+  <p><a href="https://ngjunsiang.github.io/laymansguide/category/season-08.html">Season 08</a></p>
   <header>
     <h2>
-      <a href="./issue103.html" rel="bookmark"
+      <a href="https://ngjunsiang.github.io/laymansguide/issue103.html" rel="bookmark"
          title="Permalink to Issue 103: Why apps hang even with multiple threads">Issue 103: Why apps hang even with multiple threads</a></h2>
  
   </header>
@@ -60,7 +73,7 @@
 <h2>Multiple worker threads</h2>
 <p>Another pattern is to split the job up into multiple parts, and have multiple threads each take a part of the job. When they have all completed, the completed parts are then stitched back together into the finished result.</p>
 <p>But this has its own ways of failing too.</p>
-<p>The threads have to coordinate their job status, and often do so by updating a common set of data. Thread 1 might request access to that data to update it. To ensure that the data doesn’t change before it is done, it will usually request a lock (<a href="./issue082.html">Issue 82</a>)) on it, to prevent other threads from modifying it at the same time.</p>
+<p>The threads have to coordinate their job status, and often do so by updating a common set of data. Thread 1 might request access to that data to update it. To ensure that the data doesn’t change before it is done, it will usually request a lock (<a href="https://ngjunsiang.github.io/laymansguide/issue082.html">Issue 82</a>)) on it, to prevent other threads from modifying it at the same time.</p>
 <p>One way this can fail in practice is if two or more worker threads request a lock simultaneously. They both get a lock, because at the moment their requests are processed, nothing else has locked the resource. But now they can’t proceed to modify the data because it has been locked by another thread that isn’t them.</p>
 <p>This situation is known as a <strong>deadlock</strong>. This and similar situations are just one out of many ways that apps can hang.</p>
 <p><strong>Issue summary:</strong> A race condition happens when threads depend on instructions happening with coincidental timing for success. When instructions are not executed with appropriate timing, one or more threads can get stuck waiting on a response that never comes.</p>
@@ -86,23 +99,23 @@
     </time></p>
  -->
     <address>
-      By           <a href="./author/j-s-ng.html">J S Ng</a>
+      By           <a href="https://ngjunsiang.github.io/laymansguide/author/j-s-ng.html">J S Ng</a>
     </address>
     <p>
         Tags:
-            <a href="./tag/app.html">app</a>
-            <a href="./tag/operating-system.html">operating system</a>
+            <a href="https://ngjunsiang.github.io/laymansguide/tag/app.html">app</a>
+            <a href="https://ngjunsiang.github.io/laymansguide/tag/operating-system.html">operating system</a>
     </p>
   </footer>
 </article>
 <ul>
         <li>
-            <a href="./issue102.html">
+            <a href="https://ngjunsiang.github.io/laymansguide/issue102.html">
                 Issue 102:  Threading
             </a>
         </li>
         <li>
-            <a href="./issue104.html">
+            <a href="https://ngjunsiang.github.io/laymansguide/issue104.html">
                 Issue 104: Storing sensitive data
             </a>
         </li>

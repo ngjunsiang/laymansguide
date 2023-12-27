@@ -17,30 +17,43 @@
 
 <body>
         <header>
-              <hgroup><h1><a href="./">Layman's Guide to Computing</a></h1></hgroup>
+              <hgroup><h1><a href="https://ngjunsiang.github.io/laymansguide/">Layman's Guide to Computing</a></h1></hgroup>
         <nav><ul>
+<<<<<<< HEAD
             <li><a href="./categories">Seasons</a></li>
             <li><a href="./tags">Tags</a></li>
+=======
+            <li><a href="https://ngjunsiang.github.io/laymansguide/categories">Seasons</a></li>
+            <li><a href="https://ngjunsiang.github.io/laymansguide/tags">Tags</a></li>
+>>>>>>> e8d061c (publish)
         </ul></nav>
         </header>
         <main>
 <ul>
         <li>
+<<<<<<< HEAD
             <a href="./issue130.html">
+=======
+            <a href="https://ngjunsiang.github.io/laymansguide/issue130.html">
+>>>>>>> e8d061c (publish)
                 Issue 130: Power limits
             </a>
         </li>
         <li>
+<<<<<<< HEAD
             <a href="./issue132.html">
+=======
+            <a href="https://ngjunsiang.github.io/laymansguide/issue132.html">
+>>>>>>> e8d061c (publish)
                 Issue 132: the AT form factor (pre-1995)
             </a>
         </li>
 </ul>
 <article>
-  <p><a href="./category/season-11.html">Season 11</a></p>
+  <p><a href="https://ngjunsiang.github.io/laymansguide/category/season-11.html">Season 11</a></p>
   <header>
     <h2>
-      <a href="./issue131.html" rel="bookmark"
+      <a href="https://ngjunsiang.github.io/laymansguide/issue131.html" rel="bookmark"
          title="Permalink to Issue 131: What do early CPUs and startup founders have in common?">Issue 131: What do early CPUs and startup founders have in common?</a></h2>
  
   </header>
@@ -52,26 +65,26 @@
 <h2>What a computer wants, what a computer needs</h2>
 <p>The common model of a computer is that it … computes. It calculates. It takes in numbers, and spits out more numbers.</p>
 <p>That’s not quite right.</p>
-<p>While a computer does carry out compute operations, these are far outnumbered by load/store operations (<a href="./issue058.html">Issue 58</a>)). Why so much loading and storing of data?</p>
+<p>While a computer does carry out compute operations, these are far outnumbered by load/store operations (<a href="https://ngjunsiang.github.io/laymansguide/issue058.html">Issue 58</a>)). Why so much loading and storing of data?</p>
 <h2>Moving data</h2>
 <p>The CPU itself has precious little storage (&lt;20 MB of cache storage); it is only a wee little chip! Most of the data in a computer is stored in a hard drive or solid state drive; let’s just call them storage drives for now.</p>
 <p>So CPUs have to read data from a storage drive. This is a slow operation, because storage drives are slow; writing to storage drives is even slower than reading from them.</p>
 <p>In the meantime, the CPU needs a place to dump working data; this is computer memory (2–32GB). Memory is slower than the CPU’s cache, but much faster than a storage drive.</p>
 <p>That’s 3 places to stash data so far: storage drives, CPU cache, and computer memory. You with me so far?</p>
 <h2>Pipelines</h2>
-<p>The next place that often requires lots of data is the graphics card (<a href="./issue123.html">Issue 123</a>)). For you to play a video game, the computer has to:</p>
+<p>The next place that often requires lots of data is the graphics card (<a href="https://ngjunsiang.github.io/laymansguide/issue123.html">Issue 123</a>)). For you to play a video game, the computer has to:</p>
 <ol>
 <li>Load game data from the storage disk,</li>
 <li>Store most of it in memory while it’s doing some number crunching in its cache,</li>
-<li>Get the crunched numbers to the graphics card for rendering graphics (<a href="./issue122.html">Issue 122</a>)),</li>
+<li>Get the crunched numbers to the graphics card for rendering graphics (<a href="https://ngjunsiang.github.io/laymansguide/issue122.html">Issue 122</a>)),</li>
 <li>Load more data from memory while crunching more numbers, and passing them to the graphics card.</li>
 </ol>
 <p>This involves far more loading and storing than computation. And there are limitations to how quickly data can be transferred.</p>
 <h2>Throughput</h2>
 <p>How does data get transferred? Through very fine wires usually. One side (e.g. the CPU) applies a voltage to the wire, the other side (e.g. memory) checks the voltage on the wire. No applied voltage = 0, applied voltage = 1.</p>
-<p>How does the CPU know when to apply the voltage, and the memory know when to check it? These operations are synchronised through cycles, like a highly coordinated factory. A CPU operates on a frequency of up to billions of cycles per second, each cycle potentially transferring one bit of data (<a href="./issue040.html">Issue 40</a>)) if there are no delays.</p>
+<p>How does the CPU know when to apply the voltage, and the memory know when to check it? These operations are synchronised through cycles, like a highly coordinated factory. A CPU operates on a frequency of up to billions of cycles per second, each cycle potentially transferring one bit of data (<a href="https://ngjunsiang.github.io/laymansguide/issue040.html">Issue 40</a>)) if there are no delays.</p>
 <p>Typically, the transfer rate is somewhat slower; how do we transfer more data per second? By adding more wires! With two wires, we can transfer two bits per cycle; four wires = four bits per second, eight wires = 8 bits per second … at some point, we run into a different problem. The CPU is a small chip, and there is only so much surface area for us to connect wires to.</p>
-<p><img alt="An Intel Skylake CPU, showing the pins underneath" src="./issue131_01.jpg"><br>
+<p><img alt="An Intel Skylake CPU, showing the pins underneath" src="https://ngjunsiang.github.io/laymansguide/issue131_01.jpg"><br>
 <em>An Intel Skylake desktop CPU.<br />Each gold contact on the under-surface connects to a pin on the motherboard when the CPU is seated properly in its socket<br />Source: <a href="https://en.wikipedia.org/wiki/Skylake_(microarchitecture)">Wikipedia</a></em>    </p>
 <p>Well, that just sucks.</p>
 <h2>The limits of one chip</h2>
@@ -94,22 +107,22 @@
     </time></p>
  -->
     <address>
-      By           <a href="./author/j-s-ng.html">J S Ng</a>
+      By           <a href="https://ngjunsiang.github.io/laymansguide/author/j-s-ng.html">J S Ng</a>
     </address>
     <p>
         Tags:
-            <a href="./tag/cache.html">cache</a>
+            <a href="https://ngjunsiang.github.io/laymansguide/tag/cache.html">cache</a>
     </p>
   </footer>
 </article>
 <ul>
         <li>
-            <a href="./issue130.html">
+            <a href="https://ngjunsiang.github.io/laymansguide/issue130.html">
                 Issue 130: Power limits
             </a>
         </li>
         <li>
-            <a href="./issue132.html">
+            <a href="https://ngjunsiang.github.io/laymansguide/issue132.html">
                 Issue 132: the AT form factor (pre-1995)
             </a>
         </li>

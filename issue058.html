@@ -18,30 +18,43 @@
 
 <body>
         <header>
-              <hgroup><h1><a href="./">Layman's Guide to Computing</a></h1></hgroup>
+              <hgroup><h1><a href="https://ngjunsiang.github.io/laymansguide/">Layman's Guide to Computing</a></h1></hgroup>
         <nav><ul>
+<<<<<<< HEAD
             <li><a href="./categories">Seasons</a></li>
             <li><a href="./tags">Tags</a></li>
+=======
+            <li><a href="https://ngjunsiang.github.io/laymansguide/categories">Seasons</a></li>
+            <li><a href="https://ngjunsiang.github.io/laymansguide/tags">Tags</a></li>
+>>>>>>> e8d061c (publish)
         </ul></nav>
         </header>
         <main>
 <ul>
         <li>
+<<<<<<< HEAD
             <a href="./issue057.html">
+=======
+            <a href="https://ngjunsiang.github.io/laymansguide/issue057.html">
+>>>>>>> e8d061c (publish)
                 Issue 57: Cache, the CPU’s working space
             </a>
         </li>
         <li>
+<<<<<<< HEAD
             <a href="./issue059.html">
+=======
+            <a href="https://ngjunsiang.github.io/laymansguide/issue059.html">
+>>>>>>> e8d061c (publish)
                 Issue 59: Meltdown
             </a>
         </li>
 </ul>
 <article>
-  <p><a href="./category/season-05.html">Season 05</a></p>
+  <p><a href="https://ngjunsiang.github.io/laymansguide/category/season-05.html">Season 05</a></p>
   <header>
     <h2>
-      <a href="./issue058.html" rel="bookmark"
+      <a href="https://ngjunsiang.github.io/laymansguide/issue058.html" rel="bookmark"
          title="Permalink to Issue 58: CPU Optimisation Part 1 – Out-of-Order Processing">Issue 58: CPU Optimisation Part 1 – Out-of-Order Processing</a></h2>
  
   </header>
@@ -56,7 +69,7 @@
 <ul>
 <li><strong>A</strong>rithmetic <strong>L</strong>ogic <strong>U</strong>nit (<strong>ALU</strong>): THE ALU is responsible for carrying out integer calculations</li>
 <li><strong>F</strong>loating <strong>P</strong>oint <strong>U</strong>nit (<strong>FPU</strong>): The FPU is responsible for carrying out decimal calculations</li>
-<li><strong>L</strong>oad/<strong>S</strong>tore <strong>U</strong>nit (<strong>LSU</strong>): The LSU is responsible for loading data from memory into the CPU, or storing data from the CPU into memory (<a href="./issue055.html">Issue 55</a>))</li>
+<li><strong>L</strong>oad/<strong>S</strong>tore <strong>U</strong>nit (<strong>LSU</strong>): The LSU is responsible for loading data from memory into the CPU, or storing data from the CPU into memory (<a href="https://ngjunsiang.github.io/laymansguide/issue055.html">Issue 55</a>))</li>
 </ul>
 <p>An instruction decoding unit in the CPU decodes each instruction and sends it to the appropriate execution unit. All these units can work at the same time, and for maximum performance this is what you want to happen.</p>
 <h2>Not all instructions are executed equal(ly)</h2>
@@ -64,7 +77,7 @@
 <p>For instance, the ALU can carry out most operations in one or two cycles, but the FPU often needs four or more cycles to do its work (moving decimals is hard work!). The LSU clock cycle latency varies, depending on which part of the cache you are fetching from (the cache has different regions; some regions are closer to CPU cores while other regions are shared among all the cores and therefore further. I won’t go into deeper detail.)</p>
 <p>Keeping all the execution units busy is getting more complex now, eh?</p>
 <h2>Minimising wait time in a CPU</h2>
-<p>Let’s revisit the instructions from <a href="./issue053.html">Issue 53</a>):</p>
+<p>Let’s revisit the instructions from <a href="https://ngjunsiang.github.io/laymansguide/issue053.html">Issue 53</a>):</p>
 <div class="highlight"><pre><span></span><code><span class="mf">1</span><span class="w"> </span><span class="kr">LOAD</span><span class="w"> </span><span class="mf">1</span><span class="w">   </span><span class="n">R1</span>
 <span class="mf">2</span><span class="w"> </span><span class="n">ADD</span><span class="w">  </span><span class="mf">2</span><span class="w">   </span><span class="n">R1</span><span class="p">,</span><span class="w"> </span><span class="n">R2</span>
 <span class="mf">3</span><span class="w"> </span><span class="n">MOV</span><span class="w">  </span><span class="n">R2</span><span class="p">,</span><span class="w"> </span><span class="n">MEM1011</span>
@@ -108,23 +121,23 @@
     </time></p>
  -->
     <address>
-      By           <a href="./author/j-s-ng.html">J S Ng</a>
+      By           <a href="https://ngjunsiang.github.io/laymansguide/author/j-s-ng.html">J S Ng</a>
     </address>
     <p>
         Tags:
-            <a href="./tag/cache.html">cache</a>
-            <a href="./tag/cpu.html">cpu</a>
+            <a href="https://ngjunsiang.github.io/laymansguide/tag/cache.html">cache</a>
+            <a href="https://ngjunsiang.github.io/laymansguide/tag/cpu.html">cpu</a>
     </p>
   </footer>
 </article>
 <ul>
         <li>
-            <a href="./issue057.html">
+            <a href="https://ngjunsiang.github.io/laymansguide/issue057.html">
                 Issue 57: Cache, the CPU’s working space
             </a>
         </li>
         <li>
-            <a href="./issue059.html">
+            <a href="https://ngjunsiang.github.io/laymansguide/issue059.html">
                 Issue 59: Meltdown
             </a>
         </li>

@@ -18,30 +18,43 @@
 
 <body>
         <header>
-              <hgroup><h1><a href="./">Layman's Guide to Computing</a></h1></hgroup>
+              <hgroup><h1><a href="https://ngjunsiang.github.io/laymansguide/">Layman's Guide to Computing</a></h1></hgroup>
         <nav><ul>
+<<<<<<< HEAD
             <li><a href="./categories">Seasons</a></li>
             <li><a href="./tags">Tags</a></li>
+=======
+            <li><a href="https://ngjunsiang.github.io/laymansguide/categories">Seasons</a></li>
+            <li><a href="https://ngjunsiang.github.io/laymansguide/tags">Tags</a></li>
+>>>>>>> e8d061c (publish)
         </ul></nav>
         </header>
         <main>
 <ul>
         <li>
+<<<<<<< HEAD
             <a href="./issue061.html">
+=======
+            <a href="https://ngjunsiang.github.io/laymansguide/issue061.html">
+>>>>>>> e8d061c (publish)
                 Issue 61: Mapping the cache
             </a>
         </li>
         <li>
+<<<<<<< HEAD
             <a href="./issue063.html">
+=======
+            <a href="https://ngjunsiang.github.io/laymansguide/issue063.html">
+>>>>>>> e8d061c (publish)
                 Issue 63: Limitations of Meltdown and Spectre
             </a>
         </li>
 </ul>
 <article>
-  <p><a href="./category/season-05.html">Season 05</a></p>
+  <p><a href="https://ngjunsiang.github.io/laymansguide/category/season-05.html">Season 05</a></p>
   <header>
     <h2>
-      <a href="./issue062.html" rel="bookmark"
+      <a href="https://ngjunsiang.github.io/laymansguide/issue062.html" rel="bookmark"
          title="Permalink to Issue 62: Cache snooping">Issue 62: Cache snooping</a></h2>
  
   </header>
@@ -65,7 +78,7 @@ Address 137: 66 ns<br>
 Address 138: 137 ns<br>
 …<br>
 Address 256: 135 ns</p>
-<p>Can you tell what the secret number is? It’s the one with an <em>obviously lower</em> request latency. In this case, the other addresses didn’t have a copy of their data already in the cache, so they result in a cache miss (<a href="./issue057.html">Issue 57</a>))—the CPU has to go to main memory to read the data again, and that’s slow. Address 137 already had its data loaded before, and a copy of it was already in the cache, so loading it again results in a cache hit and is fast.</p>
+<p>Can you tell what the secret number is? It’s the one with an <em>obviously lower</em> request latency. In this case, the other addresses didn’t have a copy of their data already in the cache, so they result in a cache miss (<a href="https://ngjunsiang.github.io/laymansguide/issue057.html">Issue 57</a>))—the CPU has to go to main memory to read the data again, and that’s slow. Address 137 already had its data loaded before, and a copy of it was already in the cache, so loading it again results in a cache hit and is fast.</p>
 <h2>Treating memory addresses as data</h2>
 <p>One key thing to remember here is that each memory address points to a memory “cell”, which only stores one byte (8 bits), with a value that can run from 0 to 255 to give us 256 (i.e. 2^8) different values.</p>
 <p>Meltdown or Spectre have gotten the secret number (137), but in that small window of opportunity before it gets terminated, it would not have time to even store it into a text file that we can open later. How could we get that secret number without Meltdown or Spectre storing it?</p>
@@ -75,7 +88,7 @@ Address 256: 135 ns</p>
 <p>The snooping program would then:</p>
 <p>2) Make requests for information from each of these 256 memory addresses (“tapping on tiles”) and see which request has an <em>obviously lower</em> latency.</p>
 <p>3) Determine that memory address 137 has obviously lower request latency, and store the “transmitted” secret: “137”</p>
-<p>It’s a lot of work to get a single byte (256 possible values), but computers are good at doing lots of tedious work in a short amount of time. Using sample working code that exploits out-of-order execution (<a href="./issue058.html">Issue 58</a>)) and speculative processing (<a href="./issue060.html">Issue 60</a>)), coupled with a snooping program like the one we described above, the Meltdown and Spectre authors are able to leak data at a rate of about 580 KB/s, which seems slow. But there are 86,400 seconds in a day, so that’s roughly 43 GB/day at full exploit speed! (There are 4 videos of demonstration exploits near the bottom of the <a href="https://meltdownattack.com/">Meltdown page</a>.) Malicious actors would probably do it at a slower rate to keep it covert, but in the weeks or months it would take to notice something was amiss with the memory access operations, that’s a lot of data they can siphon off … .</p>
+<p>It’s a lot of work to get a single byte (256 possible values), but computers are good at doing lots of tedious work in a short amount of time. Using sample working code that exploits out-of-order execution (<a href="https://ngjunsiang.github.io/laymansguide/issue058.html">Issue 58</a>)) and speculative processing (<a href="https://ngjunsiang.github.io/laymansguide/issue060.html">Issue 60</a>)), coupled with a snooping program like the one we described above, the Meltdown and Spectre authors are able to leak data at a rate of about 580 KB/s, which seems slow. But there are 86,400 seconds in a day, so that’s roughly 43 GB/day at full exploit speed! (There are 4 videos of demonstration exploits near the bottom of the <a href="https://meltdownattack.com/">Meltdown page</a>.) Malicious actors would probably do it at a slower rate to keep it covert, but in the weeks or months it would take to notice something was amiss with the memory access operations, that’s a lot of data they can siphon off … .</p>
 <p>We’ve covered quite a bit of technical ground, so I’ll summarise.</p>
 <p><strong>Issue summary:</strong>
 To prep the cache, our program empties addresses 1 to 256, so that they are guaranteed to have a cache miss if their information is loaded.</p>
@@ -104,23 +117,23 @@ To prep the cache, our program empties addresses 1 to 256, so that they are guar
     </time></p>
  -->
     <address>
-      By           <a href="./author/j-s-ng.html">J S Ng</a>
+      By           <a href="https://ngjunsiang.github.io/laymansguide/author/j-s-ng.html">J S Ng</a>
     </address>
     <p>
         Tags:
-            <a href="./tag/cache.html">cache</a>
-            <a href="./tag/cpu.html">cpu</a>
+            <a href="https://ngjunsiang.github.io/laymansguide/tag/cache.html">cache</a>
+            <a href="https://ngjunsiang.github.io/laymansguide/tag/cpu.html">cpu</a>
     </p>
   </footer>
 </article>
 <ul>
         <li>
-            <a href="./issue061.html">
+            <a href="https://ngjunsiang.github.io/laymansguide/issue061.html">
                 Issue 61: Mapping the cache
             </a>
         </li>
         <li>
-            <a href="./issue063.html">
+            <a href="https://ngjunsiang.github.io/laymansguide/issue063.html">
                 Issue 63: Limitations of Meltdown and Spectre
             </a>
         </li>

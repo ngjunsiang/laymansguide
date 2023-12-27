@@ -16,30 +16,43 @@
 
 <body>
         <header>
-              <hgroup><h1><a href="./">Layman's Guide to Computing</a></h1></hgroup>
+              <hgroup><h1><a href="https://ngjunsiang.github.io/laymansguide/">Layman's Guide to Computing</a></h1></hgroup>
         <nav><ul>
+<<<<<<< HEAD
             <li><a href="./categories">Seasons</a></li>
             <li><a href="./tags">Tags</a></li>
+=======
+            <li><a href="https://ngjunsiang.github.io/laymansguide/categories">Seasons</a></li>
+            <li><a href="https://ngjunsiang.github.io/laymansguide/tags">Tags</a></li>
+>>>>>>> e8d061c (publish)
         </ul></nav>
         </header>
         <main>
 <ul>
         <li>
+<<<<<<< HEAD
             <a href="./issue128.html">
+=======
+            <a href="https://ngjunsiang.github.io/laymansguide/issue128.html">
+>>>>>>> e8d061c (publish)
                 Issue 128: Upgradeability
             </a>
         </li>
         <li>
+<<<<<<< HEAD
             <a href="./issue130.html">
+=======
+            <a href="https://ngjunsiang.github.io/laymansguide/issue130.html">
+>>>>>>> e8d061c (publish)
                 Issue 130: Power limits
             </a>
         </li>
 </ul>
 <article>
-  <p><a href="./category/season-10.html">Season 10</a></p>
+  <p><a href="https://ngjunsiang.github.io/laymansguide/category/season-10.html">Season 10</a></p>
   <header>
     <h2>
-      <a href="./issue129.html" rel="bookmark"
+      <a href="https://ngjunsiang.github.io/laymansguide/issue129.html" rel="bookmark"
          title="Permalink to Issue 129: Cooling">Issue 129: Cooling</a></h2>
  
   </header>
@@ -52,7 +65,7 @@
 <p>As it turns out, energy-information equivalence theories posit that manipulating information does increase entropy which does involve energy—but this is the Layman’s Guide to Computing, not a physics newsletter. Let’s just say that managing information, in its abstract sense, needs very little energy.</p>
 <h2>Energy usage in computers</h2>
 <p>What happens to all the energy that a computer uses, then? Some miniscule amount of it goes to manipulating information. A tiny amount goes to lighting up LEDs (these devices somehow always have LEDs), and maybe running the cooling fans. The rest of it is wasted as <strong>heat</strong>.</p>
-<p>The history of computing is also a history of less and less wasted heat. The Cray 2 supercomputer, in 1985, needed 195 kW to produce 1.9 gigaflops (1.9 billion <strong>fl</strong>oating-point <strong>o</strong>perations <strong>p</strong>er <strong>s</strong>econd; more context in <a href="./issue123.html">Issue 123</a>)) of computational performance. The iPhone XS, in 2016, needed less than 1 W to produce 1 gigaflop.</p>
+<p>The history of computing is also a history of less and less wasted heat. The Cray 2 supercomputer, in 1985, needed 195 kW to produce 1.9 gigaflops (1.9 billion <strong>fl</strong>oating-point <strong>o</strong>perations <strong>p</strong>er <strong>s</strong>econd; more context in <a href="https://ngjunsiang.github.io/laymansguide/issue123.html">Issue 123</a>)) of computational performance. The iPhone XS, in 2016, needed less than 1 W to produce 1 gigaflop.</p>
 <p>No, I’m not going into the environmental concerns and carbon footprint of computing. We have more tangible and immediate concerns here.</p>
 <p>Because heat is bad for computers. When microprocessor chips heat up, the semiconductor material they are made of no longer behaves as it should; it gets “leaky”, allowing electrons to go where they shouldn’t. The data it handles starts to get corrupted, and it eventually crashes.</p>
 <h2>Thermal throttling</h2>
@@ -73,14 +86,14 @@
 <h2>Heatsinks</h2>
 <p>In practice, this means that a bare chip can only run about 4 W before it starts to run into its thermal limits (we call this <strong>overheating</strong>). Anything more powerful than a basic home router or smart device (such as the Amazon Echo or Google Home Assistant) will need some sort of heatsink to avoid overheating.</p>
 <p>The simplest way to cool a chip is to slap a piece of metal on it to increase the surface area (factor 2). This is known as <strong>passive cooling</strong>. A paste called <strong>thermal paste</strong> is applied between the heatsink and chip to improve the transfer of heat. To pack as much surface area as possible into a tiny space, this piece of metal usually has long, thin fins, giving the characteristic look of heatsinks:</p>
-<p><img alt="A passive heatsink on a chip" src="./issue129_01.jpg"><br>
+<p><img alt="A passive heatsink on a chip" src="https://ngjunsiang.github.io/laymansguide/issue129_01.jpg"><br>
 <em>A passive heatsink on the northbridge chip of a computer mainboard<br />Source: found on <a href="https://superuser.com/questions/1043094/difference-between-active-and-passive-heatsink">Superuser</a></em>    </p>
 <p>The effectiveness of passive heatsinks depends on the ambient airflow around it. Some creative setups that manage to get <em>the metal case itself</em> in contact with the CPU can readily cool up to 45 W, with zero fan noise!</p>
 <p>For mobile phones, tablets, and laptops, such heatsinks would add too much to the device thickness. Instead, the CPUs are usually in direct contact with a larger metal surface, sometimes even the metal back of the device; this is why they feel warm to you in the first place. This allows tablets to use up to approx. 8 W of power.</p>
-<p><img alt="Logic board cover in an iPad" src="./issue129_02.jpg"><br>
+<p><img alt="Logic board cover in an iPad" src="https://ngjunsiang.github.io/laymansguide/issue129_02.jpg"><br>
 <em>The logic board cover in an iPad Pro 11 has copper inside; it helps to spread heat to the rest of the device instead of concentrating it all in one spot<br />Source: <a href="https://www.ifixit.com/Teardown/iPad+Pro+11-Inch+Teardown/115457">iFixit</a></em>    </p>
 <p>Where there isn’t this luxury of space, another option is to use a slim heatsink, and increase its cooling ability by forcing air through it. This form of cooling is called <strong>active cooling</strong>, and usually done with a fan of some sort, a popular option for thicker laptops. This allows laptops to run between 25–45 W, and desktop computers to run 65 W and hotter (with larger heatsinks, of course)</p>
-<p><img alt="An active heatsink on a chip" src="./issue129_03.jpg"><br>
+<p><img alt="An active heatsink on a chip" src="https://ngjunsiang.github.io/laymansguide/issue129_03.jpg"><br>
 <em>An active heatsink on the CPU of a computer mainboard<br />Source: found on <a href="https://superuser.com/questions/1043094/difference-between-active-and-passive-heatsink">Superuser</a></em>    </p>
 <p>These numbers are for stereotypical mobile devices, laptops, and desktops; stranger or hybrid designs may have different cooling capacities (e.g. a tiny cube desktop might only have 25–35 W of cooling capacity).</p>
 <p><strong>Issue summary:</strong> The larger the surface area, the faster an object loses heat. The larger the temperature difference between object and surroundings, the faster the object loses heat. Heat is bad for computers, and CPUs will need cooling to be able to process computations quickly. A mobile phone thus typically uses no more than 4 W of power, a laptop can use 25–45 W, and a desktop can usually use 65 W and more. Two popular ways of increasing the cooling capacity of a device is to attach a larger piece of metal to the chip (passive cooling), or use a fan to force air over the heatsink (active cooling).</p>
@@ -109,18 +122,18 @@
     </time></p>
  -->
     <address>
-      By           <a href="./author/j-s-ng.html">J S Ng</a>
+      By           <a href="https://ngjunsiang.github.io/laymansguide/author/j-s-ng.html">J S Ng</a>
     </address>
   </footer>
 </article>
 <ul>
         <li>
-            <a href="./issue128.html">
+            <a href="https://ngjunsiang.github.io/laymansguide/issue128.html">
                 Issue 128: Upgradeability
             </a>
         </li>
         <li>
-            <a href="./issue130.html">
+            <a href="https://ngjunsiang.github.io/laymansguide/issue130.html">
                 Issue 130: Power limits
             </a>
         </li>

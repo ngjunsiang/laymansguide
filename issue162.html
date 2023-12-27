@@ -16,30 +16,43 @@
 
 <body>
         <header>
-              <hgroup><h1><a href="./">Layman's Guide to Computing</a></h1></hgroup>
+              <hgroup><h1><a href="https://ngjunsiang.github.io/laymansguide/">Layman's Guide to Computing</a></h1></hgroup>
         <nav><ul>
+<<<<<<< HEAD
             <li><a href="./categories">Seasons</a></li>
             <li><a href="./tags">Tags</a></li>
+=======
+            <li><a href="https://ngjunsiang.github.io/laymansguide/categories">Seasons</a></li>
+            <li><a href="https://ngjunsiang.github.io/laymansguide/tags">Tags</a></li>
+>>>>>>> e8d061c (publish)
         </ul></nav>
         </header>
         <main>
 <ul>
         <li>
+<<<<<<< HEAD
             <a href="./issue161.html">
+=======
+            <a href="https://ngjunsiang.github.io/laymansguide/issue161.html">
+>>>>>>> e8d061c (publish)
                 Issue 161: Security and XSS
             </a>
         </li>
         <li>
+<<<<<<< HEAD
             <a href="./issue163.html">
+=======
+            <a href="https://ngjunsiang.github.io/laymansguide/issue163.html">
+>>>>>>> e8d061c (publish)
                 Issue 163: System & software ecosystems
             </a>
         </li>
 </ul>
 <article>
-  <p><a href="./category/season-13.html">Season 13</a></p>
+  <p><a href="https://ngjunsiang.github.io/laymansguide/category/season-13.html">Season 13</a></p>
   <header>
     <h2>
-      <a href="./issue162.html" rel="bookmark"
+      <a href="https://ngjunsiang.github.io/laymansguide/issue162.html" rel="bookmark"
          title="Permalink to Issue 162: Fonts">Issue 162: Fonts</a></h2>
  
   </header>
@@ -51,10 +64,10 @@
 <p>I could probably fill at least half a season talking about fonts and typesetting, but let’s stick to the basics here.</p>
 <h2>What is a font?</h2>
 <p>I’m going with <a href="https://fonts.adobe.com/fonts/source-sans">Source Sans</a>, an open-source <strong>typeface</strong> designed in-house by Adobe. Let’s open one up one of its <strong>font</strong>s<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup>, Source Sans Pro Regular, in a font editor<sup id="fnref:2"><a class="footnote-ref" href="#fn:2">2</a></sup> and see:</p>
-<p><img alt="Fontforge with Source Sans Pro Regular open, showing glyphs" src="./issue162_01.png"><br>
+<p><img alt="Fontforge with Source Sans Pro Regular open, showing glyphs" src="https://ngjunsiang.github.io/laymansguide/issue162_01.png"><br>
 <em>Source Sans Pro Regular, in Fontforge.</em>    </p>
 <p>You might already be aware that fonts contain <strong>glyphs</strong>, which are the shapes of each separate character. What makes up those glyphs?</p>
-<p><img alt="Uppercase Q from Source Sans Pro Regular" src="./issue162_02.png"><br>
+<p><img alt="Uppercase Q from Source Sans Pro Regular" src="https://ngjunsiang.github.io/laymansguide/issue162_02.png"><br>
 <em>Uppercase Q from Source Sans Pro Regular.</em>    </p>
 <p>These glyphs are mathematical shapes. They are stored as a series of points, joined by curves<sup id="fnref:3"><a class="footnote-ref" href="#fn:3">3</a></sup> or straight lines<sup id="fnref:4"><a class="footnote-ref" href="#fn:4">4</a></sup>, which are stored as numbers. The diagrams we draw in Microsoft Word are much the same!</p>
 <h2>Font variants</h2>
@@ -62,9 +75,9 @@
 <p>This means that when you install fonts, remember to grab the bold and italic fonts as well!</p>
 <p>Many applications, if they are unable to find the bold/italic fonts, will artificially “bold” or “italicise” the regular font by thickening the glyph, or slanting it. Any graphic designer worth their salt will notice this immediately; even without scrutinising the font, it will feel “off” in some vaguely inscrutable way until you take a closer look and notice the proportions are wrong.</p>
 <h2>Font display</h2>
-<p>For an application to be able to support text formatting, it must have a program called a text rendering engine. This program takes a single long string of text and determines the appropriate places to chop it up with line breaks. To do that, it first needs to convert the glyph shapes from mathematical formulas into actual real lit pixels or real inky droplets (in a process called <strong>rasterisation</strong>, <a href="./issue122.html">Issue 122</a>)).</p>
+<p>For an application to be able to support text formatting, it must have a program called a text rendering engine. This program takes a single long string of text and determines the appropriate places to chop it up with line breaks. To do that, it first needs to convert the glyph shapes from mathematical formulas into actual real lit pixels or real inky droplets (in a process called <strong>rasterisation</strong>, <a href="https://ngjunsiang.github.io/laymansguide/issue122.html">Issue 122</a>)).</p>
 <p>Then their dimensions have to be considered in the line of text, to know where the line breaks should be placed. Because glyphs are not actually rectangular boxes and they protrude in different ways, optically they need some horizontal adjustment (called <strong>kerning</strong>) to look evenly spaced optically, so that needs to be done too<sup id="fnref:5"><a class="footnote-ref" href="#fn:5">5</a></sup>.</p>
-<p><img alt="Kerning for some common glyph pairs in Source Sans Pro Regular" src="./issue162_03.png">
+<p><img alt="Kerning for some common glyph pairs in Source Sans Pro Regular" src="https://ngjunsiang.github.io/laymansguide/issue162_03.png">
 <small>Kerning for some common glyph pairs in Source Sans Pro Regular.<br /><br>
 A kern value of 0 or blank means no kerning is required. A negative value means the letters need to be brought closer, and a positive value means they need to be spaced further (quite rare).</small></p>
 <p>Advanced renderers might even do other things, like avoiding too many terminal hyphens on consecutive lines (looks ugly), or making microadjustments to letter spacing. But, oops! This changes the line length, so the engine needs to go back to re-check the line breaks. This is an iterative process.</p>
@@ -109,18 +122,18 @@ A kern value of 0 or blank means no kerning is required. A negative value means 
     </time></p>
  -->
     <address>
-      By           <a href="./author/j-s-ng.html">J S Ng</a>
+      By           <a href="https://ngjunsiang.github.io/laymansguide/author/j-s-ng.html">J S Ng</a>
     </address>
   </footer>
 </article>
 <ul>
         <li>
-            <a href="./issue161.html">
+            <a href="https://ngjunsiang.github.io/laymansguide/issue161.html">
                 Issue 161: Security and XSS
             </a>
         </li>
         <li>
-            <a href="./issue163.html">
+            <a href="https://ngjunsiang.github.io/laymansguide/issue163.html">
                 Issue 163: System & software ecosystems
             </a>
         </li>

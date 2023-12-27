@@ -16,30 +16,43 @@
 
 <body>
         <header>
-              <hgroup><h1><a href="./">Layman's Guide to Computing</a></h1></hgroup>
+              <hgroup><h1><a href="https://ngjunsiang.github.io/laymansguide/">Layman's Guide to Computing</a></h1></hgroup>
         <nav><ul>
+<<<<<<< HEAD
             <li><a href="./categories">Seasons</a></li>
             <li><a href="./tags">Tags</a></li>
+=======
+            <li><a href="https://ngjunsiang.github.io/laymansguide/categories">Seasons</a></li>
+            <li><a href="https://ngjunsiang.github.io/laymansguide/tags">Tags</a></li>
+>>>>>>> e8d061c (publish)
         </ul></nav>
         </header>
         <main>
 <ul>
         <li>
+<<<<<<< HEAD
             <a href="./issue137.html">
+=======
+            <a href="https://ngjunsiang.github.io/laymansguide/issue137.html">
+>>>>>>> e8d061c (publish)
                 Issue 137: The M1 Macbook Air
             </a>
         </li>
         <li>
+<<<<<<< HEAD
             <a href="./issue139.html">
+=======
+            <a href="https://ngjunsiang.github.io/laymansguide/issue139.html">
+>>>>>>> e8d061c (publish)
                 Issue 139: What’s before this line is mine, what’s after this line is yours
             </a>
         </li>
 </ul>
 <article>
-  <p><a href="./category/season-11.html">Season 11</a></p>
+  <p><a href="https://ngjunsiang.github.io/laymansguide/category/season-11.html">Season 11</a></p>
   <header>
     <h2>
-      <a href="./issue138.html" rel="bookmark"
+      <a href="https://ngjunsiang.github.io/laymansguide/issue138.html" rel="bookmark"
          title="Permalink to Issue 138: System-on-Chip (SoC)">Issue 138: System-on-Chip (SoC)</a></h2>
  
   </header>
@@ -47,24 +60,24 @@
     Sat 18 September 2021
   </time></p>
   <p><a href="https://buttondown.email/laymansguide/archive/"><strong>Previously:</strong></a> The M1 goes one step further: not only does it make do with fewer chips, it does so with passive cooling.</p>
-<p>In <a href="./issue136.html">Issue 136</a>), I showed the miniaturisation of the Macbook mainboard through a series of pictures. While the laptop has remained the same size mostly (apart from getting slimmer), that is not the case with its components. The bigger components, like memory and storage, changed from being separate discrete parts to being another component soldered directly to the mainboard.</p>
+<p>In <a href="https://ngjunsiang.github.io/laymansguide/issue136.html">Issue 136</a>), I showed the miniaturisation of the Macbook mainboard through a series of pictures. While the laptop has remained the same size mostly (apart from getting slimmer), that is not the case with its components. The bigger components, like memory and storage, changed from being separate discrete parts to being another component soldered directly to the mainboard.</p>
 <p>But that only gets us so far; even in the M1 Macbook Air, the mainboard is still almost the entire length of a phone. There’s got to be something else.</p>
 <p>Today, let’s see how the iPhone has evolved.</p>
 <h2>What’s in a smartphone: 2008</h2>
 <p>Rewind to 2008: one year after the first-generation iPhone was launched, the iPhone 3G was released. These early smartphones let us see every little chip that was required to run a smartphone:</p>
-<p><img alt="iPhone 3G mainboard, with parts labelled" src="./issue138_01.jpg"><br>
+<p><img alt="iPhone 3G mainboard, with parts labelled" src="https://ngjunsiang.github.io/laymansguide/issue138_01.jpg"><br>
 <em>iPhone 3G mainboard, with parts labelled<br />There are lots of small, auxiliary processors around the CPU.<br />Source: <a href="https://www.ifixit.com/Teardown/iPhone+3G+Teardown/600">iFixit</a></em>    </p>
-<p>In spirit and form, the early smartphones were a lot like the early desktop mainboards (<a href="./issue132.html">Issue 132</a>)): lots of chips performing highly specific functions.</p>
-<p>After all, a smartphone has no need (or space) for a peripheral controller hub (PCH) (<a href="./issue134.html">Issue 134</a>)) when it does not have add-on peripherals, and no need for a memory controller hub (MCH) when it can put the memory directly on the same chip as the CPU.</p>
+<p>In spirit and form, the early smartphones were a lot like the early desktop mainboards (<a href="https://ngjunsiang.github.io/laymansguide/issue132.html">Issue 132</a>)): lots of chips performing highly specific functions.</p>
+<p>After all, a smartphone has no need (or space) for a peripheral controller hub (PCH) (<a href="https://ngjunsiang.github.io/laymansguide/issue134.html">Issue 134</a>)) when it does not have add-on peripherals, and no need for a memory controller hub (MCH) when it can put the memory directly on the same chip as the CPU.</p>
 <p>At this point, Apple was still using a CPU based on a design by ARM, and manufactured by Samsung. 2 years later, Apple had its own in-house processor: the Apple A4, their own design.</p>
 <h2>What’s in a smartphone: 2010</h2>
 <p>This time, Apple had switched to an internal layout distinctly different from the iPhone 3G, and the basic layout (mainboard beside battery) would become a pattern for subsequent iPhone generations: battery taking up almost half the space, charging and audio circuitry at the bottom near the charging port, camera and antennas near the top, and everything else beside the battery.</p>
-<p><img alt="iPhone 4 and iPhone 12 Pro" src="./issue138_02.jpg"><br>
+<p><img alt="iPhone 4 and iPhone 12 Pro" src="https://ngjunsiang.github.io/laymansguide/issue138_02.jpg"><br>
 <em>iPhone 4 on the left, iPhone 12 Pro on the right<br />The basic layout of the iPhone has been preserved over a decade.<br />Source: <a href="https://www.ifixit.com/Teardown/iPhone+4+Teardown/3130">iFixit</a> and <a href="https://www.ifixit.com/Teardown/iPhone+12+and+12+Pro+Teardown/137669">iFixit</a></em>    </p>
 <p>What’s the difference between this layout and the 3G? Let’s have a look at the iPhone 4’s mainboard:</p>
-<p><img alt="iPhone 4 mainboard" src="./issue138_03.jpg"><br>
+<p><img alt="iPhone 4 mainboard" src="https://ngjunsiang.github.io/laymansguide/issue138_03.jpg"><br>
 <em>iPhone 4 mainboard. I got lazy with the labelling because, well, there’s nothing to label!<br />The CPU is the huge chip labelled “A4”, and there’s memory and the 3G chip on the back.<br />Source: <a href="https://www.ifixit.com/Teardown/iPhone+4+Teardown/3130">iFixit</a></em>    </p>
-<p>Similar to the transition from AT to ATX motherboards (<a href="./issue132.html">Issue 132</a>) and <a href="./issue134.html">134</a>)), the iPhone underwent a great miniaturisation—in a single generation!</p>
+<p>Similar to the transition from AT to ATX motherboards (<a href="https://ngjunsiang.github.io/laymansguide/issue132.html">Issue 132</a>) and <a href="https://ngjunsiang.github.io/laymansguide/issue134.html">134</a>)), the iPhone underwent a great miniaturisation—in a single generation!</p>
 <h2>System-on-Chip</h2>
 <p>What happened to all those separate chips? Most of them got moved <em>onboard</em>, into the A4 chip, or other auxiliary chips. The great consolidating brought all their functionality under one roof.</p>
 <p>The A4 chip carries:</p>
@@ -77,7 +90,7 @@
 <p>This chip is responsible for:</p>
 <ul>
 <li>performing calculations</li>
-<li>rendering graphics (<a href="./issue123.html">Issue 123</a>))</li>
+<li>rendering graphics (<a href="https://ngjunsiang.github.io/laymansguide/issue123.html">Issue 123</a>))</li>
 <li>managing the flow of information between CPU, GPU, and memory (previously the job of the MCH)</li>
 <li>managing the flow of information between storage, network, and the MCH (previously the job of the PCH)</li>
 </ul>
@@ -121,18 +134,18 @@
     </time></p>
  -->
     <address>
-      By           <a href="./author/j-s-ng.html">J S Ng</a>
+      By           <a href="https://ngjunsiang.github.io/laymansguide/author/j-s-ng.html">J S Ng</a>
     </address>
   </footer>
 </article>
 <ul>
         <li>
-            <a href="./issue137.html">
+            <a href="https://ngjunsiang.github.io/laymansguide/issue137.html">
                 Issue 137: The M1 Macbook Air
             </a>
         </li>
         <li>
-            <a href="./issue139.html">
+            <a href="https://ngjunsiang.github.io/laymansguide/issue139.html">
                 Issue 139: What’s before this line is mine, what’s after this line is yours
             </a>
         </li>

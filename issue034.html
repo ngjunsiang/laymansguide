@@ -16,30 +16,43 @@
 
 <body>
         <header>
-              <hgroup><h1><a href="./">Layman's Guide to Computing</a></h1></hgroup>
+              <hgroup><h1><a href="https://ngjunsiang.github.io/laymansguide/">Layman's Guide to Computing</a></h1></hgroup>
         <nav><ul>
+<<<<<<< HEAD
             <li><a href="./categories">Seasons</a></li>
             <li><a href="./tags">Tags</a></li>
+=======
+            <li><a href="https://ngjunsiang.github.io/laymansguide/categories">Seasons</a></li>
+            <li><a href="https://ngjunsiang.github.io/laymansguide/tags">Tags</a></li>
+>>>>>>> e8d061c (publish)
         </ul></nav>
         </header>
         <main>
 <ul>
         <li>
+<<<<<<< HEAD
             <a href="./issue033.html">
+=======
+            <a href="https://ngjunsiang.github.io/laymansguide/issue033.html">
+>>>>>>> e8d061c (publish)
                 Issue 33: Port numbers
             </a>
         </li>
         <li>
+<<<<<<< HEAD
             <a href="./issue035.html">
+=======
+            <a href="https://ngjunsiang.github.io/laymansguide/issue035.html">
+>>>>>>> e8d061c (publish)
                 Issue 35: Virtual Private Networks (VPNs)
             </a>
         </li>
 </ul>
 <article>
-  <p><a href="./category/season-03.html">Season 03</a></p>
+  <p><a href="https://ngjunsiang.github.io/laymansguide/category/season-03.html">Season 03</a></p>
   <header>
     <h2>
-      <a href="./issue034.html" rel="bookmark"
+      <a href="https://ngjunsiang.github.io/laymansguide/issue034.html" rel="bookmark"
          title="Permalink to Issue 34: Firewalls">Issue 34: Firewalls</a></h2>
  
   </header>
@@ -48,9 +61,9 @@
   </time></p>
   <p>Previously: Data is encapsulated when it goes out from an app onto the internet as a request or response. First, in the TCP layer, the OS tags the request with the pre-assigned port number so that it can forward the response to the correct app later. Next, in the IP layer, the network card adds source and destination IP address information so that the data packet arrives at the correct destination server, and the destination server can send the response back to the correct computer. As the packet goes through the router, the router replaces the (source) private IP address assigned to the device by the router with the public IP address assigned to the router by the ISP.</p>
 <p>If the above summary of Issues 30–33 makes sense to you, you are probably ready to proceed :) If not, you might want to review those issues quickly through the links below:</p>
-<p><a href="./issue030.html">Issue 30</a>): Private IP addresses<br>
-<a href="./issue032.html">Issue 32</a>): Sharing a public IP address: Network Address Traversal<br>
-<a href="./issue033.html">Issue 33</a>): Port numbers<br>
+<p><a href="https://ngjunsiang.github.io/laymansguide/issue030.html">Issue 30</a>): Private IP addresses<br>
+<a href="https://ngjunsiang.github.io/laymansguide/issue032.html">Issue 32</a>): Sharing a public IP address: Network Address Traversal<br>
+<a href="https://ngjunsiang.github.io/laymansguide/issue033.html">Issue 33</a>): Port numbers<br>
 <a href="https://buttondown.email/laymansguide/archive">Read the rest of the archives here.</a></p>
 <p>Okay, now we understand how the open, unfettered internet of the 1990s worked. But we are still nowhere near understand the modern Internet until we understand how security is applied. Let’s look at one of the earliest features first.</p>
 <h2>Firewall: a wall to prevent the spread of fire</h2>
@@ -61,7 +74,7 @@
 <p>Do this with a sufficiently comprehensive list of IP addresses, and you can completely block out an entire region’s or even country’s servers. And it would take a VPN to circumvent this, if the VPN server’s IP address is not in the firewall’s block list.</p>
 <p>At the next level, the TCP layer contains port information. A firewall can block out all web browser traffic by restricting data packets with port number 80, or prevent the use of HTTPS by block port 443. It could also theoretically restrict WhatsApp messages, or Apple Messages, just about anything with a well-known or registered port number. This involves more processing power, since the router would have to process the IP layer first to get to the TCP layer.</p>
 <h2>Hostname filtering</h2>
-<p>At higher levels of filtering (involving yet more processing power), the router might even block certain hostnames. Remember that the public IP address of the server is needed before a request can be sent, and this IP address is obtained through a DNS query (<a href="./issue029.html">Issue 29</a>)). If a firewall intercepts and processes the DNS query and blocks the DNS query to resolve that hostname, the device never obtains the public IP address of the server and won’t be able to send the request.</p>
+<p>At higher levels of filtering (involving yet more processing power), the router might even block certain hostnames. Remember that the public IP address of the server is needed before a request can be sent, and this IP address is obtained through a DNS query (<a href="https://ngjunsiang.github.io/laymansguide/issue029.html">Issue 29</a>)). If a firewall intercepts and processes the DNS query and blocks the DNS query to resolve that hostname, the device never obtains the public IP address of the server and won’t be able to send the request.</p>
 <h2>Advanced filtering</h2>
 <p>Advanced routers might also come with built-in patterns that detect different types of traffic, e.g. streaming video, videoconferencing, bittorrent, and more. Anything with a predictable pattern can be blocked by a firewall that the data packet passes through, some requiring more processing power than others.</p>
 <p><strong>Issue summary:</strong> Firewalls block data packets that match certain rules. They decrypt the data packet layer by layer, dropping those that match its programmed rules without allowing them to be forwarded to the next point in its journey. The type of filtering that can be applied depends on the processing power available to the router, since some information is hidden more deeply in the data packet than others. Such filtering is typically circumvented by the use of VPNs, or other means of encrypting the data that is required.</p>
@@ -91,18 +104,18 @@
     </time></p>
  -->
     <address>
-      By           <a href="./author/j-s-ng.html">J S Ng</a>
+      By           <a href="https://ngjunsiang.github.io/laymansguide/author/j-s-ng.html">J S Ng</a>
     </address>
   </footer>
 </article>
 <ul>
         <li>
-            <a href="./issue033.html">
+            <a href="https://ngjunsiang.github.io/laymansguide/issue033.html">
                 Issue 33: Port numbers
             </a>
         </li>
         <li>
-            <a href="./issue035.html">
+            <a href="https://ngjunsiang.github.io/laymansguide/issue035.html">
                 Issue 35: Virtual Private Networks (VPNs)
             </a>
         </li>
