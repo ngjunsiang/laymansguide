@@ -16,43 +16,30 @@
 
 <body>
         <header>
-              <hgroup><h1><a href="https://ngjunsiang.github.io/laymansguide/">Layman's Guide to Computing</a></h1></hgroup>
+              <hgroup><h1><a href="./">Layman's Guide to Computing</a></h1></hgroup>
         <nav><ul>
-<<<<<<< HEAD
             <li><a href="./categories">Seasons</a></li>
             <li><a href="./tags">Tags</a></li>
-=======
-            <li><a href="https://ngjunsiang.github.io/laymansguide/categories">Seasons</a></li>
-            <li><a href="https://ngjunsiang.github.io/laymansguide/tags">Tags</a></li>
->>>>>>> e8d061c (publish)
         </ul></nav>
         </header>
         <main>
 <ul>
         <li>
-<<<<<<< HEAD
             <a href="./issue153.html">
-=======
-            <a href="https://ngjunsiang.github.io/laymansguide/issue153.html">
->>>>>>> e8d061c (publish)
                 Issue 153: Using the cloud
             </a>
         </li>
         <li>
-<<<<<<< HEAD
             <a href="./issue155.html">
-=======
-            <a href="https://ngjunsiang.github.io/laymansguide/issue155.html">
->>>>>>> e8d061c (publish)
                 Issue 155: Emulation performance
             </a>
         </li>
 </ul>
 <article>
-  <p><a href="https://ngjunsiang.github.io/laymansguide/category/season-12.html">Season 12</a></p>
+  <p><a href="./category/season-12.html">Season 12</a></p>
   <header>
     <h2>
-      <a href="https://ngjunsiang.github.io/laymansguide/issue154.html" rel="bookmark"
+      <a href="./issue154.html" rel="bookmark"
          title="Permalink to Issue 154: Emulation">Issue 154: Emulation</a></h2>
  
   </header>
@@ -63,17 +50,17 @@
 <p>Virtualisation, particularly system virtualization, is a real game-changer for those of us who like to have our apps all running in the same operating system, instead of switching operating systems all the time through dual-booting (or Apple Parallels).</p>
 <p>But what is stopping us from allowing them to run near-natively in the desktop, their windows directly showing up in the taskbar, without the distracting abstraction of the virtual machine?</p>
 <h2>Introduction to Emulation</h2>
-<p>What you are seeking is a feature known as <strong>emulation</strong>, in which your operating system (OS), which we shall again call the <strong>host</strong>, <em>emulates</em> the instruction set (<a href="https://ngjunsiang.github.io/laymansguide/issue053.html">Issue 53</a>)) that the application is compiled for. In other words, the host OS:</p>
+<p>What you are seeking is a feature known as <strong>emulation</strong>, in which your operating system (OS), which we shall again call the <strong>host</strong>, <em>emulates</em> the instruction set (<a href="./issue053.html">Issue 53</a>)) that the application is compiled for. In other words, the host OS:</p>
 <ol>
 <li>presents itself as the “correct” machine type to the application (“hello program, I listen to x86 instructions and respond to x86 instructions, so please treat me like an x86 processor”),</li>
 <li>transparently interprets its machine code into its instruction set’s machine code (through a program called an <strong>emulation layer</strong>),</li>
 <li>executes the interpreted version, producing its intended effects, and returning any intended output back to the application.</li>
 </ol>
 <p>Depending on how different the two instruction sets are, the complexity of this task differs greatly. Not much point going into detail here in a layman’s newsletter, so instead I’ll briefly illustrate some instances of emulation in the wild.</p>
-<p>The three main instruction sets discussed here are x86 (32-bit), x86-64 (64-bit), and ARM<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup> (<a href="https://ngjunsiang.github.io/laymansguide/issue053.html">Issue 53</a>)).</p>
+<p>The three main instruction sets discussed here are x86 (32-bit), x86-64 (64-bit), and ARM<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup> (<a href="./issue053.html">Issue 53</a>)).</p>
 <h2>Windows-to-Windows emulation (WOW64)</h2>
-<p>Do you remember the great 32-to-64-bit schism of the late 2000s (<a href="https://ngjunsiang.github.io/laymansguide/issue055.html">Issue 55</a>))? There was a period of time when people got confused whether a Windows program they had could run on a 32-bit x86 processor or a 64-bit x86-64 processor: programs compiled for the latter could not run on the former, but programs compiled for the former could run on the latter.</p>
-<p><img alt="screenshot of download options for WinRAR, showing 32-bit and 64-bit options" src="https://ngjunsiang.github.io/laymansguide/issue154_01.png"><br>
+<p>Do you remember the great 32-to-64-bit schism of the late 2000s (<a href="./issue055.html">Issue 55</a>))? There was a period of time when people got confused whether a Windows program they had could run on a 32-bit x86 processor or a 64-bit x86-64 processor: programs compiled for the latter could not run on the former, but programs compiled for the former could run on the latter.</p>
+<p><img alt="screenshot of download options for WinRAR, showing 32-bit and 64-bit options" src="./issue154_01.png"><br>
 <em>Some download sites still ask you to make this choice between downloading the 32-bit or 64-bit version, usually for users who for whatever reason have opted not to upgrade to 64-bit processors.</em>    </p>
 <p>That was a lie. Programs compiled for Windows on x86 cannot run <em>natively</em> on x86-64, and vice-versa. x86 and x86-64, while looking similar, are different instruction sets. x86 instructions have to be translated into x86-64 instructions to run on a 64-bit processor.</p>
 <p>What happened was Microsoft developed the WOW64 subsystem, an emulation layer that translated 32-bit x86 instructions into 64-bit x86-64 instructions. When users tried to run a 32-bit application, Windows plugged the instruction stream into WOW64, executing the interpreted instructions and allowing it to run near-natively<sup id="fnref:2"><a class="footnote-ref" href="#fn:2">2</a></sup>.</p>
@@ -116,18 +103,18 @@
     </time></p>
  -->
     <address>
-      By           <a href="https://ngjunsiang.github.io/laymansguide/author/j-s-ng.html">J S Ng</a>
+      By           <a href="./author/j-s-ng.html">J S Ng</a>
     </address>
   </footer>
 </article>
 <ul>
         <li>
-            <a href="https://ngjunsiang.github.io/laymansguide/issue153.html">
+            <a href="./issue153.html">
                 Issue 153: Using the cloud
             </a>
         </li>
         <li>
-            <a href="https://ngjunsiang.github.io/laymansguide/issue155.html">
+            <a href="./issue155.html">
                 Issue 155: Emulation performance
             </a>
         </li>

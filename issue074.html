@@ -17,43 +17,30 @@
 
 <body>
         <header>
-              <hgroup><h1><a href="https://ngjunsiang.github.io/laymansguide/">Layman's Guide to Computing</a></h1></hgroup>
+              <hgroup><h1><a href="./">Layman's Guide to Computing</a></h1></hgroup>
         <nav><ul>
-<<<<<<< HEAD
             <li><a href="./categories">Seasons</a></li>
             <li><a href="./tags">Tags</a></li>
-=======
-            <li><a href="https://ngjunsiang.github.io/laymansguide/categories">Seasons</a></li>
-            <li><a href="https://ngjunsiang.github.io/laymansguide/tags">Tags</a></li>
->>>>>>> e8d061c (publish)
         </ul></nav>
         </header>
         <main>
 <ul>
         <li>
-<<<<<<< HEAD
             <a href="./issue073.html">
-=======
-            <a href="https://ngjunsiang.github.io/laymansguide/issue073.html">
->>>>>>> e8d061c (publish)
                 Issue 73: The Heart of Darkness (Header Bidding)
             </a>
         </li>
         <li>
-<<<<<<< HEAD
             <a href="./issue075.html">
-=======
-            <a href="https://ngjunsiang.github.io/laymansguide/issue075.html">
->>>>>>> e8d061c (publish)
                 Issue 75: The Costs of Data Leakage
             </a>
         </li>
 </ul>
 <article>
-  <p><a href="https://ngjunsiang.github.io/laymansguide/category/season-06.html">Season 06</a></p>
+  <p><a href="./category/season-06.html">Season 06</a></p>
   <header>
     <h2>
-      <a href="https://ngjunsiang.github.io/laymansguide/issue074.html" rel="bookmark"
+      <a href="./issue074.html" rel="bookmark"
          title="Permalink to Issue 74: The Walls Have Pixels">Issue 74: The Walls Have Pixels</a></h2>
  
   </header>
@@ -66,17 +53,17 @@
 <p>Even if you disable third-party tracking cookies and javascript that didn’t originate from the same page, information about where you went can still be sent to these servers. Can you guess how?</p>
 <p>Obviously when you loaded the page, some information already went to the server to tell it what your browser wants. But beyond that, have you ever wondered about the images that get loaded?</p>
 <p>Let’s revisit HuffPost again, this time filtering only for image loads:</p>
-<p><img alt="Screenshot of DevTools in Vivaldi browser, filtered to show only image loads." src="https://ngjunsiang.github.io/laymansguide/issue074_01.png"><br>
+<p><img alt="Screenshot of DevTools in Vivaldi browser, filtered to show only image loads." src="./issue074_01.png"><br>
 <em>Chrome DevTools showing filtered image requests.<br />A request for a tracking pixel is highlighted in blue.</em>    </p>
-<p>Hmm … why does an image request need to be so long? Anytime you see a long URL like that, with a <code>?</code> after the URL proper, and peppered with <code>&amp;</code>s and <code>=</code>s, alarm bells should be going off in your head: data is being sent to the server (<a href="https://ngjunsiang.github.io/laymansguide/issue070.html">Issue 70</a>))!</p>
+<p>Hmm … why does an image request need to be so long? Anytime you see a long URL like that, with a <code>?</code> after the URL proper, and peppered with <code>&amp;</code>s and <code>=</code>s, alarm bells should be going off in your head: data is being sent to the server (<a href="./issue070.html">Issue 70</a>))!</p>
 <p>Let’s see what this image looks like:</p>
-<p><img alt="Vivaldi browser tab showing a tracking pixel." src="https://ngjunsiang.github.io/laymansguide/issue074_02.png"><br>
+<p><img alt="Vivaldi browser tab showing a tracking pixel." src="./issue074_02.png"><br>
 <em>This is a tracking pixel.<br />You can’t see it. The image info sidebar shows that its dimensions are 1×1 pixels.</em>    </p>
 <p>Wha—?!</p>
 <p>What is your browser doing, loading a useless 1×1 image? If it appears to be doing something useless, you’re not looking in the right place. The image itself is clearly useless; its just a way to get your browser to send information to a server.</p>
 <h2>Tracking pixels work hand in hand with cookies</h2>
-<p>This request for the tracking pixel was sent from a script. My cookie information was embedded in the request URL when it was sent. So a tracking pixel is another mechanism for sending cookies, besides sending a generic document request via the script like we saw in <a href="https://ngjunsiang.github.io/laymansguide/issue070.html">Issue 70</a>).</p>
-<p>If you have a popular website, ad exchanges will ask to pay you to put their ads on your website. These ads are served after the user’s browser sends the user’s cookie to the ad exchange, which triggers an automated bidding process. The winning bid gets sent to the CDN (content delivery network), which serves the ads (<a href="https://ngjunsiang.github.io/laymansguide/issue073.html">Issue 73</a>)).</p>
+<p>This request for the tracking pixel was sent from a script. My cookie information was embedded in the request URL when it was sent. So a tracking pixel is another mechanism for sending cookies, besides sending a generic document request via the script like we saw in <a href="./issue070.html">Issue 70</a>).</p>
+<p>If you have a popular website, ad exchanges will ask to pay you to put their ads on your website. These ads are served after the user’s browser sends the user’s cookie to the ad exchange, which triggers an automated bidding process. The winning bid gets sent to the CDN (content delivery network), which serves the ads (<a href="./issue073.html">Issue 73</a>)).</p>
 <p>On the other hand, data companies don’t serve ads. They usually ask to put a tracking pixel on your website, which means they ask you to put in their script. This script will scrape whatever data it can about the page the user is on and related user activity, and embed it in the pixel request along with the user’s cookie.</p>
 <p>When you visit Facebook, it looks up your cookie and sees if you have been visiting any websites recently, or left any shopping carts un-checked-out. Then it knows what ads to serve you :)</p>
 <p><strong>Issue summary:</strong> There are two ways your browser can send cookies back to the server:</p>
@@ -108,22 +95,22 @@
     </time></p>
  -->
     <address>
-      By           <a href="https://ngjunsiang.github.io/laymansguide/author/j-s-ng.html">J S Ng</a>
+      By           <a href="./author/j-s-ng.html">J S Ng</a>
     </address>
     <p>
         Tags:
-            <a href="https://ngjunsiang.github.io/laymansguide/tag/document.html">document</a>
+            <a href="./tag/document.html">document</a>
     </p>
   </footer>
 </article>
 <ul>
         <li>
-            <a href="https://ngjunsiang.github.io/laymansguide/issue073.html">
+            <a href="./issue073.html">
                 Issue 73: The Heart of Darkness (Header Bidding)
             </a>
         </li>
         <li>
-            <a href="https://ngjunsiang.github.io/laymansguide/issue075.html">
+            <a href="./issue075.html">
                 Issue 75: The Costs of Data Leakage
             </a>
         </li>

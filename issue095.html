@@ -19,43 +19,30 @@
 
 <body>
         <header>
-              <hgroup><h1><a href="https://ngjunsiang.github.io/laymansguide/">Layman's Guide to Computing</a></h1></hgroup>
+              <hgroup><h1><a href="./">Layman's Guide to Computing</a></h1></hgroup>
         <nav><ul>
-<<<<<<< HEAD
             <li><a href="./categories">Seasons</a></li>
             <li><a href="./tags">Tags</a></li>
-=======
-            <li><a href="https://ngjunsiang.github.io/laymansguide/categories">Seasons</a></li>
-            <li><a href="https://ngjunsiang.github.io/laymansguide/tags">Tags</a></li>
->>>>>>> e8d061c (publish)
         </ul></nav>
         </header>
         <main>
 <ul>
         <li>
-<<<<<<< HEAD
             <a href="./issue094.html">
-=======
-            <a href="https://ngjunsiang.github.io/laymansguide/issue094.html">
->>>>>>> e8d061c (publish)
                 Issue 94: Why do web browsers take up so much memory?
             </a>
         </li>
         <li>
-<<<<<<< HEAD
             <a href="./issue096.html">
-=======
-            <a href="https://ngjunsiang.github.io/laymansguide/issue096.html">
->>>>>>> e8d061c (publish)
                 Issue 96: Why are mobile apps so large in size?
             </a>
         </li>
 </ul>
 <article>
-  <p><a href="https://ngjunsiang.github.io/laymansguide/category/season-08.html">Season 08</a></p>
+  <p><a href="./category/season-08.html">Season 08</a></p>
   <header>
     <h2>
-      <a href="https://ngjunsiang.github.io/laymansguide/issue095.html" rel="bookmark"
+      <a href="./issue095.html" rel="bookmark"
          title="Permalink to Issue 95: What’s in a mobile app?">Issue 95: What’s in a mobile app?</a></h2>
  
   </header>
@@ -66,14 +53,14 @@
 <p>“Why use the mobile app when there’s already a website?”</p>
 <p>“Why even have a mobile app that looks almost exactly like the website?”</p>
 <p>I’m not going to answer from an aesthetic or user experience point of view, you’re all experts in your own preferences :) Instead, I’ll focus on whats actually under the hood in this newsletter issue.</p>
-<p>If you haven’t read <a href="https://ngjunsiang.github.io/laymansguide/issue093.html">Issue 93</a>) on web apps (a.k.a. websites), I’d recommend you do that for the full context, because in this issue I’ll highlight some key differences between web apps and mobile apps.</p>
+<p>If you haven’t read <a href="./issue093.html">Issue 93</a>) on web apps (a.k.a. websites), I’d recommend you do that for the full context, because in this issue I’ll highlight some key differences between web apps and mobile apps.</p>
 <h2>Resources</h2>
-<p>Web apps have to request every single image, video, non-text object on the page via a web request. Caching (<a href="https://ngjunsiang.github.io/laymansguide/issue039.html">Issue 39</a>))—storing these resources for offline use—can reduce subsequent load times, but the first load will still be the most painful.</p>
+<p>Web apps have to request every single image, video, non-text object on the page via a web request. Caching (<a href="./issue039.html">Issue 39</a>))—storing these resources for offline use—can reduce subsequent load times, but the first load will still be the most painful.</p>
 <p>A mobile app can package the most common, unchanging resources (logos, button images, backgrounds, etc) into the mobile app itself, so they can be loaded directly in the app, without having to make a web request and wait for the response. This lets it load faster (theoretically … in practice, many apps still have to retrieve other data from the server, so the loading speed improvement is marginal)</p>
 <h2>Flexibility</h2>
-<p>The document object model, or DOM (<a href="https://ngjunsiang.github.io/laymansguide/issue094.html">Issue 94</a>)) is how web apps keep track of all the elements and their contents on a page, but it is not the most efficient way to do so. A mobile app has more choice in deciding which user interface library (<a href="https://ngjunsiang.github.io/laymansguide/issue017.html">Issue 17</a>)) it wants to use.</p>
+<p>The document object model, or DOM (<a href="./issue094.html">Issue 94</a>)) is how web apps keep track of all the elements and their contents on a page, but it is not the most efficient way to do so. A mobile app has more choice in deciding which user interface library (<a href="./issue017.html">Issue 17</a>)) it wants to use.</p>
 <h2>Storage access</h2>
-<p>A mobile app can request permission to access storage on the mobile device, allowing it to store files (images, data, ...) on the device without having to interrupt the user each time. It is not limited only to browser storage interfaces (localstorage, sessionstorage) and browser databases (IndexedDB)—see <a href="https://ngjunsiang.github.io/laymansguide/issue093.html">Issue 93</a>)—but can use other kinds of interfaces and databases, if they are available on the mobile device, or bundled into the mobile app.</p>
+<p>A mobile app can request permission to access storage on the mobile device, allowing it to store files (images, data, ...) on the device without having to interrupt the user each time. It is not limited only to browser storage interfaces (localstorage, sessionstorage) and browser databases (IndexedDB)—see <a href="./issue093.html">Issue 93</a>)—but can use other kinds of interfaces and databases, if they are available on the mobile device, or bundled into the mobile app.</p>
 <h2>Memory use</h2>
 <p>Both Android and iOS impose a memory limit on each app that is running. And they treat a mobile browser as a single app, despite all the web apps running inside it. So a web app has to share that limit with all the other web apps running in the mobile browser (which is why your tabs have to reload so often—they are also cleared often!).</p>
 <p>On the other hand, a mobile app can have that per-app limit all to itself.</p>
@@ -103,24 +90,24 @@ How so? And more importantly, why are some mobile apps just so darn <em>huge</em
     </time></p>
  -->
     <address>
-      By           <a href="https://ngjunsiang.github.io/laymansguide/author/j-s-ng.html">J S Ng</a>
+      By           <a href="./author/j-s-ng.html">J S Ng</a>
     </address>
     <p>
         Tags:
-            <a href="https://ngjunsiang.github.io/laymansguide/tag/app.html">app</a>
-            <a href="https://ngjunsiang.github.io/laymansguide/tag/memory.html">memory</a>
-            <a href="https://ngjunsiang.github.io/laymansguide/tag/operating-system.html">operating system</a>
+            <a href="./tag/app.html">app</a>
+            <a href="./tag/memory.html">memory</a>
+            <a href="./tag/operating-system.html">operating system</a>
     </p>
   </footer>
 </article>
 <ul>
         <li>
-            <a href="https://ngjunsiang.github.io/laymansguide/issue094.html">
+            <a href="./issue094.html">
                 Issue 94: Why do web browsers take up so much memory?
             </a>
         </li>
         <li>
-            <a href="https://ngjunsiang.github.io/laymansguide/issue096.html">
+            <a href="./issue096.html">
                 Issue 96: Why are mobile apps so large in size?
             </a>
         </li>

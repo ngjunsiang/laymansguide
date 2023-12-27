@@ -18,43 +18,30 @@
 
 <body>
         <header>
-              <hgroup><h1><a href="https://ngjunsiang.github.io/laymansguide/">Layman's Guide to Computing</a></h1></hgroup>
+              <hgroup><h1><a href="./">Layman's Guide to Computing</a></h1></hgroup>
         <nav><ul>
-<<<<<<< HEAD
             <li><a href="./categories">Seasons</a></li>
             <li><a href="./tags">Tags</a></li>
-=======
-            <li><a href="https://ngjunsiang.github.io/laymansguide/categories">Seasons</a></li>
-            <li><a href="https://ngjunsiang.github.io/laymansguide/tags">Tags</a></li>
->>>>>>> e8d061c (publish)
         </ul></nav>
         </header>
         <main>
 <ul>
         <li>
-<<<<<<< HEAD
             <a href="./issue108.html">
-=======
-            <a href="https://ngjunsiang.github.io/laymansguide/issue108.html">
->>>>>>> e8d061c (publish)
                 Issue 108: Safeguarding data operations
             </a>
         </li>
         <li>
-<<<<<<< HEAD
             <a href="./issue110.html">
-=======
-            <a href="https://ngjunsiang.github.io/laymansguide/issue110.html">
->>>>>>> e8d061c (publish)
                 Issue 110: Safeguarding against data corruption with a journal
             </a>
         </li>
 </ul>
 <article>
-  <p><a href="https://ngjunsiang.github.io/laymansguide/category/season-09.html">Season 09</a></p>
+  <p><a href="./category/season-09.html">Season 09</a></p>
   <header>
     <h2>
-      <a href="https://ngjunsiang.github.io/laymansguide/issue109.html" rel="bookmark"
+      <a href="./issue109.html" rel="bookmark"
          title="Permalink to Issue 109: Speeding up data operations">Issue 109: Speeding up data operations</a></h2>
  
   </header>
@@ -67,7 +54,7 @@
 <p>If you have a shipment coming in that urgently needs to be dumped into the warehouse quickly (e.g. because the ship needs to leave quickly for another delivery, or to free up space on the docks), how do we speed this up?</p>
 <p>What usually happens is the goods will be offloaded onto some empty space <strong>outside the warehouse</strong>. The ship will leave first, and <em>assume</em> that the warehouse will be able to get the goods in just fine.</p>
 <p>What is the OS equivalent of this? Hard disk writes are actually pretty slow; they can get up to 100 MB/s, but usually hit a sustained speed of 60 MB/s for system disks, and about 20 MB/s over USB. The operating system therefore sets up a “dumping space” in memory; files can be read from other disks at up to 200 MB/s, and written to memory at <strong>a few GB/s</strong>!</p>
-<p>This space is known as the <strong>write cache</strong>. (I’ve previously covered the idea of caches in Issues <a href="https://ngjunsiang.github.io/laymansguide/issue039.html">39</a>) and <a href="https://ngjunsiang.github.io/laymansguide/issue057.html">57</a>), and the write cache works on a similar idea.)</p>
+<p>This space is known as the <strong>write cache</strong>. (I’ve previously covered the idea of caches in Issues <a href="./issue039.html">39</a>) and <a href="./issue057.html">57</a>), and the write cache works on a similar idea.)</p>
 <h2>Speeding up file access ... and its drawbacks</h2>
 <p>So how do we speed up the process of copying data to a disk? We could dump the data into the write cache (assuming there is enough space), then update the file table first, and let the OS slowly copy the data from the write cache into the disk. Anyone who needs access to the file records will then be able to go about their merry way, and if they need data from the file, they can just copy it from the disk cache instead of the disk. Easy peasy!</p>
 <p>This was what happened in Windows XP. File copying appears to be speeded up, and users are happy.</p>
@@ -96,23 +83,23 @@
     </time></p>
  -->
     <address>
-      By           <a href="https://ngjunsiang.github.io/laymansguide/author/j-s-ng.html">J S Ng</a>
+      By           <a href="./author/j-s-ng.html">J S Ng</a>
     </address>
     <p>
         Tags:
-            <a href="https://ngjunsiang.github.io/laymansguide/tag/cache.html">cache</a>
-            <a href="https://ngjunsiang.github.io/laymansguide/tag/memory.html">memory</a>
+            <a href="./tag/cache.html">cache</a>
+            <a href="./tag/memory.html">memory</a>
     </p>
   </footer>
 </article>
 <ul>
         <li>
-            <a href="https://ngjunsiang.github.io/laymansguide/issue108.html">
+            <a href="./issue108.html">
                 Issue 108: Safeguarding data operations
             </a>
         </li>
         <li>
-            <a href="https://ngjunsiang.github.io/laymansguide/issue110.html">
+            <a href="./issue110.html">
                 Issue 110: Safeguarding against data corruption with a journal
             </a>
         </li>

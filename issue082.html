@@ -16,43 +16,30 @@
 
 <body>
         <header>
-              <hgroup><h1><a href="https://ngjunsiang.github.io/laymansguide/">Layman's Guide to Computing</a></h1></hgroup>
+              <hgroup><h1><a href="./">Layman's Guide to Computing</a></h1></hgroup>
         <nav><ul>
-<<<<<<< HEAD
             <li><a href="./categories">Seasons</a></li>
             <li><a href="./tags">Tags</a></li>
-=======
-            <li><a href="https://ngjunsiang.github.io/laymansguide/categories">Seasons</a></li>
-            <li><a href="https://ngjunsiang.github.io/laymansguide/tags">Tags</a></li>
->>>>>>> e8d061c (publish)
         </ul></nav>
         </header>
         <main>
 <ul>
         <li>
-<<<<<<< HEAD
             <a href="./issue081.html">
-=======
-            <a href="https://ngjunsiang.github.io/laymansguide/issue081.html">
->>>>>>> e8d061c (publish)
                 Issue 81: Data Normalisation
             </a>
         </li>
         <li>
-<<<<<<< HEAD
             <a href="./issue083.html">
-=======
-            <a href="https://ngjunsiang.github.io/laymansguide/issue083.html">
->>>>>>> e8d061c (publish)
                 Issue 83: Structured Query Language
             </a>
         </li>
 </ul>
 <article>
-  <p><a href="https://ngjunsiang.github.io/laymansguide/category/season-07.html">Season 07</a></p>
+  <p><a href="./category/season-07.html">Season 07</a></p>
   <header>
     <h2>
-      <a href="https://ngjunsiang.github.io/laymansguide/issue082.html" rel="bookmark"
+      <a href="./issue082.html" rel="bookmark"
          title="Permalink to Issue 82: Multiplayer databases">Issue 82: Multiplayer databases</a></h2>
  
   </header>
@@ -65,7 +52,7 @@
 <p>“The action can’t be completed because the file is open. Close the file and try again.”</p>
 </blockquote>
 <p>This happens in File Explorer because the operating system treats a text file as a single block of data. When a user opens this file, they do not expect data inside to change. To prevent other users inadvertently modifying it, the operating system “locks” the file, preventing any changes—including deletion!</p>
-<p>How do we resolve this with a database? In the previous issue (<a href="https://ngjunsiang.github.io/laymansguide/issue081.html">Issue 81</a>)), I described the process of making data atomic—breaking it up into the smallest level of detail. By splitting up one huge spreadsheet worth of data into multiple tables representing different things, we allow the database to do the heavy work of data processing for us, while we avoid the tedium of repeating the same data row after row (such as author name for different blog posts).</p>
+<p>How do we resolve this with a database? In the previous issue (<a href="./issue081.html">Issue 81</a>)), I described the process of making data atomic—breaking it up into the smallest level of detail. By splitting up one huge spreadsheet worth of data into multiple tables representing different things, we allow the database to do the heavy work of data processing for us, while we avoid the tedium of repeating the same data row after row (such as author name for different blog posts).</p>
 <h2>Locking specific data</h2>
 <p>Now that the data is atomic, the database is better able to figure out which data needs to be locked. If a user is requesting data from a particular table and from certain rows only, we do not need to lock the entire database and prevent other users from accessing it. Such systems are called row-locking systems, and some databases (but not all) support this feature.</p>
 <h2>Action deconflicting</h2>
@@ -93,18 +80,18 @@
     </time></p>
  -->
     <address>
-      By           <a href="https://ngjunsiang.github.io/laymansguide/author/j-s-ng.html">J S Ng</a>
+      By           <a href="./author/j-s-ng.html">J S Ng</a>
     </address>
   </footer>
 </article>
 <ul>
         <li>
-            <a href="https://ngjunsiang.github.io/laymansguide/issue081.html">
+            <a href="./issue081.html">
                 Issue 81: Data Normalisation
             </a>
         </li>
         <li>
-            <a href="https://ngjunsiang.github.io/laymansguide/issue083.html">
+            <a href="./issue083.html">
                 Issue 83: Structured Query Language
             </a>
         </li>

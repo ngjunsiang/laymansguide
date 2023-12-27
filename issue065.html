@@ -20,43 +20,30 @@
 
 <body>
         <header>
-              <hgroup><h1><a href="https://ngjunsiang.github.io/laymansguide/">Layman's Guide to Computing</a></h1></hgroup>
+              <hgroup><h1><a href="./">Layman's Guide to Computing</a></h1></hgroup>
         <nav><ul>
-<<<<<<< HEAD
             <li><a href="./categories">Seasons</a></li>
             <li><a href="./tags">Tags</a></li>
-=======
-            <li><a href="https://ngjunsiang.github.io/laymansguide/categories">Seasons</a></li>
-            <li><a href="https://ngjunsiang.github.io/laymansguide/tags">Tags</a></li>
->>>>>>> e8d061c (publish)
         </ul></nav>
         </header>
         <main>
 <ul>
         <li>
-<<<<<<< HEAD
             <a href="./issue064.html">
-=======
-            <a href="https://ngjunsiang.github.io/laymansguide/issue064.html">
->>>>>>> e8d061c (publish)
                 Issue 64: Fixing Meltdown and Spectre
             </a>
         </li>
         <li>
-<<<<<<< HEAD
             <a href="./issue066.html">
-=======
-            <a href="https://ngjunsiang.github.io/laymansguide/issue066.html">
->>>>>>> e8d061c (publish)
                 Issue 66: Before the Cloud
             </a>
         </li>
 </ul>
 <article>
-  <p><a href="https://ngjunsiang.github.io/laymansguide/category/season-05.html">Season 05</a></p>
+  <p><a href="./category/season-05.html">Season 05</a></p>
   <header>
     <h2>
-      <a href="https://ngjunsiang.github.io/laymansguide/issue065.html" rel="bookmark"
+      <a href="./issue065.html" rel="bookmark"
          title="Permalink to Issue 65: Memory Sharing in the Operating System">Issue 65: Memory Sharing in the Operating System</a></h2>
  
   </header>
@@ -66,16 +53,16 @@
   <p><a href="https://buttondown.email/laymansguide/archive/"><strong>Previously:</strong></a> Meltdown and Spectre require the programs executing them to have access to kernel memory space. Kernel address isolation attempts to prevent the program from even having access to the kernel address space in the first place. TLB flushing changes the virtual-to-physical memory mapping, disrupting Spectre’s reliance on a consistent virtual-to-physical memory mapping.</p>
 <p>One question that makes sense to ask is: if the operating system is supposed to keep the memory used by each program separate, then how is one program able to access the memory of another program? How would a program trying to mount a Meltdown or Spectre attack be able to read the memory of any other program, let alone the operating system?</p>
 <p>Let’s face it: it is impossible to completely separate programs from each other. Many programs need to communicate with each other; antivirus software needs to be able to scan the addresses accessed by your web browser for harmful links, Office software needs to be able to send data to each other especially for features like Mail Merge, and of course your task manager has to know how much resources every app is using. So that it can show you this:</p>
-<p><img alt="Screenshot of task manager in Windows 10, showing shared memory usage" src="https://ngjunsiang.github.io/laymansguide/issue065_01.png"><br />
+<p><img alt="Screenshot of task manager in Windows 10, showing shared memory usage" src="./issue065_01.png"><br />
 <small>Task Manager in Windows 10<br />
 You can reveal the shared memory column by right-clicking on the column labels and then “Select Columns”.</small></p>
 <p>or this:</p>
-<p><img alt="Screenshot of system monitor in KDE, showing shared memory usage" src="https://ngjunsiang.github.io/laymansguide/issue065_02.png"><br>
+<p><img alt="Screenshot of system monitor in KDE, showing shared memory usage" src="./issue065_02.png"><br>
 <em>System Monitor in KDE (Linux).</em>    </p>
 <p>What is this shared memory?</p>
 <h2>Private memory</h2>
-<p>The memory I talked about earlier, which every software application has, is used to store various things. It is used to store temporary information, such as unsaved data, application settings, graphics resources (every icon and image shown in the application has to come from somewhere …), but most important, libraries and other functions (<a href="https://ngjunsiang.github.io/laymansguide/issue017.html">Issue 17</a>)).</p>
-<p>Very few software developers will write every single bit of code used by their program; often, they will use software libraries written by others to provide specialised functions (e.g. encrypting your data, or accessing a database). When program code is compiled into CPU instructions (<a href="https://ngjunsiang.github.io/laymansguide/issue054.html">Issue 54</a>)), these libraries of course have to be compiled and bundled up as well.</p>
+<p>The memory I talked about earlier, which every software application has, is used to store various things. It is used to store temporary information, such as unsaved data, application settings, graphics resources (every icon and image shown in the application has to come from somewhere …), but most important, libraries and other functions (<a href="./issue017.html">Issue 17</a>)).</p>
+<p>Very few software developers will write every single bit of code used by their program; often, they will use software libraries written by others to provide specialised functions (e.g. encrypting your data, or accessing a database). When program code is compiled into CPU instructions (<a href="./issue054.html">Issue 54</a>)), these libraries of course have to be compiled and bundled up as well.</p>
 <p>That makes the program really huge, doesn’t it? Yes, it does; it is one reason (but not the main reason) that mobile apps, especially Android apps, <a href="https://trevore.com/post/app-sizes-are-out-of-control/">have become so bloated</a> over the last half-decade or so. But I digress.</p>
 <h2>Shared memory</h2>
 <p>At some point, you start to realise that many of these apps need to use a set of identical functions: at the most basic level, requesting and managing memory, requesting file access, sending data over a network, …, and up to libraries for resizing images, and so on.</p>
@@ -86,7 +73,7 @@ You can reveal the shared memory column by right-clicking on the column labels a
 <p>On Windows, I’m going to need more specialised tools. I’ve only got an hour; let’s try something else.</p>
 <p>Ah! System Monitor actually reveals more details about how an application uses memory. Let’s investigate the top few processes using the most memory.</p>
 <p>Here’s Firefox:</p>
-<p><img alt="Screenshot of detailed memory usage in Firefox on KDE" src="https://ngjunsiang.github.io/laymansguide/issue065_03.png"><br>
+<p><img alt="Screenshot of detailed memory usage in Firefox on KDE" src="./issue065_03.png"><br>
 <em>Firefox detailed memory usage in KDE (Linux).</em>    </p>
 <p>Oops, too much detail. Heres the gist:</p>
 <ol>
@@ -100,9 +87,9 @@ You can reveal the shared memory column by right-clicking on the column labels a
 <h2>How is shared memory used?</h2>
 <p>I do my newsletter writing mainly in an app called Atom, made by Github. Atom runs on a platform called Electron (atom … electron … get it?). Electron is a Github project that allows developers to write desktop/laptop apps in Javascript, traditionally the language of web scripting.</p>
 <p>In system monitor, I can see an app named atom, and one named electron. Let’s inspect them both.</p>
-<p><img alt="Screenshot of detailed memory usage for electron on KDE" src="https://ngjunsiang.github.io/laymansguide/issue065_04.png"><br>
+<p><img alt="Screenshot of detailed memory usage for electron on KDE" src="./issue065_04.png"><br>
 <em>Electron detailed memory usage in KDE (Linux).</em>    </p>
-<p><img alt="Screenshot of detailed memory usage for atom on KDE" src="https://ngjunsiang.github.io/laymansguide/issue065_05.png"><br>
+<p><img alt="Screenshot of detailed memory usage for atom on KDE" src="./issue065_05.png"><br>
 <em>Atom detailed memory usage in KDE (Linux).</em>    </p>
 <p>We can see that:</p>
 <ol>
@@ -139,25 +126,25 @@ You can reveal the shared memory column by right-clicking on the column labels a
     </time></p>
  -->
     <address>
-      By           <a href="https://ngjunsiang.github.io/laymansguide/author/j-s-ng.html">J S Ng</a>
+      By           <a href="./author/j-s-ng.html">J S Ng</a>
     </address>
     <p>
         Tags:
-            <a href="https://ngjunsiang.github.io/laymansguide/tag/app.html">app</a>
-            <a href="https://ngjunsiang.github.io/laymansguide/tag/cache.html">cache</a>
-            <a href="https://ngjunsiang.github.io/laymansguide/tag/memory.html">memory</a>
-            <a href="https://ngjunsiang.github.io/laymansguide/tag/operating-system.html">operating system</a>
+            <a href="./tag/app.html">app</a>
+            <a href="./tag/cache.html">cache</a>
+            <a href="./tag/memory.html">memory</a>
+            <a href="./tag/operating-system.html">operating system</a>
     </p>
   </footer>
 </article>
 <ul>
         <li>
-            <a href="https://ngjunsiang.github.io/laymansguide/issue064.html">
+            <a href="./issue064.html">
                 Issue 64: Fixing Meltdown and Spectre
             </a>
         </li>
         <li>
-            <a href="https://ngjunsiang.github.io/laymansguide/issue066.html">
+            <a href="./issue066.html">
                 Issue 66: Before the Cloud
             </a>
         </li>

@@ -17,43 +17,30 @@
 
 <body>
         <header>
-              <hgroup><h1><a href="https://ngjunsiang.github.io/laymansguide/">Layman's Guide to Computing</a></h1></hgroup>
+              <hgroup><h1><a href="./">Layman's Guide to Computing</a></h1></hgroup>
         <nav><ul>
-<<<<<<< HEAD
             <li><a href="./categories">Seasons</a></li>
             <li><a href="./tags">Tags</a></li>
-=======
-            <li><a href="https://ngjunsiang.github.io/laymansguide/categories">Seasons</a></li>
-            <li><a href="https://ngjunsiang.github.io/laymansguide/tags">Tags</a></li>
->>>>>>> e8d061c (publish)
         </ul></nav>
         </header>
         <main>
 <ul>
         <li>
-<<<<<<< HEAD
             <a href="./issue103.html">
-=======
-            <a href="https://ngjunsiang.github.io/laymansguide/issue103.html">
->>>>>>> e8d061c (publish)
                 Issue 103: Why apps hang even with multiple threads
             </a>
         </li>
         <li>
-<<<<<<< HEAD
             <a href="./issue105.html">
-=======
-            <a href="https://ngjunsiang.github.io/laymansguide/issue105.html">
->>>>>>> e8d061c (publish)
                 Issue 105: Operating Systems
             </a>
         </li>
 </ul>
 <article>
-  <p><a href="https://ngjunsiang.github.io/laymansguide/category/season-08.html">Season 08</a></p>
+  <p><a href="./category/season-08.html">Season 08</a></p>
   <header>
     <h2>
-      <a href="https://ngjunsiang.github.io/laymansguide/issue104.html" rel="bookmark"
+      <a href="./issue104.html" rel="bookmark"
          title="Permalink to Issue 104: Storing sensitive data">Issue 104: Storing sensitive data</a></h2>
  
   </header>
@@ -64,11 +51,11 @@
 <p>To wrap up this season on how apps work, I’m going to try answering a question I had on my mind as I was still new to computers: where do my secrets get stored? If I don’t want them to be stored, what are my options?</p>
 <p>I will answer that <em>from an app’s perspective</em> in this issue.</p>
 <h2>Why would I want to keep secrets from my users?</h2>
-<p>You just wrote an app. Your app syncs data to a cloud database (<a href="https://ngjunsiang.github.io/laymansguide/issue090.html">Issue 90</a>)). But the cloud database has many other app developers using it as well—how would it know it is you and not some other malicious hacker? It recognises you via a <strong>shared secret</strong>: a token or an API key that you can see after you log in to your dashboard on their website.</p>
+<p>You just wrote an app. Your app syncs data to a cloud database (<a href="./issue090.html">Issue 90</a>)). But the cloud database has many other app developers using it as well—how would it know it is you and not some other malicious hacker? It recognises you via a <strong>shared secret</strong>: a token or an API key that you can see after you log in to your dashboard on their website.</p>
 <p>After your users install the app, every request sent by your app to the cloud database has to be authenticated using this <em>shared secret</em>. That means you are going to have to get this shared secret onto the app somehow. But this has to happen without the user being able to see it or access it, otherwise a savvy user could use that key to gain access to your cloud database.</p>
 <h2>Storing secrets on the web</h2>
 <p>The code that is loaded by the user’s browser runs under their control, so putting the shared secret anywhere in that code is a bad idea. Any savvy user who knows how to view the script’s source can potentially find it!</p>
-<p>A much safer option is to store the secret with the code that runs on <em>your server</em>. But not in the server’s source code! If you are most developers, you would be using some kind of version control system (<a href="https://ngjunsiang.github.io/laymansguide/issue019.html">Issue 19</a>)) that maintains a copy of your source code and all its changes. If you are using Github or some other public platform for this, you have to be very careful that the shared secret is not visible (or otherwise guessable) just by reading the source code.</p>
+<p>A much safer option is to store the secret with the code that runs on <em>your server</em>. But not in the server’s source code! If you are most developers, you would be using some kind of version control system (<a href="./issue019.html">Issue 19</a>)) that maintains a copy of your source code and all its changes. If you are using Github or some other public platform for this, you have to be very careful that the shared secret is not visible (or otherwise guessable) just by reading the source code.</p>
 <p>For a simple shared secret, such as a short string of characters, app developers usually use <strong>environment variables</strong>. These are pieces of information that are kept in memory only, accessible by the app, and are set by the operating system whenever the app starts up. The server where you run your code will let you configure the environment variables that your app needs, keeping them out of sight of the users.</p>
 <h2>Storing secrets in a mobile app</h2>
 <p>Mobile apps are supported by a host of services provided by the operating system (OS), typically managed by Google or Apple. They each offer a way for you to store a shared secret with the OS. Your app can use this shared secret from the OS to encrypt information so that other apps are not able to access it. When your app starts up, it requests the secret from the OS, and uses it to decrypt the secret again.</p>
@@ -87,7 +74,7 @@
 <p>The hashes are designed to be difficult to reverse. The state-of-the-art algorithm used today can generate hashes that would take millions of years to reverse using hardware currently available. But there are techniques that can reverse hashes of some older algorithms in as little as 30 minutes, so if you are a developer, please find out which one to use!</p>
 <p><strong>Issue summary:</strong></p>
 <p>Shared secrets allow secured access to resources, such as databases or other services. These shared secrets are typically kept on a server controlled by the app developer. For mobile apps, they are usually stored with the operating system, inaccessible to other apps.</p>
-<p>Phew, we had enough issues here to cover the main parts. And I managed to answer one of the sometime-in-the-future questions! Actually, I also answered another one on software installation earlier, in issues <a href="https://ngjunsiang.github.io/laymansguide/issue099.html">99</a>) and <a href="https://ngjunsiang.github.io/laymansguide/issue100.html">100</a>), so I’m going to go ahead and strike it off.</p>
+<p>Phew, we had enough issues here to cover the main parts. And I managed to answer one of the sometime-in-the-future questions! Actually, I also answered another one on software installation earlier, in issues <a href="./issue099.html">99</a>) and <a href="./issue100.html">100</a>), so I’m going to go ahead and strike it off.</p>
 <h2>What I’ll be covering next</h2>
 <p><strong>Next issue:</strong> [LMG S9] Issue 105: Operating Systems</p>
 <p>This wraps up another season of Layman’s Guide on how apps work. Next season, I am going to zoom out and look at the environment that apps operate in: the operating system. Yep, I’m going to tackle the most complex pieces of software ever to be written, and try to explain them in terms that laypeople can understand 😅</p>
@@ -117,22 +104,22 @@
     </time></p>
  -->
     <address>
-      By           <a href="https://ngjunsiang.github.io/laymansguide/author/j-s-ng.html">J S Ng</a>
+      By           <a href="./author/j-s-ng.html">J S Ng</a>
     </address>
     <p>
         Tags:
-            <a href="https://ngjunsiang.github.io/laymansguide/tag/app.html">app</a>
+            <a href="./tag/app.html">app</a>
     </p>
   </footer>
 </article>
 <ul>
         <li>
-            <a href="https://ngjunsiang.github.io/laymansguide/issue103.html">
+            <a href="./issue103.html">
                 Issue 103: Why apps hang even with multiple threads
             </a>
         </li>
         <li>
-            <a href="https://ngjunsiang.github.io/laymansguide/issue105.html">
+            <a href="./issue105.html">
                 Issue 105: Operating Systems
             </a>
         </li>

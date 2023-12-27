@@ -16,43 +16,30 @@
 
 <body>
         <header>
-              <hgroup><h1><a href="https://ngjunsiang.github.io/laymansguide/">Layman's Guide to Computing</a></h1></hgroup>
+              <hgroup><h1><a href="./">Layman's Guide to Computing</a></h1></hgroup>
         <nav><ul>
-<<<<<<< HEAD
             <li><a href="./categories">Seasons</a></li>
             <li><a href="./tags">Tags</a></li>
-=======
-            <li><a href="https://ngjunsiang.github.io/laymansguide/categories">Seasons</a></li>
-            <li><a href="https://ngjunsiang.github.io/laymansguide/tags">Tags</a></li>
->>>>>>> e8d061c (publish)
         </ul></nav>
         </header>
         <main>
 <ul>
         <li>
-<<<<<<< HEAD
             <a href="./issue068.html">
-=======
-            <a href="https://ngjunsiang.github.io/laymansguide/issue068.html">
->>>>>>> e8d061c (publish)
                 Issue 68: The Age of Bloat
             </a>
         </li>
         <li>
-<<<<<<< HEAD
             <a href="./issue070.html">
-=======
-            <a href="https://ngjunsiang.github.io/laymansguide/issue070.html">
->>>>>>> e8d061c (publish)
                 Issue 70: The Cookie Factory
             </a>
         </li>
 </ul>
 <article>
-  <p><a href="https://ngjunsiang.github.io/laymansguide/category/season-06.html">Season 06</a></p>
+  <p><a href="./category/season-06.html">Season 06</a></p>
   <header>
     <h2>
-      <a href="https://ngjunsiang.github.io/laymansguide/issue069.html" rel="bookmark"
+      <a href="./issue069.html" rel="bookmark"
          title="Permalink to Issue 69: The Cookie Monster">Issue 69: The Cookie Monster</a></h2>
  
   </header>
@@ -63,20 +50,20 @@
 <p>How to do that? The key, it turns out, centres around cookies.</p>
 <h2>Wait, what’s a cookie?</h2>
 <p>When you visit any website in Chrome or Firefox, if you click on the icon to the left of the address bar:</p>
-<p><img alt="Screenshot of website info popup in Vivaldi browser" src="https://ngjunsiang.github.io/laymansguide/issue069_01.png"><br>
+<p><img alt="Screenshot of website info popup in Vivaldi browser" src="./issue069_01.png"><br>
 <em>Clicking the icon to the left of the address bar shows basic site information</em>    </p>
 <p>It shows you some basic information, including the cookies loaded by the website.</p>
-<p><img alt="Screenshot of cookies in use popup in Vivaldi browser" src="https://ngjunsiang.github.io/laymansguide/issue069_02.png"><br>
+<p><img alt="Screenshot of cookies in use popup in Vivaldi browser" src="./issue069_02.png"><br>
 <em>You can view the content of cookies through that window in Chrome or Vivaldi. This information is also available in other web browsers through a different menu option.</em>    </p>
 <p>The cookies themselves are only just little fragments of information. They are identified with a name, they have a bunch of content (usually gibberish to humans), and they are associated with a website. Above, you can see that this website has a cookie named <code>_gid</code> with a value of <code>GA1.2.1807773255.1584140066</code>.</p>
-<p><img alt="Screenshot of website source in Vivaldi browser. The script line that loads analytics.js is highlighted" src="https://ngjunsiang.github.io/laymansguide/issue069_03.png"><br>
+<p><img alt="Screenshot of website source in Vivaldi browser. The script line that loads analytics.js is highlighted" src="./issue069_03.png"><br>
 <em>The script code used by Google Analytics is named <code>analytics.js</code>.</em>    </p>
 <p>Little snippets of javascript create and delete cookies. These snippets of Javascript are usually loaded as a script, with a <code>.js</code> file extension. The script code used by Google Analytics is named <code>analytics.js</code>.</small></p>
 <h2>What do cookies do?</h2>
 <p>This cookie was loaded by  <a href="https://developers.google.com/analytics/devguides/collection/analyticsjs/cookies-user-id">analytics.js</a> after the web browser runs the script. It is how Google Analytics identifies users on the website. The value stored in the <code>_gid</code> cookie is the client ID assigned by Google Analytics to identify a unique user.</p>
 <p>Many bloggers and website owners rely on Google Analytics to tell them how much internet traffic their website is getting every month, which countries they are from, what time of day they are most active, which search results are bringing these visitors to the site, and so on.</p>
 <p>But each visit represents one browser loading the page; how do we know that’s not the same user repeatedly refreshing the page waiting for something to happen? (It happens on auction sites, or game sites, and many other places).</p>
-<p>Whenever the webpage is loaded, the cookie information gets sent to the Google Analytics server. That is how Google Analytics know it’s the same fella on the same browser doing it. The cookie associates each client <a href="https://ngjunsiang.github.io/laymansguide/issue007.html">Issue 7</a>) with a <code>_gid</code> id. But if the user is using two different web browsers, or using a smartphone browser and doing it on their laptop, that actually gets classified under two different identifiers, even though it’s the same person!</p>
+<p>Whenever the webpage is loaded, the cookie information gets sent to the Google Analytics server. That is how Google Analytics know it’s the same fella on the same browser doing it. The cookie associates each client <a href="./issue007.html">Issue 7</a>) with a <code>_gid</code> id. But if the user is using two different web browsers, or using a smartphone browser and doing it on their laptop, that actually gets classified under two different identifiers, even though it’s the same person!</p>
 <h1>Plain cookies are not enough</h1>
 <p>Before 2006, this wasn’t a big issue. Users mostly browsed the internet on their desktops and browsers, and they seldom used more than one as their regular device. The famous Intel Core series processors had not even arrived yet—they would come a year later, in July 2007—and the first iPhone would arrive a month before Intel Core.</p>
 <p>That meant the average user was using a Pentium-based computer to browse the internet, and that was probably their only internet-enabled device. At most, they had a desktop at home and a laptop at work. If you got a website visit with a user’s cookie, you know it’s not coming from a smartphone or their Amazon Alexa or any other smart device—those did not exist yet. One or two cookie identifiers was enough.</p>
@@ -88,7 +75,7 @@
 <blockquote>
 <p>Whenever the webpage is loaded, the cookie information gets sent to the Google Analytics server.</p>
 </blockquote>
-<p>How does this actually happen? In <a href="https://ngjunsiang.github.io/laymansguide/issue038.html">Issue 38</a>), I showed you a graphic from Chrome’s Developer Tools that represented the loading sequence a webpage goes through. With that same feature, we can find out when and how the Google Analytics cookie gets returned to the server.</p>
+<p>How does this actually happen? In <a href="./issue038.html">Issue 38</a>), I showed you a graphic from Chrome’s Developer Tools that represented the loading sequence a webpage goes through. With that same feature, we can find out when and how the Google Analytics cookie gets returned to the server.</p>
 <h2>What I’ll be covering next</h2>
 <p><strong>Next issue:</strong> [LMG S6] Issue 70: The Cookie Factory</p>
 <p>We’ve seen how cookies are served, next issue we’ll get a bit closer. We’ll see how information from the cookie is returned. And then in the subsequent issue, you’ll understand Quantcast’s genius insight, and how it led to the ad landscape we have today.</p>
@@ -111,18 +98,18 @@
     </time></p>
  -->
     <address>
-      By           <a href="https://ngjunsiang.github.io/laymansguide/author/j-s-ng.html">J S Ng</a>
+      By           <a href="./author/j-s-ng.html">J S Ng</a>
     </address>
   </footer>
 </article>
 <ul>
         <li>
-            <a href="https://ngjunsiang.github.io/laymansguide/issue068.html">
+            <a href="./issue068.html">
                 Issue 68: The Age of Bloat
             </a>
         </li>
         <li>
-            <a href="https://ngjunsiang.github.io/laymansguide/issue070.html">
+            <a href="./issue070.html">
                 Issue 70: The Cookie Factory
             </a>
         </li>

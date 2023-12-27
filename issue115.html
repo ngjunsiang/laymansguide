@@ -17,43 +17,30 @@
 
 <body>
         <header>
-              <hgroup><h1><a href="https://ngjunsiang.github.io/laymansguide/">Layman's Guide to Computing</a></h1></hgroup>
+              <hgroup><h1><a href="./">Layman's Guide to Computing</a></h1></hgroup>
         <nav><ul>
-<<<<<<< HEAD
             <li><a href="./categories">Seasons</a></li>
             <li><a href="./tags">Tags</a></li>
-=======
-            <li><a href="https://ngjunsiang.github.io/laymansguide/categories">Seasons</a></li>
-            <li><a href="https://ngjunsiang.github.io/laymansguide/tags">Tags</a></li>
->>>>>>> e8d061c (publish)
         </ul></nav>
         </header>
         <main>
 <ul>
         <li>
-<<<<<<< HEAD
             <a href="./issue114.html">
-=======
-            <a href="https://ngjunsiang.github.io/laymansguide/issue114.html">
->>>>>>> e8d061c (publish)
                 Issue 114: In the beginning (firmware)
             </a>
         </li>
         <li>
-<<<<<<< HEAD
             <a href="./issue116.html">
-=======
-            <a href="https://ngjunsiang.github.io/laymansguide/issue116.html">
->>>>>>> e8d061c (publish)
                 Issue 116: Hibernation
             </a>
         </li>
 </ul>
 <article>
-  <p><a href="https://ngjunsiang.github.io/laymansguide/category/season-09.html">Season 09</a></p>
+  <p><a href="./category/season-09.html">Season 09</a></p>
   <header>
     <h2>
-      <a href="https://ngjunsiang.github.io/laymansguide/issue115.html" rel="bookmark"
+      <a href="./issue115.html" rel="bookmark"
          title="Permalink to Issue 115: Shutdown & standby">Issue 115: Shutdown & standby</a></h2>
  
   </header>
@@ -61,13 +48,13 @@
     Sat 10 April 2021
   </time></p>
   <p><a href="https://buttondown.email/laymansguide/archive/"><strong>Previously:</strong></a> Embedded operating systems are unlike user operating systems. They are designed to run the software needed for an appliance’s operation, and are not meant to be used by users directly. Since they are considered somewhere between software and hardware, they are usually referred to as firmware.</p>
-<p>In <a href="https://ngjunsiang.github.io/laymansguide/issue112.html">Issue 112</a>), I described the bootup process, and what a process it is! We have sayings in the English language that talk about things taking years to build up, but only seconds to destroy, and that’s certainly the case here. It takes so many steps to get data into computer memory in a way that makes it useable for us humans, and the mere press of a power switch wipes that data configuration once computer memory loses power.</p>
-<p>This is obviously undesirable; your work in progress might not have been saved, data that is being transferred to disks might not be written properly and end up getting corrupted (<a href="https://ngjunsiang.github.io/laymansguide/issue109.html">Issue 109</a>)), and you should never switch off a computer at the power socket this way!</p>
+<p>In <a href="./issue112.html">Issue 112</a>), I described the bootup process, and what a process it is! We have sayings in the English language that talk about things taking years to build up, but only seconds to destroy, and that’s certainly the case here. It takes so many steps to get data into computer memory in a way that makes it useable for us humans, and the mere press of a power switch wipes that data configuration once computer memory loses power.</p>
+<p>This is obviously undesirable; your work in progress might not have been saved, data that is being transferred to disks might not be written properly and end up getting corrupted (<a href="./issue109.html">Issue 109</a>)), and you should never switch off a computer at the power socket this way!</p>
 <h2>Forced shutdowns</h2>
 <p>But sometimes, the computer gets itself so stuck that there’s just no other way to do it. On a laptop or smartphone, which has a built-in battery and cant be shut off immediately at the power socket, this is usually done by holding the power button for more than 10 seconds. This will literally cut off power to the mainboard immediately.</p>
 <p>What does a proper shutdown do differently?</p>
 <h2>Shutdown</h2>
-<p>To avoid the Problems described above, we need to give the computer time to wind down. Most programs have a proper exit routine (y’know, the red dot on macOS or the red cross in Windows). This gets the program to write any last bits of data, release any file or database locks (<a href="https://ngjunsiang.github.io/laymansguide/issue082.html">Issue 82</a>)), quit, and then release its resources back to the OS. When shutting down, all running programs and services have this exit routine invoked, and they usually quit pretty quickly.</p>
+<p>To avoid the Problems described above, we need to give the computer time to wind down. Most programs have a proper exit routine (y’know, the red dot on macOS or the red cross in Windows). This gets the program to write any last bits of data, release any file or database locks (<a href="./issue082.html">Issue 82</a>)), quit, and then release its resources back to the OS. When shutting down, all running programs and services have this exit routine invoked, and they usually quit pretty quickly.</p>
 <p>The exceptions to this usually have to do with disk operations, the slowest of operations on a computer. If a program has lots of data to save to disk, or is waiting for a disk operation to complete, it will remain open while attempting to exit, and prevent the computer from shutting down. If you’re wondering why a folder seems to be stopping the computer from shutting down, this is usually the reason!</p>
 <p>“Wait, I’m not copying anything …” Yep, but File Explorer in Windows does more than just let you copy, paste, and delete. It also generates image and video thumbnails for you, create file indexes to speed up searching, and so on. And these are disk operations too!</p>
 <p>On rare occasions, these disk operations can mean your computer takes up to an hour to shutdown! My best advice, if you’re not in a hurry, is to just leave it alone and let it do its thing. Much safer than having to scan for errors later.</p>
@@ -75,7 +62,7 @@
 <p>On older computers, shutting down and booting up took more than 10 seconds, which is quite a killjoy when you are getting ready for a presentation and just need to stuff your laptop into a bag, get up to the conference room, and switch it on again. That feeling when you’re looking at a room full of people looking back at you, waiting for your laptop to boot up … <em>awkwardddddd</em></p>
 <p>Some of us just keep our laptops open (because closing the lid causes it to shut down, but you can change that in the settings by the way), and hold it that way while running around. And the purpose of that is just to keep the computer memory powered so we don’t lose the precious data configuration of the computer memory!</p>
 <p>What if there was a way to keep power going to computer memory, but have the rest of the computer system powered off, to save on power? That would be perfect for hopping from coffee joint to coffee joint!</p>
-<p>This is exactly what happens when you put a computer into <strong>standby</strong> (some systems also refer to this as <strong>sleep</strong>). The computer processor goes into a power state where only the computer memory remains powered (<a href="https://ngjunsiang.github.io/laymansguide/issue112.html">Issue 112</a>)). Everything else is powered off—screen, network hardware, storage disks, … until you power the system on again. The memory configuration remains intact, and everything is exactly the way you left it at the moment you put the laptop into standby. Best of all, you didn’t have to go through the long and tedious shutdown-bootup sequence again!</p>
+<p>This is exactly what happens when you put a computer into <strong>standby</strong> (some systems also refer to this as <strong>sleep</strong>). The computer processor goes into a power state where only the computer memory remains powered (<a href="./issue112.html">Issue 112</a>)). Everything else is powered off—screen, network hardware, storage disks, … until you power the system on again. The memory configuration remains intact, and everything is exactly the way you left it at the moment you put the laptop into standby. Best of all, you didn’t have to go through the long and tedious shutdown-bootup sequence again!</p>
 <p><strong>Issue summary:</strong> When you shut a computer down, it sends an exit signal to all running programs to get them to do their exit routine. This process can sometimes take a long time. To preserve the data configuration in memory while minimising power draw, a computer can go into standby mode: all hardware except the memory gets powered down, until the computer is woken up from standby.</p>
 <p>Lots of people don’t know about computer sleep, and resort to workarounds to keep their computer running while they have to move around. But now you know.</p>
 <h2>What I’ll be covering next</h2>
@@ -95,22 +82,22 @@
     </time></p>
  -->
     <address>
-      By           <a href="https://ngjunsiang.github.io/laymansguide/author/j-s-ng.html">J S Ng</a>
+      By           <a href="./author/j-s-ng.html">J S Ng</a>
     </address>
     <p>
         Tags:
-            <a href="https://ngjunsiang.github.io/laymansguide/tag/operating-system.html">operating system</a>
+            <a href="./tag/operating-system.html">operating system</a>
     </p>
   </footer>
 </article>
 <ul>
         <li>
-            <a href="https://ngjunsiang.github.io/laymansguide/issue114.html">
+            <a href="./issue114.html">
                 Issue 114: In the beginning (firmware)
             </a>
         </li>
         <li>
-            <a href="https://ngjunsiang.github.io/laymansguide/issue116.html">
+            <a href="./issue116.html">
                 Issue 116: Hibernation
             </a>
         </li>
